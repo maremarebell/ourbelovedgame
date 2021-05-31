@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from "react";
+import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
+import { Players } from './Players';
+import { playerData } from "./data";
+import "./App.css";
 
-function App() {
+var _ = require('underscore');
+
+const PersonPage = ({ match }) => {
+
+  const {
+    params: { slug },
+  } = match;
+
+  const [data, setData] = useState();
+
+  var players = _.indexBy(playerData, 'slug');
+
+  return (
+    <>
+      age= {players.[slug].age}
+    </>
+  );
+};
+
+const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("https://swapi.dev/api/people/", {})
+      .then((res) => res.json())
+      .then((response) => {
+        setData(response.results);
+        setIsLoading(false);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Players />
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <>
+      <Router>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/player/:slug" component={PersonPage} />
+      </Router>
+    </>
+  );
+};
 
 export default App;
