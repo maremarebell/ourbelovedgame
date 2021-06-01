@@ -1,32 +1,4 @@
 {
-  name: "Andrew M",
-  name_full: "Andrew Milkovich",
-  slug: "andrewm",
-  age: "31",
-  job: "Deputy District Attorney",
-  job_full: "Deputy District Attorney at Orange County District Attorney’s Office",
-  location: "Newport Beach, CA",
-  origin: "Walnut Creek, California",
-  instagram: "https://www.instagram.com/soymilc/",
-  instagram_handle: "soymilc",
-  instagram_scrubbed: false,
-  tiktok: "",
-  abc_profile: "https://abc.com/shows/the-bachelorette/cast/andrew-m-summer-2021",
-  gor_assessment_epi: "The Men of Season 17 Volume 1",
-  gor_assessment_timestamp: "10:22",
-  linkedin: "https://www.linkedin.com/in/andrew-milcovich-531916a0/",
-  gor_social_assessment: "regular",
-  predictions: {
-    limo_exit: "",
-    gameplay: "",
-    game_length: "Pacecase: I think he can do very well",
-  },
-  "tags":["military", "partier", "lawyer"]
-},
-
-
-
-{
   name: "",
   name_full: "",
   slug: "",
@@ -37,7 +9,7 @@
   tags:[""],
   player_status: "",
   gor: {
-    gor_assessment_epi: "",
+    gor_assessment_epi: "The Men of Season 17 Volume 1",
     gor_assessment_timestamp: "",
     gor_assessment_timestamp_remaining: "",
     gor_social_assessment: "",

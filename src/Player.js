@@ -13,8 +13,8 @@ export const Player = (props) => {
 
   let epi_embed = "hmm";
 
-  if (gor.gor_assessment_epi == "The Men of Season 17 Volume 1") {
-      epi_embed = <iframe src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>;
+  if (gor.gor_assessment_epi === "The Men of Season 17 Volume 1") {
+      epi_embed = <iframe title="Spotify Embed" src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>;
   }
   else {
     epi_embed= <span></span>
