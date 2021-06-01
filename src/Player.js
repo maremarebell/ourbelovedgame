@@ -11,6 +11,15 @@ export const Player = (props) => {
     <span className="tags__tag" key={tag}>{tag}</span>
   );
 
+  let epi_embed = "hmm";
+
+  if (gor.gor_assessment_epi == "The Men of Season 17 Volume 1") {
+      epi_embed = <iframe src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>;
+  }
+  else {
+    epi_embed= <span></span>
+  }
+
   return (
     <>
       <section className="player-header">
@@ -81,6 +90,8 @@ export const Player = (props) => {
 
               <div className="gor-review">
                 <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
+
+                {epi_embed}
 
                 <p className="gor-review__callout">
                   Listen to {name}'s assessment at &nbsp;

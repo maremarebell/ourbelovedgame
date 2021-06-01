@@ -169,9 +169,7 @@ h3 {
 }
 
 .tags__tag {
-  /* background-color: #ff00ff; */
   border: 3px solid #da2817;
-  /* background-color: #da28170d; */
   color: #da2817;
   font-weight: 900;
   letter-spacing: 2px;
@@ -179,6 +177,8 @@ h3 {
   border-radius: 20px;
   padding: 3px 6px;
   font-size: 14px;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 
@@ -204,13 +204,11 @@ h3 {
   border-radius: 10px 10px 0 0;
   margin-right: -2px;
   font-size: 12px;
-  /* font-weight: bold; */
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .stats__row {
-  /* padding: 20px; */
   display: flex;
   align-items: center;
 }
@@ -535,6 +533,7 @@ h3 {
     font-size: 11px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
 
   .stat {
