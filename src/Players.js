@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { playerData } from "./data";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const Players = () => {
@@ -14,7 +14,7 @@ export const Players = () => {
           return (
             <div key={key}>
               {data.name}
-            
+
               <Link to={`/player/${data.slug}`}>{data.slug}'s Page</Link>
 
             </div>

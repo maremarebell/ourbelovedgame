@@ -5,7 +5,11 @@ import { Status } from "./Status";
 
 export const Player = (props) => {
 
-  const { name, age, job, location, player_status, slug, name_full, season_stats, social_media, gor } = props.singlePlayerData;
+  const { name, age, job, location, player_status, slug, name_full, season_stats, social_media, gor, tags } = props.singlePlayerData;
+
+  const tagList = tags.map((tag) =>
+    <span className="tags__tag" key={tag}>{tag}</span>
+  );
 
   return (
     <>
@@ -14,7 +18,7 @@ export const Player = (props) => {
 
           <div className="player-header__pic col col-1">
 
-            <img className="player-header__headshot" src={`../player-${slug}.png`}></img>
+            <img className="player-header__headshot" src={`../player-${slug}.png`} alt={`headshot of ${name}`}></img>
           </div>
 
           <div className="player-header__info col col-2">
@@ -31,8 +35,8 @@ export const Player = (props) => {
               <li>{location}</li>
             </ul>
 
-            <a className="social-icon social-icon--instagram" href={`https://www.instagram.com/${social_media.instagram_handle}`} target="_blank">
-              <img className="social-icon__icon" height="0" src="../logo-instagram.svg" />
+            <a className="social-icon social-icon--instagram" href={`https://www.instagram.com/${social_media.instagram_handle}`} target="_blank" rel="noreferrer">
+              <img alt="Instagram logo" className="social-icon__icon" height="0" src="../logo-instagram.svg" />
               <span className="social-icon__text">{social_media.instagram_handle}</span>
               <div className="tooltip">instagram</div>
             </a>
@@ -87,7 +91,7 @@ export const Player = (props) => {
                 <div className="gor-review__predictions">
                   <h3 className="predictions__title">Pre-Season Predictions</h3>
 
-                  <img className="gor-review__ball" src="../image-ball.png"/>
+                  <img alt="crystal ball emoji" className="gor-review__ball" src="../image-ball.png"/>
 
                   <ul className="predictions">
                     <li className="prediction">
@@ -113,24 +117,24 @@ export const Player = (props) => {
 
                 {social_media.tiktok_handle.length > 0 &&
                 <li className="secondary-social__link">
-                  <a href={`${social_media.tiktok_url}`} target="_blank">
-                    <img className="secondary-social__icon" src="../logo-tiktok.svg" height="0"/>
+                  <a href={`${social_media.tiktok_url}`} target="_blank" rel="noreferrer">
+                    <img alt="TikTok logo" className="secondary-social__icon" src="../logo-tiktok.svg" height="0"/>
                     <span className="secondary-social__label">Tiktok: {social_media.tiktok_handle}</span>
                   </a>
                 </li>
                 }
 
                 <li className="secondary-social__link">
-                  <a href={`${social_media.abc_profile}`} target="_blank">
-                    <img className="secondary-social__icon" src="../logo-abc.svg" height="0" />
+                  <a href={`${social_media.abc_profile}`} target="_blank" rel="noreferrer">
+                    <img alt="ABC logo" className="secondary-social__icon" src="../logo-abc.svg" height="0" />
                     <span className="secondary-social__label">Official ABC Bio</span>
                   </a>
                 </li>
 
                 {social_media.linkedin_url.length > 0 &&
                 <li className="secondary-social__link">
-                  <a href={`${social_media.linkedin_url}`} target="_blank">
-                    <img className="secondary-social__icon" src="../logo-linkedin.svg" height="0" />
+                  <a href={`${social_media.linkedin_url}`} target="_blank" rel="noreferrer">
+                    <img alt="LinkedIn logo" className="secondary-social__icon" src="../logo-linkedin.svg" height="0" />
                     <span className="secondary-social__label">LinkedIn: {social_media.linkedin_job}</span>
                   </a>
                 </li>
@@ -139,7 +143,7 @@ export const Player = (props) => {
 
               <div className="tags">
                 <h2 className="tags__header">Tags:</h2>
-                <span className="tags__tag">Ripped</span>
+                {tagList}
               </div>
             </div>
           </div>

@@ -6,8 +6,6 @@ export const Status = (props) => {
   const playerStatus = props.playerStatus;
   let newStatus;
 
-  console.log(playerStatus);
-
   switch (playerStatus) {
     case "active":
       newStatus = "In The Game"
