@@ -397,25 +397,28 @@ h3 {
 .player-status__dot--active {
   background-color: #00ff7d;
 }
+
 .player-status__dot--dismissed {
   background-color: #ff0000;
   border: 3px solid #ff5959;
 }
+
 .player-status__dot--sidelined {
-  background-color: #d9d9d9;
+  background-color: #ff0000;
+  border: 3px solid #ff5959;
 }
+
 .player-status__dot--self-eliminated {
   background-color: #ff0000;
 }
+
 .player-status__dot--undefined {
   background-color: #d9d9d9;
 }
+
 .player-status__dot--unannounced {
   background-color: #d9d9d9;
 }
-
-
-
 
 .player-status__label {
    display: inline-block;

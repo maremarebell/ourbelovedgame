@@ -96,7 +96,7 @@ export const Player = (props) => {
                 <p className="gor-review__callout">
                   Listen to {name}'s assessment at &nbsp;
                   <span className="gor-review__timestamp">{gor.gor_assessment_timestamp}</span>&nbsp;
-                  ({gor.gor_assessment_timestamp_remaining} remaining)
+                  {/*({gor.gor_assessment_timestamp_remaining} remaining)*/}
                 </p>
 
                 <div className="gor-review__predictions">
