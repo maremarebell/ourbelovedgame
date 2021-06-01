@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import { Players } from './Players';
 import { Player } from './Player';
@@ -12,8 +12,6 @@ const PersonPage = ({ match }) => {
   const {
     params: { slug },
   } = match;
-
-  const [data, setData] = useState();
 
   var players = _.indexBy(playerData, 'slug');
 

@@ -1,14 +1,11 @@
 import React from "react";
 import "./App.css";
-import { playerData } from "./data";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Status } from "./Status";
+
 
 export const Player = (props) => {
 
   const { name, age, job, location, player_status, slug, name_full, season_stats } = props.singlePlayerData;
-
-
-  
 
   return (
     <>
@@ -25,10 +22,7 @@ export const Player = (props) => {
             <h1 className="player-header__name">{name}</h1>
 
             <div className="player-status">
-              <span className="player-status__dot player-status__dot--active"></span>
-              <span className="player-status__label">
-               {player_status}
-              </span>
+              <Status playerStatus={player_status} />
             </div>
 
             <ul className="player-header__details">
@@ -84,8 +78,7 @@ export const Player = (props) => {
               <div className="gor-review">
                 <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
 
-                <iframe src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+               
                 <p className="gor-review__callout">Listen to Aaron's assessment at <span className="gor-review__timestamp">5:49</span> (1:25:23 remaining)</p>
 
                 <div className="gor-review__predictions">
