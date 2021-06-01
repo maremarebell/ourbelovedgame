@@ -72,10 +72,10 @@ h3 {
 }
 
 .player-header__info {
-  /* height: 400px; */
   display: block;
   margin-top: 40px;
   width: 50%;
+  text-align: left;
 }
 
 .player-header__headshot {
@@ -152,8 +152,6 @@ h3 {
   text-decoration: none;
   vertical-align: middle;
 }
-
-
 
 
 /*--------------------------------------------------------*/
@@ -233,7 +231,7 @@ h3 {
   display: block;
   position: absolute;
   right: 0;
-  top: 20;
+  top: 20px;
   content: " ";
 }
 
@@ -256,10 +254,6 @@ h3 {
   width: 100%;
   display: block;
   text-align: center;
-}
-
-.stat_detail {
-
 }
 
 
@@ -293,10 +287,6 @@ h3 {
 /*Gor Episode Callout*/
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
-
-.gor-review {
-
-}
 
 .gor-review__title {
   font-weight: bold;
@@ -336,18 +326,40 @@ h3 {
   border-bottom-color: #ff00ff;
 }
 
+.gor-review__timestamp {
+  font-weight: 900;
+  font-size: 26px;
+  display: inline-block;
+  vertical-align: baseline;
+  background-color: yellow;
+  color: #ff00ff;
+  padding: 2px 12px;
+}
 
-.gor-review__timestamp {font-weight: 900;font-size: 26px;display: inline-block;vertical-align: baseline;background-color: yellow;color: #ff00ff;padding: 2px 12px;}
-.gor-review__predictions {padding-top: 40px;clear: both;padding-bottom: 40px;}
+.gor-review__predictions {
+  padding-top: 40px;
+  clear: both;
+  padding-bottom: 40px;
+}
 
-.gor-review__ball {width: 100px;width: 14%;float: left;/* margin-top: 20px; */}
+.gor-review__ball {
+  width: 100px;
+  width: 14%;
+  float: left;
+}
 
-.prediction {padding: 5px 0;color: #4a4a4a;}
+.prediction {
+  padding: 5px 0;
+  color: #4a4a4a;
+}
 
-.prediction__attribute {text-transform: uppercase;font-size: 13px;letter-spacing: 1px;}
+.prediction__attribute {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
 
 .predictions {
-  /* margin-top: 20px; */
   width: 80%;
   padding-left: 18%;
 }
@@ -359,13 +371,11 @@ h3 {
 }
 
 
-
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 /*Player Status*/
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
-
 
 .player-status {
   color: #ffffff;
@@ -385,7 +395,6 @@ h3 {
 
 .player-status__dot--active {
   background-color: #00ff7d;
-  /* vertical-align: middle; */
 }
 
 .player-status__label {
@@ -399,8 +408,6 @@ h3 {
 }
 
 
-
-
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 /*Columns*/
@@ -409,18 +416,15 @@ h3 {
 
 .cols {
   overflow: hidden;
-  /* background-color: green; */
 }
 
 .col {
-  /* width: auto; */
   float: left;
   position: relative;
 }
 
 .col-1 {
   width: 40%;
-  /* min-width: 340px; */
 }
 
 .col-2 {
@@ -437,18 +441,21 @@ h3 {
 
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
-/*Instagram Icon -- Needs Cleaned up*/
+/*Media Queries
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 
 @media (max-width: 680px) {
+
   .col {
     width:  100%;
     padding-left: 0;
   }
+
   .player-header {
     height: auto;
   }
+
   .player-header__pic {
     border-radius: 100%;
     height: auto;
@@ -461,6 +468,7 @@ h3 {
     display: block;
     margin: auto;
   }
+
   .player-header__pic:before {
     left: 13%;
     top: 10%;
@@ -470,24 +478,32 @@ h3 {
   .player-header__info {
     background-color: #000;
     margin-top: 0;
-    text-align: center;
     padding: 20px;
+    text-align: center;
   }
 
   .player-header__name {
     font-size: 30px;
   }
+
   .player-status__dot {
     height: 14px;
     width: 14px;
   }
+
   .player-status__label {
     font-size: 14px;
   }
+
   .player-header__details {
     font-size: 18px;
   }
-  .secondary-social__links{margin-right: 0;padding: 0px 20px;}
+
+  .secondary-social__links{
+    margin-right: 0;
+    padding: 0px 20px;
+  }
+
   .tags {
     margin: 10px 20px 60px 20px;
   }
