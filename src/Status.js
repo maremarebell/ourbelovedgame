@@ -19,6 +19,9 @@ export const Status = (props) => {
     case "self_eliminated":
       newStatus = "Self-Eliminated"
       break;
+    case "unannounced":
+      newStatus = "Unannounced"
+      break;
     default:
       newStatus = "Status Unknown";
   }
