@@ -9,6 +9,7 @@ html {
 body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
+  background-color: #ff00ff;
 }
 
 h1 {
@@ -30,6 +31,38 @@ h3 {
   max-width: 900px;
   margin: auto;
 }
+
+
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*All Players*/
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+.all-player__title {
+  color: #fff;
+  font-size: 40px;
+}
+
+.all-players__list {
+  width: 320px;
+  margin: auto;
+  font-size: 30px;
+}
+
+.all-players__list li {
+  padding: 10px;
+}
+
+.all-players__list a {
+  color: #fff;
+}
+
+
+.all-players__player--sidelined {
+  text-decoration: line-through;
+  opacity: .3;
+}
+
 
 
 /*--------------------------------------------------------*/
@@ -107,6 +140,7 @@ h3 {
 
 .secondary-social__links {
   margin-right: 60px;
+  width: 100%;
 }
 
 .secondary-social__link a {
@@ -118,9 +152,9 @@ h3 {
   display: block;
 }
 
-.secondary-social__link:last-child a {
+/*.secondary-social__link:last-child a {
   border-bottom-width: 0;
-}
+}*/
 
 .secondary-social__link {
   text-decoration: none;
@@ -178,6 +212,7 @@ h3 {
   font-size: 14px;
   display: inline-block;
   margin-right: 4px;
+  margin-bottom: 6px;
 }
 
 
@@ -266,6 +301,8 @@ h3 {
 
 .player-content {
   text-align: left;
+  background-color: #fff;
+  overflow: auto;
 }
 
 .profile__title {
@@ -280,6 +317,7 @@ h3 {
 
 .column--secondary-info {
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 

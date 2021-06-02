@@ -105,18 +105,27 @@ export const Player = (props) => {
                   <img alt="crystal ball emoji" className="gor-review__ball" src="../image-ball.png"/>
 
                   <ul className="predictions">
+
+                    {gor.predictions.limo_exit.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Limo exit: </span>
                       {gor.predictions.limo_exit}
                     </li>
+                    }
+
+                    {gor.predictions.gameplay.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Gameplay: </span>
                       {gor.predictions.gameplay}
                     </li>
+                    }
+
+                    {gor.predictions.game_length.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Game length: </span>
                       {gor.predictions.game_length}
                     </li>
+                    }
                   </ul>
                 </div>
               </div>

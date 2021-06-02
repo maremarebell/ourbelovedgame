@@ -8,18 +8,17 @@ export const Players = () => {
   return (
     <>
       <div className="player-container">
-        Players of the Game
+        <h1 class="all-player__title">Players of the Game</h1>
 
-        <ol>
+        <ul class="all-players__list">
         {playerData.map((data, key) => {
           return (
-            <li key={key}>
-              {key+1}
-              <Link to={`/player/${data.slug}`}>{data.name}'s Page</Link>
+            <li className={`all-players__player all-players__player--${data.player_status}`} key={key}>
+              <Link to={`/player/${data.slug}`}>{data.name}</Link>
             </li>
           );
         })}
-        </ol>
+        </ul>
       </div>
     </>
   );
