@@ -127,7 +127,7 @@ h3 {
   font-size: 21px;
   line-height: 26px;
   margin: 18px 0 18px 0;
-  font-weight: 300;
+  font-weight: 400;
   color: #dcdcdc;
 }
 
@@ -297,12 +297,14 @@ h3 {
 
 .profile {
   padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .player-content {
   text-align: left;
   background-color: #fff;
   overflow: auto;
+  padding-bottom: 60px;
 }
 
 .profile__title {
