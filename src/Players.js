@@ -10,7 +10,7 @@ export const Players = () => {
       <div className="player-container">
 
         <h2 className="update-notice">Website last updated: 6/9 after Episode 1</h2>
-        
+
         <h1 className="all-player__title">Players of the Game</h1>
 
         <ul className="all-players__list">
