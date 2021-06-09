@@ -27,9 +27,6 @@ const PersonPage = ({ match }) => {
 const HomePage = () => {
   return (
     <div className="App">
-     
-      <h2>Website last updated: 6/9 after Episode 1</h2>
-
       <Players />
     </div>
   );

@@ -9,7 +9,6 @@ html {
 body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  background-color: #ff00ff;
 }
 
 h1 {
@@ -38,29 +37,52 @@ h3 {
 /*All Players*/
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
+
+.player-container {
+  text-align: left;
+  background-color: #ff00ff;
+  width: 100%;
+  height: 100%;
+  padding: 6%;
+}
+
+.update-notice {
+  color: #fff;
+  padding: 20px 0;
+  font-weight: 400;
+  text-align: left;
+}
+
 .all-player__title {
   color: #fff;
   font-size: 40px;
 }
 
 .all-players__list {
-  width: 320px;
+  width: 100%;
   margin: auto;
   font-size: 30px;
+  text-align: left;
 }
 
 .all-players__list li {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .all-players__list a {
   color: #fff;
 }
 
+.all-players__player {
+  position: relative;
+}
 
-.all-players__player--sidelined {
+.all-players__player--sidelined,
+.all-players__player--dismissed,
+.all-players__player--eliminated,
+.all-players__player--self-eliminated {
   text-decoration: line-through;
-  opacity: .3;
+  opacity: .5;
 }
 
 
@@ -213,6 +235,30 @@ h3 {
   display: inline-block;
   margin-right: 4px;
   margin-bottom: 6px;
+}
+
+
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+/*Pill*/
+/*TODO: Clean this up, tag and pill are basically the same thing*/
+/*--------------------------------------------------------*/
+/*--------------------------------------------------------*/
+
+.pill {
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 3px 6px;
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  margin-left: 6px;
 }
 
 
@@ -438,24 +484,15 @@ h3 {
   background-color: #00ff7d;
 }
 
-.player-status__dot--dismissed {
-  background-color: #ff0000;
-  border: 3px solid #ff5959;
-}
-
-.player-status__dot--sidelined {
-  background-color: #ff0000;
-  border: 3px solid #ff5959;
-}
-
+.player-status__dot--dismissed,
+.player-status__dot--eliminated,
+.player-status__dot--sidelined,
 .player-status__dot--self-eliminated {
   background-color: #ff0000;
+  border: 3px solid #ff5959;
 }
 
-.player-status__dot--undefined {
-  background-color: #d9d9d9;
-}
-
+.player-status__dot--undefined,
 .player-status__dot--unannounced {
   background-color: #d9d9d9;
 }

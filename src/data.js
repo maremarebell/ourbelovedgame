@@ -122,7 +122,7 @@ export const playerData = [
     location: "Mission Viejo, CA",
     origin: "Mission Viejo, CA",
     tags:["athlete","track star", "jacked", "family", "gym"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "17:38",
@@ -239,7 +239,7 @@ export const playerData = [
     location: "Queens, NY",
     origin: "Mokena, IL",
     tags:["motorcycles", "speaks Japanese", "Tokyo"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "41:34",
@@ -551,7 +551,7 @@ export const playerData = [
     location: "Charlotte, NC",
     origin: "Charlotte, NC",
     tags:["artist","reading","tennis","photography"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:18:09",
@@ -707,7 +707,7 @@ export const playerData = [
     location: "Jersey City, NJ",
     origin: "Cranford, NJ",
     tags:["vampire","jacked","lots of TOTs", "surfer", "bro"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "9:56",
@@ -941,7 +941,7 @@ export const playerData = [
     location: "Dallas, TX",
     origin: "Bakersfield, CA",
     tags:["basketball","Sunshine","partier","sunglasses"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "36:10",
@@ -980,7 +980,7 @@ export const playerData = [
     location: "Portland, OR",
     origin: "Vancouver, WA",
     tags:["DJ","neat freak","model"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "39:28",
@@ -1018,7 +1018,7 @@ export const playerData = [
     location: "Reno, NV",
     origin: "",
     tags:["numerology","jacked","partier"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "43:44",
