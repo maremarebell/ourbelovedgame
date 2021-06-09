@@ -14,9 +14,9 @@ export const playerData = [
       gor_assessment_timestamp: "5:49",
       gor_assessment_timestamp_remaining: "1:25:23",
       predictions: {
-        limo_exit: "shirtless",
-        gameplay: "will take shirt off",
-        game_length: "mid-season floater",
+        limo_exit: "Shirtless",
+        gameplay: "Will take shirt off",
+        game_length: "Mid-season floater",
       },
     },
     season_stats: {
@@ -92,7 +92,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "Likely trained by previous players",
-        game_length: "Mid to late-season floater; don't see playoffs; Top 10",
+        game_length: "Mid to late-season floater; Don't see playoffs but Top 10",
       },
     },
     season_stats: {
@@ -130,7 +130,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "Bad first audience game",
-        game_length: "Maybe deep run based on Instagram scrub; and/or prepping for influencer",
+        game_length: "Maybe deep run based on Instagram scrub and/or prepping for influencer",
         notes: "May workout at nude gyms; full assessment of all 9 instagrams",
       },
     },
@@ -168,7 +168,7 @@ export const playerData = [
       gor_assessment_timestamp_remaining: "",
       predictions: {
         limo_exit: "",
-        gameplay: "Professional player; strong parasocial gaze; ",
+        gameplay: "Professional player; strong parasocial gaze",
         game_length: "Playoff-bound",
         notes: "Has some instagram animals; Instagram flirting with peripheral Bachelor universe",
       },
@@ -325,7 +325,7 @@ export const playerData = [
       gor_assessment_timestamp_remaining: "",
       predictions: {
         limo_exit: "",
-        gameplay: "Good salesman = good game skills;",
+        gameplay: "Good salesman = good game skills",
         game_length: "Optimistic outlook; one to watch",
         notes: "",
       },
@@ -364,7 +364,7 @@ export const playerData = [
       gor_assessment_timestamp_remaining: "",
       predictions: {
         limo_exit: "Brings a blowup doll (known)",
-        gameplay: "Could be 4TWR - promoting business;",
+        gameplay: "Could be 4TWR - promoting business",
         game_length: "Night one guy",
         notes: "",
       },
