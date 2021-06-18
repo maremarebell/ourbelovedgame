@@ -12,122 +12,122 @@ export const playerAwardsData = [
   },
   {
     name: "Aaron",
-    plays: [],
+    awards: [],
   },
   {
     name: "Andrew M",
-    plays: [],
+    awards: [],
   },
   {
     name: "Andrew S",
-    plays: [],
+    awards: [],
   },
   {
     name: "Austin",
-    plays: [],
+    awards: [],
   },
   {
     name: "Blake",
-    plays: []
+    awards: []
   },
   {
     name: "Brandon",
-    plays: []
+    awards: []
   },
   {
     name: "Brendan",
-    plays: []
+    awards: []
   },
   {
     name: "Christian",
-    plays: []
+    awards: []
   },
   {
     name: "Cody",
-    plays: []
+    awards: []
   },
   {
     name: "Connor B",
-    plays: []
+    awards: []
   },
   {
     name: "Conor C",
-    plays: []
+    awards: []
   },
   {
     name: "David",
-    plays: []
+    awards: []
   },
   {
     name: "Gabriel",
-    plays: []
+    awards: []
   },
   {
     name: "Garrett",
-    plays: []
+    awards: []
   },
   {
     name: "Greg",
-    plays: []
+    awards: []
   },
   {
     name: "Hunter",
-    plays: []
+    awards: []
   },
   {
     name: "Jeff",
-    plays: []
+    awards: []
   },
   {
     name: "John",
-    plays: []
+    awards: []
   },
   {
     name: "Josh",
-    plays: []
+    awards: []
   },
   {
     name: "Justin",
-    plays: []
+    awards: []
   },
   {
     name: "Karl",
-    plays: []
+    awards: []
   },
   {
     name: "Kyle",
-    plays: []
+    awards: []
   },
   {
   name: "Landon",
-    plays: []
+    awards: []
   },
     {
     name: "Marcus",
-    plays: []
+    awards: []
   },
   {
     name: "Marty",
-    plays: []
+    awards: []
   },
   {
     name: "Michael",
-    plays: []
+    awards: []
   },
   {
     name: "Mike",
-    plays: []
+    awards: []
   },
   {
     name: "Quartney",
-    plays: []
+    awards: []
   },
   {
     name: "Thomas",
-    plays: []
+    awards: []
   },
   {
     name: "Tre",
-    plays: []
+    awards: []
   },
 ];
