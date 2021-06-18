@@ -357,7 +357,7 @@ export const playerData = [
     location: "San Diego, CA",
     origin: "San Diego, CA",
     tags:["EDM", "tattoos", "music festivals", "weights"],
-    player_status: "active",
+    player_status: "eliminated",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "52:37",

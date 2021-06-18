@@ -102,7 +102,7 @@ export const playerAwardsData = [
   name: "Landon",
     awards: []
   },
-    {
+  {
     name: "Marcus",
     awards: []
   },
