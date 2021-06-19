@@ -1,6 +1,6 @@
 export const playerPlaysData = [
   {
-    name: "Template"
+    name: "Template",
     plays: [
       {
         title: "",
@@ -24,7 +24,7 @@ export const playerPlaysData = [
         details: "",
         episode: "2",
         event: "Group Date #2",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Won Group Date Challenge",
@@ -32,7 +32,7 @@ export const playerPlaysData = [
         details: "Katie's Golden Cowboy",
         episode: "2",
         event: "Group Date #2",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Tattle",
@@ -40,7 +40,7 @@ export const playerPlaysData = [
         details: "Weak tattle but it worked",
         episode: "2",
         event: "Group Date #2",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Finalist for GDR",
@@ -84,6 +84,14 @@ export const playerPlaysData = [
         ]
       },
       {
+        title: "Group Date Knock Kock",
+        type: "win",
+        details: "Went to get Katie when she was feeling down, very 4TRR",
+        episode: "2",
+        event: "Group Date #2",
+        portion: "nighttime",
+      },
+      {
         title: "GDR",
         type: "win",
         details: "Good kiss lead-in line",
@@ -119,7 +127,16 @@ export const playerPlaysData = [
   },
   {
     name: "Christian",
-    plays: []
+    plays: [
+      {
+        title: "Voluntary Nudity Play",
+        type: "positive",
+        details: "",
+        episode: "2",
+        event: "Group Date #1",
+        portion: "day portion",
+      },
+    ]
   },
   {
     name: "Cody",
@@ -172,6 +189,14 @@ export const playerPlaysData = [
     plays: [
       {
         title: "First Group Date 1:1 Time",
+        type: "win",
+        details: "",
+        episode: "2",
+        event: "Group Date #1",
+        portion: "nighttime",
+      },
+      {
+        title: "Take 2 Kiss Play",
         type: "win",
         details: "",
         episode: "2",
@@ -231,7 +256,7 @@ export const playerPlaysData = [
         details: "",
         episode: "2",
         event: "1:1 Date",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Move to LL1",
@@ -239,7 +264,7 @@ export const playerPlaysData = [
         details: "",
         episode: "2",
         event: "1:1 Date",
-        portion: "",
+        portion: "day portion",
       },
       {
         title: "PTC",
@@ -282,9 +307,9 @@ export const playerPlaysData = [
         portion: "nighttime",
       },
       {
-        title: "LL2",
+        title: "Recieved LL2",
         type: "win",
-        details: "Received in person",
+        details: "Received from Katie in person",
         episode: "2",
         event: "1:1 Date",
         portion: "nighttime",
@@ -324,7 +349,7 @@ export const playerPlaysData = [
         details: "Called back via a D*ck in a Box joke",
         episode: "2",
         event: "Group Date #1",
-        portion: "first portion",
+        portion: "day portion",
       },
     ]
   },
@@ -425,12 +450,20 @@ export const playerPlaysData = [
     ],
     plays: [
       {
+        title: "Forced PVC",
+        type: "win",
+        details: "Forced to reveal he's a virgin on the first Group Date",
+        episode: "2",
+        event: "Group Date #1",
+        portion: "day portion",
+      },
+      {
         title: "Won Group Date Challenge",
         type: "win",
         details: "🏆 Greatest Lover",
         episode: "2",
         event: "Group Date #1",
-        portion: "first portion",
+        portion: "day portion",
       },
     ]
   },
@@ -451,7 +484,7 @@ export const playerPlaysData = [
         details: "",
         episode: "2",
         event: "Group Date #1",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Huju",
@@ -459,7 +492,7 @@ export const playerPlaysData = [
         details: "Forced, no ankle lock, no dismount",
         episode: "2",
         event: "Group Date #1",
-        portion: "first portion",
+        portion: "day portion",
       },
       {
         title: "Steal",
