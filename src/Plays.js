@@ -29,7 +29,6 @@ export const Plays = (props) => {
             play.title = "👯‍♂️Matching Outfits"
             break;
           default:
-            play.title  = play.title;
         }
 
         switch (play.event) {
@@ -43,7 +42,6 @@ export const Plays = (props) => {
             play.event = "GD #2"
             break;
           default:
-            play.event  = play.event;
         }
 
         return (
