@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const PlayerTile = (props) => {
 
   return (
-    <li className={`tile all-players__player--${props.data.player_status}`} key={props.key}>
+    <li className={`tile all-players__player--${props.data.player_status}`}>
       <img className="tile__headshot" src={`../player-${props.data.slug}.png`} alt={`headshot of ${props.data.name}`}></img>
 
       <div className="tile__info">

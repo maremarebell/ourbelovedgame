@@ -22,25 +22,25 @@ export const Players = () => {
         <ul className="all-players__list">
           {players.active.map((data, key) => {
             return (
-              <PlayerTile data={data} />
+              <PlayerTile data={data} key={key} />
             );
           })}
 
           {players.unannounced.map((data, key) => {
             return (
-              <PlayerTile data={data} />
+              <PlayerTile data={data} key={key} />
             );
           })}
 
           {players.eliminated.map((data, key) => {
             return (
-              <PlayerTile data={data} />
+              <PlayerTile data={data} key={key} />
             );
           })}
 
           {players.sidelined.map((data, key) => {
             return (
-              <PlayerTile data={data} />
+              <PlayerTile data={data} key={key} />
             );
           })}
 
