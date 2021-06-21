@@ -18,7 +18,7 @@ export const Status = (props) => {
       newStatus = "Self-Eliminated"
       break;
     case "eliminated":
-      newStatus = "Eliminated " + "Epi " + props.data.player_status_last_update
+      newStatus = "Eliminated Epi " + props.data.player_status_last_update
       break;
     case "unannounced":
       newStatus = "Unannounced"

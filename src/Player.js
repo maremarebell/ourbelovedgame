@@ -96,10 +96,12 @@ export const Player = (props) => {
                 </div>
               </div>
 
-              <div className="plays">
-                <h2>Regular Season Play</h2>
-                <Plays playerPlays={dataPlays} />
-              </div>
+              {dataPlays &&
+                <div className="plays">
+                  <h2>Regular Season Play</h2>
+                  <Plays playerPlays={dataPlays} />
+                </div>
+              }
 
               <div className="gor-review">
                 <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
