@@ -25,7 +25,7 @@ export const Players = () => {
                   {data.name}
                 </Link>
 
-                <Status playerStatus={data.player_status} />
+                <Status data={data} />
 
                 {/*<a className="social-icon social-icon--instagram tile__social-button" href={`https://www.instagram.com/${data.social_media.instagram_handle}`} target="_blank" rel="noreferrer">
                   <img alt="Instagram logo" className="social-icon__icon" height="0" src="../logo-instagram.svg" />

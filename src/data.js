@@ -9,6 +9,7 @@ export const playerData = [
     origin: "Walnut, California",
     tags:["jacked", "swimmer"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "5:49",
@@ -47,6 +48,7 @@ export const playerData = [
     origin: "Walnut Creek, California",
     tags:["military", "potential partier", "lawyer", "water polo", "California-type"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "10:20",
@@ -85,6 +87,7 @@ export const playerData = [
     origin: "Waukegan, Illinois",
     tags:["Clay's cousin", "worldly", "football", "beach parties","athlete"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "13:42",
@@ -123,6 +126,7 @@ export const playerData = [
     origin: "Mission Viejo, CA",
     tags:["athlete","track star", "jacked", "family", "gym"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "17:38",
@@ -162,6 +166,7 @@ export const playerData = [
     origin: "",
     tags:["jacked", "cat", "frat energy", "travel"],
     player_status: "sidelined",
+    player_status_last_update: "pre-season",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "30:26",
@@ -201,6 +206,7 @@ export const playerData = [
     origin: "Burlington, Ontario, Canada",
     tags:["pets", "wildlife", "sex positivity"],
     player_status: "unannounced",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "36:10",
@@ -240,6 +246,7 @@ export const playerData = [
     origin: "Mokena, IL",
     tags:["motorcycles", "speaks Japanese", "Tokyo"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "41:34",
@@ -280,6 +287,7 @@ export const playerData = [
     origin: "Toronto, Ontario, Canada",
     tags:["Blake's friend","dog", "travel", "tattoos", "Canadian"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "45:54",
@@ -319,6 +327,7 @@ export const playerData = [
     origin: "Newburyport, MA",
     tags:["athletic","MMA fighter", "obstacle experience", "salesman"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "49:27",
@@ -358,6 +367,7 @@ export const playerData = [
     origin: "San Diego, CA",
     tags:["EDM", "tattoos", "music festivals", "weights"],
     player_status: "eliminated",
+    player_status_last_update: "2",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "52:37",
@@ -397,6 +407,7 @@ export const playerData = [
     origin: "Columbia, IL",
     tags:["musician","piano","songwriter", "progressive"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "54:55",
@@ -436,6 +447,7 @@ export const playerData = [
     origin: "Edmond, OK",
     tags:["athlete","baseball","religious", "hunting"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:04:36",
@@ -475,6 +487,7 @@ export const playerData = [
     origin: "New York, NY",
     tags:["basketball","tech"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1;08:48",
@@ -514,6 +527,7 @@ export const playerData = [
     origin: "Chicago, IL",
     tags:["cop", "religious"],
     player_status: "sidelined",
+    player_status_last_update: "pre-season",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:12:40",
@@ -552,6 +566,7 @@ export const playerData = [
     origin: "Charlotte, NC",
     tags:["artist","reading","tennis","photography"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:18:09",
@@ -591,6 +606,7 @@ export const playerData = [
     origin: "Salinas, CA",
     tags:["red hair", "dog", "golf", "jacked"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:23:00",
@@ -630,6 +646,7 @@ export const playerData = [
     origin: "Edison, NJ",
     tags:["dog","bro","family","basketball"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:25:00",
@@ -669,6 +686,7 @@ export const playerData = [
     origin: "San Angelo, TX",
     tags:["single dad","former addict","tiktoker", "tattoos", "hunter"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "3:36",
@@ -708,6 +726,7 @@ export const playerData = [
     origin: "",
     tags:["in a box", "Box Man"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {},
     season_stats: {
       season: "The Bachelorette Season 17",
@@ -737,6 +756,7 @@ export const playerData = [
     origin: "Cranford, NJ",
     tags:["vampire","jacked","lots of TOTs", "surfer", "bro"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "9:56",
@@ -776,6 +796,7 @@ export const playerData = [
     origin: "Santa Cruz, CA",
     tags:["vegetarian","EDM","pilot","surfer","dog","travel"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "14:44",
@@ -815,6 +836,7 @@ export const playerData = [
     origin: "Pembroke Pines, FL",
     tags:["cheer squad","NFL",""],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "18:45",
@@ -854,6 +876,7 @@ export const playerData = [
     origin: "Ellicott City, MD",
     tags:["artist","painter"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "22:01",
@@ -893,6 +916,7 @@ export const playerData = [
     origin: "Miami, FL",
     tags:["speaker"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "25:02",
@@ -932,6 +956,7 @@ export const playerData = [
     origin: "Sarasota, FL",
     tags:["travel","bro","sports"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "33:00",
@@ -971,6 +996,7 @@ export const playerData = [
     origin: "Bakersfield, CA",
     tags:["basketball","Sunshine","partier","sunglasses"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "36:10",
@@ -1010,6 +1036,7 @@ export const playerData = [
     origin: "Vancouver, WA",
     tags:["DJ","neat freak","model"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "39:28",
@@ -1048,6 +1075,7 @@ export const playerData = [
     origin: "",
     tags:["numerology","jacked","partier"],
     player_status: "eliminated",
+    player_status_last_update: "1",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "43:44",
@@ -1086,6 +1114,7 @@ export const playerData = [
     origin: "Akron, OH",
     tags:["single dad","widower"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "47:12",
@@ -1124,6 +1153,7 @@ export const playerData = [
     origin: "Surprise, AZ",
     tags:["baseball","athletic","religious","travel"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "51:28",
@@ -1163,6 +1193,7 @@ export const playerData = [
     origin: "Arlington, TX",
     tags:["gym","fitness","religious","family"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "56:00",
@@ -1201,6 +1232,7 @@ export const playerData = [
     origin: "San Diego, CA",
     tags:["dogs","family"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "1:02:20",
@@ -1240,6 +1272,7 @@ export const playerData = [
     origin: "Covington, GA",
     tags:["family"],
     player_status: "active",
+    player_status_last_update: "",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "1:07:38",

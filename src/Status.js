@@ -2,10 +2,9 @@ import React from 'react'
 
 export const Status = (props) => {
 
-  const playerStatus = props.playerStatus;
   let newStatus;
 
-  switch (playerStatus) {
+  switch (props.data.player_status) {
     case "active":
       newStatus = "In The Game"
       break;
@@ -13,13 +12,13 @@ export const Status = (props) => {
       newStatus = "Sent Home"
       break;
     case "sidelined":
-      newStatus = "Sidelined Pre-Season"
+      newStatus = "Sidelined " + props.data.player_status_last_update
       break;
     case "self_eliminated":
       newStatus = "Self-Eliminated"
       break;
     case "eliminated":
-      newStatus = "Eliminated"
+      newStatus = "Eliminated " + "Epi " + props.data.player_status_last_update
       break;
     case "unannounced":
       newStatus = "Unannounced"
@@ -30,7 +29,7 @@ export const Status = (props) => {
 
  return (
     <div className="player-status">
-      <span className={`player-status__dot player-status__dot--${playerStatus}`}></span>
+      <span className={`player-status__dot player-status__dot--${props.data.player_status}`}></span>
       <span className="player-status__label">
          {newStatus}
       </span>

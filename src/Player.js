@@ -6,17 +6,17 @@ import { playerPlaysData } from "./data-plays";
 
 export const Player = (props) => {
 
-  const { name, age, job, location, player_status, slug, name_full, season_stats, social_media, gor, tags } = props.singlePlayerData;
+  const data = props.data;
 
-  const tagList = tags.map((tag) =>
+  const tagList = data.tags.map((tag) =>
     <span className="tags__tag" key={tag}>{tag}</span>
   );
 
-  let epi_embed = "hmm";
+  let epi_embed = "";
 
-  if (gor.gor_assessment_epi === "The Men of Season 17 Volume 1") {
+  if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 1") {
     epi_embed = <iframe title="Spotify Embed 1" src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>;
-  } else if (gor.gor_assessment_epi === "The Men of Season 17 Volume 2") {
+  } else if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 2") {
     epi_embed = <iframe title="Spotify Embed 2" src="https://open.spotify.com/embed-podcast/episode/0v3piWITd8CM2I8YVESVV9" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>
   } else {
     epi_embed= <span></span>
@@ -24,9 +24,9 @@ export const Player = (props) => {
 
   var _ = require('underscore');
 
-  var playerPlays = _.indexBy(playerPlaysData, 'name');
+  var dataPlays = _.indexBy(playerPlaysData, 'name');
 
-  playerPlays = playerPlays[name];
+  dataPlays = dataPlays[data.name];
 
   return (
     <>
@@ -35,26 +35,26 @@ export const Player = (props) => {
 
           <div className="player-header__pic col col-1">
 
-            <img className="player-header__headshot" src={`../player-${slug}.png`} alt={`headshot of ${name}`}></img>
+            <img className="player-header__headshot" src={`../player-${data.slug}.png`} alt={`headshot of ${data.name}`}></img>
           </div>
 
           <div className="player-header__info col col-2">
 
-            <h1 className="player-header__name">{name}</h1>
+            <h1 className="player-header__name">{data.name}</h1>
 
             <div className="player-status">
-              <Status playerStatus={player_status} />
+              <Status data={data} />
             </div>
 
             <ul className="player-header__details">
-              <li>{age}</li>
-              <li>{job}</li>
-              <li>{location}</li>
+              <li>{data.age}</li>
+              <li>{data.job}</li>
+              <li>{data.location}</li>
             </ul>
 
-            <a className="social-icon social-icon--instagram" href={`https://www.instagram.com/${social_media.instagram_handle}`} target="_blank" rel="noreferrer">
+            <a className="social-icon social-icon--instagram" href={`https://www.instagram.com/${data.social_media.instagram_handle}`} target="_blank" rel="noreferrer">
               <img alt="Instagram logo" className="social-icon__icon" height="0" src="../logo-instagram.svg" />
-              <span className="social-icon__text">{social_media.instagram_handle}</span>
+              <span className="social-icon__text">{data.social_media.instagram_handle}</span>
               <div className="tooltip">instagram</div>
             </a>
           </div>
@@ -68,29 +68,29 @@ export const Player = (props) => {
 
             <div className="profile col col-2">
 
-              <h1 className="profile__title">{name_full}</h1>
+              <h1 className="profile__title">{data.name_full}</h1>
 
               <div className="stats">
                 <h2 className="stats__title">Player Season Stats</h2>
                 <div className="stats__row">
                   <div className="stat">
                     <span className="stat__title">Roses🌹</span>
-                    <span className="stat__value">{season_stats.roses}</span>
+                    <span className="stat__value">{data.season_stats.roses}</span>
                     <span className="stat_detail"></span>
                   </div>
                   <div className="stat">
                     <span className="stat__title">Hujus</span>
-                    <span className="stat__value">{season_stats.hujus}</span>
+                    <span className="stat__value">{data.season_stats.hujus}</span>
                     <span className="stat_detail"></span>
                   </div>
                   <div className="stat">
                     <span className="stat__title">PTCs</span>
-                    <span className="stat__value">{season_stats.ptcs}</span>
+                    <span className="stat__value">{data.season_stats.ptcs}</span>
                     <span className="stat_detail"></span>
                   </div>
                   <div className="stat">
                     <span className="stat__title">Love Level</span>
-                    <span className="stat__value">{season_stats.love_level}</span>
+                    <span className="stat__value">{data.season_stats.love_level}</span>
                     <span className="stat_detail"></span>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ export const Player = (props) => {
 
               <div className="plays">
                 <h2>Regular Season Play</h2>
-                <Plays playerPlays={playerPlays} />
+                <Plays playerPlays={dataPlays} />
               </div>
 
               <div className="gor-review">
@@ -107,8 +107,8 @@ export const Player = (props) => {
                 {epi_embed}
 
                 <p className="gor-review__callout">
-                  Listen to {name}'s assessment at &nbsp;
-                  <span className="gor-review__timestamp">{gor.gor_assessment_timestamp}</span>&nbsp;
+                  Listen to {data.name}'s assessment at &nbsp;
+                  <span className="gor-review__timestamp">{data.gor.gor_assessment_timestamp}</span>&nbsp;
                   {/*({gor.gor_assessment_timestamp_remaining} remaining)*/}
                 </p>
 
@@ -119,24 +119,24 @@ export const Player = (props) => {
 
                   <ul className="predictions">
 
-                    {gor.predictions.limo_exit.length > 0 &&
+                    {data.gor.predictions.limo_exit.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Limo exit: </span>
-                      {gor.predictions.limo_exit}
+                      {data.gor.predictions.limo_exit}
                     </li>
                     }
 
-                    {gor.predictions.gameplay.length > 0 &&
+                    {data.gor.predictions.gameplay.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Gameplay: </span>
-                      {gor.predictions.gameplay}
+                      {data.gor.predictions.gameplay}
                     </li>
                     }
 
-                    {gor.predictions.game_length.length > 0 &&
+                    {data.gor.predictions.game_length.length > 0 &&
                     <li className="prediction">
                       <span className="prediction__attribute">Game length: </span>
-                      {gor.predictions.game_length}
+                      {data.gor.predictions.game_length}
                     </li>
                     }
                   </ul>
@@ -148,27 +148,27 @@ export const Player = (props) => {
 
               <ul className="secondary-social__links">
 
-                {social_media.tiktok_handle.length > 0 &&
+                {data.social_media.tiktok_handle.length > 0 &&
                 <li className="secondary-social__link">
-                  <a href={`${social_media.tiktok_url}`} target="_blank" rel="noreferrer">
+                  <a href={`${data.social_media.tiktok_url}`} target="_blank" rel="noreferrer">
                     <img alt="TikTok logo" className="secondary-social__icon" src="../logo-tiktok.svg" height="0"/>
-                    <span className="secondary-social__label">Tiktok: {social_media.tiktok_handle}</span>
+                    <span className="secondary-social__label">Tiktok: {data.social_media.tiktok_handle}</span>
                   </a>
                 </li>
                 }
 
                 <li className="secondary-social__link">
-                  <a href={`${social_media.abc_profile}`} target="_blank" rel="noreferrer">
+                  <a href={`${data.social_media.abc_profile}`} target="_blank" rel="noreferrer">
                     <img alt="ABC logo" className="secondary-social__icon" src="../logo-abc.svg" height="0" />
                     <span className="secondary-social__label">Official ABC Bio</span>
                   </a>
                 </li>
 
-                {social_media.linkedin_url.length > 0 &&
+                {data.social_media.linkedin_url.length > 0 &&
                 <li className="secondary-social__link">
-                  <a href={`${social_media.linkedin_url}`} target="_blank" rel="noreferrer">
+                  <a href={`${data.social_media.linkedin_url}`} target="_blank" rel="noreferrer">
                     <img alt="LinkedIn logo" className="secondary-social__icon" src="../logo-linkedin.svg" height="0" />
-                    <span className="secondary-social__label">LinkedIn: {social_media.linkedin_job}</span>
+                    <span className="secondary-social__label">LinkedIn: {data.social_media.linkedin_job}</span>
                   </a>
                 </li>
                 }

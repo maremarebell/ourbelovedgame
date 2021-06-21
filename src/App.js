@@ -14,11 +14,11 @@ const PersonPage = ({ match }) => {
 
   var players = _.indexBy(playerData, 'slug');
 
-  var singlePlayerData = players.[slug];
+  var data = players.[slug];
 
   return (
     <div className="App">
-      <Player singlePlayerData={singlePlayerData} />
+      <Player data={data} />
     </div>
   );
 };

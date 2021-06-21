@@ -50,15 +50,15 @@ export const Plays = (props) => {
               <img className={`play__image`} src={`../icon-${play.type}-dark.png`} alt={`${play.type}`} />
               {/*{play.type}*/}
             </span>
-            <div class="play__title">
+            <div className="play__title">
               <strong>{play.title}</strong>
-               <div class="play__details">
+               <div className="play__details">
                 {play.details}
               </div>
             </div>
-            <div class="play__metadata">
+            <div className="play__metadata">
               <div>EPI {play.episode}</div>
-              <span class="divider"></span>
+              <span className="divider"></span>
               <div>{play.event}{portionIcon}</div>
             </div>
           </li>
@@ -68,10 +68,10 @@ export const Plays = (props) => {
       {playerPlays.plays.length === 0 &&
         <ul className="plays">
          <li className="play">
-            <div class="play__title">
+            <div className="play__title">
               <strong>No notable plays.</strong>
             </div>
-            <div class="play__metadata">
+            <div className="play__metadata">
             </div>
           </li>
         </ul>
