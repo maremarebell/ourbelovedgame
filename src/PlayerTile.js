@@ -24,4 +24,3 @@ export const PlayerTile = (props) => {
     </li>
   );
 };
-

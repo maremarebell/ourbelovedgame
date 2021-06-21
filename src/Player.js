@@ -103,6 +103,7 @@ export const Player = (props) => {
                 </div>
               }
 
+              {data.gor.length > 0 &&
               <div className="gor-review">
                 <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
 
@@ -144,6 +145,7 @@ export const Player = (props) => {
                   </ul>
                 </div>
               </div>
+              }
 
             </div>
             <div className="col col-1 column--secondary-info">
