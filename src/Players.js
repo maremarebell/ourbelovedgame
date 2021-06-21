@@ -2,9 +2,16 @@ import React from "react";
 import { Status } from "./Status";
 import { playerData } from "./data";
 import { Link } from "react-router-dom";
+import { PlayerTile } from "./PlayerTile";
 
 
 export const Players = () => {
+
+  var _ = require('underscore');
+
+  let players = _.indexBy(playerData, 'slug');
+
+  players = _.groupBy(players, 'player_status');
 
   return (
     <>
@@ -15,26 +22,30 @@ export const Players = () => {
         <h1 className="all-player__title">Players of the Game</h1>
 
         <ul className="all-players__list">
-        {playerData.map((data, key) => {
-          return (
-            <li className={`tile all-players__player--${data.player_status}`} key={key}>
-              <img className="tile__headshot" src={`../player-${data.slug}.png`} alt={`headshot of ${data.name}`}></img>
+          {players.active.map((data, key) => {
+            return (
+              <PlayerTile data={data} />
+            );
+          })}
 
-              <div className="tile__info">
-                <Link className="tile__name" to={`/player/${data.slug}`}>
-                  {data.name}
-                </Link>
+          {players.unannounced.map((data, key) => {
+            return (
+              <PlayerTile data={data} />
+            );
+          })}
 
-                <Status data={data} />
+          {players.eliminated.map((data, key) => {
+            return (
+              <PlayerTile data={data} />
+            );
+          })}
 
-                {/*<a className="social-icon social-icon--instagram tile__social-button" href={`https://www.instagram.com/${data.social_media.instagram_handle}`} target="_blank" rel="noreferrer">
-                  <img alt="Instagram logo" className="social-icon__icon" height="0" src="../logo-instagram.svg" />
-                  <span className="social-icon__text">{data.social_media.instagram_handle}</span>
-                </a>*/}
-              </div>
-            </li>
-          );
-        })}
+          {players.sidelined.map((data, key) => {
+            return (
+              <PlayerTile data={data} />
+            );
+          })}
+
         </ul>
       </div>
     </>
