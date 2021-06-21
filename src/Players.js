@@ -1,4 +1,5 @@
 import React from "react";
+import { Status } from "./Status";
 import { playerData } from "./data";
 import { Link } from "react-router-dom";
 
@@ -16,16 +17,21 @@ export const Players = () => {
         <ul className="all-players__list">
         {playerData.map((data, key) => {
           return (
-            <li className={`all-players__player all-players__player--${data.player_status}`} key={key}>
-              <Link to={`/player/${data.slug}`}>
-                {data.name}
-              </Link>
+            <li className={`tile all-players__player--${data.player_status}`} key={key}>
+              <img className="tile__headshot" src={`../player-${data.slug}.png`} alt={`headshot of ${data.name}`}></img>
 
-              {data.player_status !== "active" &&
-                <span className="pill">
-                  {data.player_status}
-                </span>
-              }
+              <div className="tile__info">
+                <Link className="tile__name" to={`/player/${data.slug}`}>
+                  {data.name}
+                </Link>
+
+                <Status playerStatus={data.player_status} />
+
+                {/*<a className="social-icon social-icon--instagram tile__social-button" href={`https://www.instagram.com/${data.social_media.instagram_handle}`} target="_blank" rel="noreferrer">
+                  <img alt="Instagram logo" className="social-icon__icon" height="0" src="../logo-instagram.svg" />
+                  <span className="social-icon__text">{data.social_media.instagram_handle}</span>
+                </a>*/}
+              </div>
             </li>
           );
         })}

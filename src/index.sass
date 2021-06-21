@@ -32,6 +32,52 @@ h3
   max-width: 900px
   margin: auto
 
+
+//--------------------------------------------------------
+//--------------------------------------------------------
+//Player Tile
+//--------------------------------------------------------
+//--------------------------------------------------------
+
+.tile
+  padding: 0
+  clear: both
+  overflow: hidden
+  display: flex
+  border-bottom: 3px solid #FFF
+  margin-top: 12px
+
+.tile__headshot
+  width: 120px
+  height: 120px
+  float: left
+  margin-right: 20px
+.tile__info
+
+.tile__name
+  display: block
+  font-size: 30px
+  margin-right: 6px
+
+// TODO: correct this w BEM
+.tile
+  .social-icon
+    border: 3px solid #fff
+    padding: 2px 12px
+
+  .social-icon__text
+    font-size: 20px
+
+  .social-icon__icon
+    width: 20px
+
+  .player-status__label
+    margin-bottom: 12px
+    letter-spacing: 2px
+
+.tile__header
+  display: flex
+
 //--------------------------------------------------------
 //--------------------------------------------------------
 //All Players
@@ -61,20 +107,14 @@ h3
   font-size: 30px
   text-align: left
 
-  li
-    padding: 10px 0
-
   a
     color: #fff
-
-.all-players__player
-  position: relative
 
 .all-players__player--sidelined,
 .all-players__player--dismissed,
 .all-players__player--eliminated,
 .all-players__player--self-eliminated
-  text-decoration: line-through
+  // text-decoration: line-through
   opacity: .5
 
 //--------------------------------------------------------
@@ -486,7 +526,8 @@ strong
   color: #ffffff
   margin-top: 10px
   vertical-align: middle
-  display: inline-block
+  display: block
+  display: flex
 
 .player-status__dot
   display: inline-block
@@ -557,6 +598,10 @@ strong
 
   .player-header
     height: auto
+
+  .update-notice
+    padding-top: 0
+    margin-top: 6px
 
   .player-header__pic
     border-radius: 100%

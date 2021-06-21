@@ -18,6 +18,9 @@ export const Status = (props) => {
     case "self_eliminated":
       newStatus = "Self-Eliminated"
       break;
+    case "eliminated":
+      newStatus = "Eliminated"
+      break;
     case "unannounced":
       newStatus = "Unannounced"
       break;
@@ -26,11 +29,11 @@ export const Status = (props) => {
   }
 
  return (
-    <>
+    <div className="player-status">
       <span className={`player-status__dot player-status__dot--${playerStatus}`}></span>
       <span className="player-status__label">
          {newStatus}
       </span>
-    </>
+    </div>
   );
 };
