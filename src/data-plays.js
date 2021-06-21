@@ -16,7 +16,7 @@ export const playerPlaysData = [
   {
     name: "Aaron",
     strategy: [
-      "Rivalry with <a href=\"/player/cody\">Cody</a>",
+      "Rivalry with Cody",
     ],
     plays: [
       {
@@ -151,7 +151,7 @@ export const playerPlaysData = [
   {
     name: "Cody",
     strategy: [
-      "Rivalry with <a href=\"player/aaron\">Aaron</a>"
+      "Rivalry with Aaron"
     ],
     plays: [
       {
@@ -348,7 +348,7 @@ export const playerPlaysData = [
         title: "Kringle",
         type: "play",
         sentiment: "neutral",
-        details: "Gave a note; Barely shown but led to being a finalist for GDR",
+        details: "Gave a note, barely shown",
         episode: "2",
         event: "Group Date #2",
         portion: "nighttime",
@@ -396,7 +396,7 @@ export const playerPlaysData = [
         title: "PTC",
         type: "play",
         sentiment: "neutral",
-        details: "Weight issues; Was missed because of <a href=\"/player/andrews\">Andrew S's</a> better PTC",
+        details: "Weight issues; Was missed because of Andrew S's better PTC",
         episode: "2",
         event: "Group Date #2",
         portion: "nighttime",
@@ -418,7 +418,7 @@ export const playerPlaysData = [
         title: "Allowed Steal",
         type: "play",
         sentiment: "negative",
-        details: "Let <a href=\"/player/thomas\">Thomas</a> make a steal without putting up a single defense",
+        details: "Let Thomas make a steal without putting up a single defense",
         episode: "2",
         event: "Group Date #1",
         portion: "nighttime",
@@ -535,7 +535,7 @@ export const playerPlaysData = [
         title: "Steal",
         type: "play",
         sentiment: "positive",
-        details: "Stole from <a href=\"/player/karl\">Karl</a>",
+        details: "Stole from Karl",
         episode: "2",
         event: "Group Date #1",
         portion: "nighttime",

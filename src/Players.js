@@ -9,7 +9,7 @@ export const Players = () => {
     <>
       <div className="player-container">
 
-        <h2 className="update-notice">Website last updated: 6/9 after Episode 1</h2>
+        <h2 className="update-notice">Website last updated: 6/21 9:30AM ET right before Episode 3</h2>
 
         <h1 className="all-player__title">Players of the Game</h1>
 

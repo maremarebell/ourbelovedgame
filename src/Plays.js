@@ -49,7 +49,7 @@ export const Plays = (props) => {
         return (
           <li key={`play-${index}`} className={`play play--${play.sentiment}`} >
             <span className={`play__icon play__icon--${play.type}`}>
-              <img className={`play__image`} src={`../icon-${play.type}-dark.png`} />
+              <img className={`play__image`} src={`../icon-${play.type}-dark.png`} alt={`${play.type}`} />
               {/*{play.type}*/}
             </span>
             <div class="play__title">
