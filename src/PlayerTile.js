@@ -1,8 +1,6 @@
 import React from "react";
 import { Status } from "./Status";
-import { Plays } from "./Plays";
 import { Link } from "react-router-dom";
-import { playerPlaysData } from "./data-plays";
 
 
 export const PlayerTile = (props) => {

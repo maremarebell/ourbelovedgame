@@ -1,7 +1,5 @@
 import React from "react";
-import { Status } from "./Status";
 import { playerData } from "./data";
-import { Link } from "react-router-dom";
 import { PlayerTile } from "./PlayerTile";
 
 
