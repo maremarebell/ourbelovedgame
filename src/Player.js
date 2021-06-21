@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
 import { Status } from "./Status";
+import { Plays } from "./Plays";
+import { playerPlaysData } from "./data-plays";
 
 
 export const Player = (props) => {
@@ -20,6 +21,12 @@ export const Player = (props) => {
   } else {
     epi_embed= <span></span>
   }
+
+  var _ = require('underscore');
+
+  var playerPlays = _.indexBy(playerPlaysData, 'name');
+
+  playerPlays = playerPlays[name];
 
   return (
     <>
@@ -87,6 +94,11 @@ export const Player = (props) => {
                     <span className="stat_detail"></span>
                   </div>
                 </div>
+              </div>
+
+              <div className="plays">
+                <h2>Regular Season Play</h2>
+                <Plays playerPlays={playerPlays} />
               </div>
 
               <div className="gor-review">

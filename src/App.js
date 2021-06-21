@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
 import { Players } from './Players';
 import { Player } from './Player';
 import { playerData } from "./data";

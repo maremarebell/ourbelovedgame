@@ -21,7 +21,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -59,7 +59,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -97,9 +97,9 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 2,
       hujus: 0,
-      ptcs: 0,
+      ptcs: 1,
       love_level: 0,
     },
     social_media: {
@@ -293,7 +293,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -332,7 +332,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -371,7 +371,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -410,7 +410,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -449,7 +449,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -488,7 +488,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -604,7 +604,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -643,10 +643,10 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 2,
       hujus: 0,
-      ptcs: 0,
-      love_level: 0,
+      ptcs: 1,
+      love_level: "LL1",
     },
     social_media: {
       instagram_url: "https://www.instagram.com/greggrippo/",
@@ -682,7 +682,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -696,6 +696,35 @@ export const playerData = [
       abc_profile: "https://abc.com/shows/the-bachelorette/cast/hunter-summer-2021",
       linkedin_url: "",
       linkedin_job: "",
+    },
+  },
+  {
+    name: "James",
+    name_full: "James Bonsall",
+    slug: "james",
+    age: "30",
+    job: "Software Salesman",
+    location: "La Jolla, CA",
+    origin: "",
+    tags:["in a box", "Box Man"],
+    player_status: "active",
+    gor: {},
+    season_stats: {
+      season: "The Bachelorette Season 17",
+      roses: 1,
+      hujus: 0,
+      ptcs: 0,
+      love_level: 0,
+    },
+    social_media: {
+      instagram_url: "https://www.instagram.com/jamesbonsall_/",
+      instagram_handle: "jamesbonsall_",
+      tiktok_url: "",
+      tiktok_handle: "",
+      instagram_scrubbed: false,
+      abc_profile: "https://abc.com/shows/the-bachelorette/cast/james-summer-2021",
+      linkedin_url: "https://www.linkedin.com/in/james-bonsall-04489477/",
+      linkedin_job: "Human Capital Management",
     },
   },
   {
@@ -760,7 +789,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -801,7 +830,7 @@ export const playerData = [
       season: "The Bachelorette Season 17",
       roses: 0,
       hujus: 0,
-      ptcs: 0,
+      ptcs: 1,
       love_level: 0,
     },
     social_media: {
@@ -838,7 +867,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -877,7 +906,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -916,7 +945,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -1069,10 +1098,10 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
-      love_level: 0,
+      love_level: "LL1",
     },
     social_media: {
       instagram_url: "https://www.instagram.com/michael_alliol4/",
@@ -1146,7 +1175,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,
@@ -1185,10 +1214,10 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
-      hujus: 0,
+      roses: 2,
+      hujus: 1,
       ptcs: 0,
-      love_level: 0,
+      love_level: "LL1",
     },
     social_media: {
       instagram_url: "https://www.instagram.com/thomasajacobs/",
@@ -1224,7 +1253,7 @@ export const playerData = [
     },
     season_stats: {
       season: "The Bachelorette Season 17",
-      roses: 0,
+      roses: 1,
       hujus: 0,
       ptcs: 0,
       love_level: 0,

@@ -1,10 +1,10 @@
 import React from "react";
-import "./App.css";
 import { playerData } from "./data";
 import { Link } from "react-router-dom";
 
 
 export const Players = () => {
+
   return (
     <>
       <div className="player-container">
