@@ -14,12 +14,15 @@ export const Player = (props) => {
 
   let epi_embed = "";
 
-  if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 1") {
-    epi_embed = <iframe title="Spotify Embed 1" src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>;
-  } else if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 2") {
-    epi_embed = <iframe title="Spotify Embed 2" src="https://open.spotify.com/embed-podcast/episode/0v3piWITd8CM2I8YVESVV9" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>
-  } else {
-    epi_embed= <span></span>
+  // todo: this messy :-(
+  if (typeof data.gor !== "undefined") {
+    if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 1") {
+      epi_embed = <iframe title="Spotify Embed 1" src="https://open.spotify.com/embed-podcast/episode/4cmQ4yNufxL4GSdxhSRblC" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>;
+    } else if (data.gor.gor_assessment_epi === "The Men of Season 17 Volume 2") {
+      epi_embed = <iframe title="Spotify Embed 2" src="https://open.spotify.com/embed-podcast/episode/0v3piWITd8CM2I8YVESVV9" width="100%" height="232" allowtransparency="true" allow="encrypted-media"></iframe>
+    } else {
+      epi_embed= <span></span>
+    }
   }
 
   var _ = require('underscore');
@@ -103,7 +106,7 @@ export const Player = (props) => {
                 </div>
               }
 
-              {data.gor.length > 0 &&
+              {typeof data.gor !== "undefined" &&
               <div className="gor-review">
                 <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
 

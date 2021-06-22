@@ -727,7 +727,6 @@ export const playerData = [
     tags:["in a box", "Box Man"],
     player_status: "active",
     player_status_last_update: "",
-    gor: {},
     season_stats: {
       season: "The Bachelorette Season 17",
       roses: 1,
@@ -834,7 +833,7 @@ export const playerData = [
     job: "IT Consultant",
     location: "Miami, FL",
     origin: "Pembroke Pines, FL",
-    tags:["cheer squad","NFL",""],
+    tags:["cheer squad","NFL"],
     player_status: "active",
     player_status_last_update: "",
     gor: {
