@@ -605,8 +605,8 @@ export const playerData = [
     location: "Salinas, CA",
     origin: "Salinas, CA",
     tags:["red hair", "dog", "golf", "jacked"],
-    player_status: "active",
-    player_status_last_update: "",
+    player_status: "eliminated",
+    player_status_last_update: "3",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 1",
       gor_assessment_timestamp: "1:23:00",
@@ -795,8 +795,8 @@ export const playerData = [
     location: "Pacific Beach, CA",
     origin: "Santa Cruz, CA",
     tags:["vegetarian","EDM","pilot","surfer","dog","travel"],
-    player_status: "active",
-    player_status_last_update: "",
+    player_status: "eliminated",
+    player_status_last_update: "3",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "14:44",
@@ -915,8 +915,8 @@ export const playerData = [
     location: "Miami, FL",
     origin: "Miami, FL",
     tags:["speaker"],
-    player_status: "active",
-    player_status_last_update: "",
+    player_status: "eliminated",
+    player_status_last_update: "3",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "25:02",
@@ -955,8 +955,8 @@ export const playerData = [
     location: "Fort Lauderdale, FL",
     origin: "Sarasota, FL",
     tags:["travel","bro","sports"],
-    player_status: "active",
-    player_status_last_update: "",
+    player_status: "eliminated",
+    player_status_last_update: "3",
     gor: {
       gor_assessment_epi: "The Men of Season 17 Volume 2",
       gor_assessment_timestamp: "33:00",
