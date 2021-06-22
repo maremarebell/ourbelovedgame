@@ -1,8 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, {Fragment} from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Players } from './Players';
 import { Player } from './Player';
 import { playerData } from "./data";
+import  ScrollToTop  from "./ScrollToTop.js";
 
 var _ = require('underscore');
 
@@ -35,8 +36,13 @@ const App = () => {
   return (
     <>
       <Router>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/player/:slug" component={PersonPage} />
+        <Fragment>
+          <ScrollToTop />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/player/:slug" component={PersonPage} />
+          </Switch>
+        </Fragment>
       </Router>
     </>
   );
