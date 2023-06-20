@@ -1,6 +1,6 @@
 export const playerAwardsData = [
   {
-    name: "Template"
+    name: "Template",
     awards: [
       {
         type: "",

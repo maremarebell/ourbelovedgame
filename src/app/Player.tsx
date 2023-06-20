@@ -158,7 +158,7 @@ export const Player = ({ data }: PlayerProps) => {
                   <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
                   {epi_embed}
                   <p className="gor-review__callout">
-                    Listen to {data.name}'s assessment at &nbsp;
+                    Listen to {data.name}&lsquo;s assessment at &nbsp;
                     <span className="gor-review__timestamp">
                       {data.gor.gor_assessment_timestamp}
                     </span>
