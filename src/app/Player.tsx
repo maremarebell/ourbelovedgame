@@ -25,7 +25,6 @@ interface PlayerProps {
       roses: number;
       hujus: number;
       ptcs: number;
-      love_level: number;
     };
     social_media: {
       instagram_handle: string;
@@ -143,7 +142,7 @@ export const Player = ({ data }: PlayerProps) => {
                   </div>
                   <div className="stat">
                     <span className="stat__title">Love Level</span>
-                    <span className="stat__value">{data.season_stats.love_level}</span>
+                    <span className="stat__value"></span>
                     <span className="stat_detail"></span>
                   </div>
                 </div>

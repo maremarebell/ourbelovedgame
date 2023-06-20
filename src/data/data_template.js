@@ -22,8 +22,7 @@
       season: "The Bachelorette Season 17",
       roses: 0,
       hujus: 0,
-      ptcs: 0,
-      love_level: 0,
+      ptcs: 0
     },
     social_media: {
       instagram_url: "",
