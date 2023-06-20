@@ -1,3 +1,5 @@
+@import '~normalize.css';
+
 html {
   box-sizing: border-box;
 }
@@ -96,7 +98,7 @@ h3 {
 .player-header {
   width: 100%;
   height: 340px;
-  background: #000000 url("petals.png") repeat-x top left;
+  background: #000000 url("/assets/petals.png") repeat-x top left;
   background-size: auto 100%;
   color: #fff;
   opacity: 10;
@@ -104,7 +106,7 @@ h3 {
 
 .player-header__pic:before {
   content: "";
-  background: url("rose-transparent.png") no-repeat top left;
+  background: url("/assets/rose-transparent.png") no-repeat top left;
   background-size: 210px auto;
   width: 240px;
   height: 240px;

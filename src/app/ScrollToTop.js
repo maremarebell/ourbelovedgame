@@ -14,4 +14,4 @@ function ScrollToTop({ history }) {
   return (null);
 }
 
-export default withRouter(ScrollToTop);
+export default ScrollToTop;
