@@ -8,14 +8,14 @@ export default function Players() {
   return (
     <>
       <div className="player-container">
-        <h2 className="update-notice">Website last updated: 6/21 9:30AM ET right before Episode 3</h2>
-        <h1 className="all-player__title">Players of the Game</h1>
+        {/* <h2 className="update-notice">Website last updated: 6/21 9:30AM ET right before Episode 3</h2> */}
+        <h1 className="all-player__title">UNDER CONSTRUCTION!</h1>
         
-        <ul className="all-players__list">
+        {/* <ul className="all-players__list">
           {playerData.map((data, key) => (
             <PlayerTile data={data} key={key} />
           ))}
-        </ul>
+        </ul> */}
       </div>
     </>
   );
