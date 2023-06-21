@@ -121,7 +121,6 @@ h3 {
   width: 30%;
   width: 50%;
   float: left;
-  vertical-align: bottom;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -475,7 +474,6 @@ h3 {
 
 .player-status__dot {
   display: inline-block;
-  float: left;
   width: 18px;
   height: 18px;
   border-radius: 100%;
@@ -543,7 +541,7 @@ h3 {
 
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
-/*Media Queries
+/* Media Queries
 /*--------------------------------------------------------*/
 /*--------------------------------------------------------*/
 
@@ -621,9 +619,6 @@ h3 {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-  }
-
-  .stat {
   }
 
   .column--secondary-info {
