@@ -16,8 +16,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   let data = player;
 
-  console.log(data);
-
   // Dynamically construct the image path based on the slug
   const imagePath = `/assets/players/player-${params.slug}.png`;
 

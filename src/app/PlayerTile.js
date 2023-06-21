@@ -5,8 +5,6 @@ import Link from 'next/link';
 
 export const PlayerTile = (props) => {
 
-  console.log(props);
-
   return (
     <li className={`tile all-players__player--${props.data.player_status}`}>
       <img className="tile__headshot" src={`../player-${props.data.slug}.png`} alt={`headshot of ${props.data.name}`}></img>
