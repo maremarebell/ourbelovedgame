@@ -27,11 +27,11 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div className="container cols container--header">
             <div className="player-header__pic col col-1">
                 <Image
-                src={imagePath}
-                alt={`headshot of ${player?.name}`}
-                className="player-header__headshot"
-                height={320}
-                width={320}
+                  src={imagePath}
+                  alt={`headshot of ${player?.name}`}
+                  className="player-header__headshot"
+                  height={320}
+                  width={320}
                 />
             </div>
 
@@ -51,12 +51,15 @@ export default function Page({ params }: { params: { slug: string } }) {
                 target="_blank"
                 rel="noreferrer"
                 >
-                <img
-                    alt="Instagram logo"
-                    className="social-icon__icon"
-                    height="0"
-                    src="../logo-instagram.svg"
+
+                <Image
+                  src="/assets/logo-instagram.svg"
+                  alt="Instagram logo"
+                  className="social-icon__icon"
+                  height={40}
+                  width={40}
                 />
+
                 <span className="social-icon__text">
                     {data.social_media.instagram_handle}
                 </span>
@@ -107,12 +110,17 @@ export default function Page({ params }: { params: { slug: string } }) {
                           {/*({gor.gor_assessment_timestamp_remaining} remaining)*/}
                       </p>
                       <div className="gor-review__predictions">
+
                           <h3 className="predictions__title">Pre-Season Predictions</h3>
-                          <img
-                          alt="crystal ball emoji"
-                          className="gor-review__ball"
-                          src="../image-ball.png"
+
+                          <Image
+                            src="/assets/image-ball.png"
+                            alt="crystal ball emoji"
+                            className="gor-review__ball"
+                            height={40}
+                            width={40}
                           />
+
                           <ul className="predictions">
                           {data.gor.predictions.limo_exit.length > 0 && (
                               <li className="prediction">
@@ -156,13 +164,14 @@ export default function Page({ params }: { params: { slug: string } }) {
                       )}
                       <li className="secondary-social__link">
                       <a href={`${data.social_media.abc_profile}`} target="_blank" rel="noreferrer">
-                          <img
+                        <Image
+                          src="/assets/logo-abc.svg"
                           alt="ABC logo"
                           className="secondary-social__icon"
-                          src="../logo-abc.svg"
-                          height="0"
-                          />
-                          <span className="secondary-social__label">Official ABC Bio</span>
+                          height={40}
+                          width={40}
+                        />
+                        <span className="secondary-social__label">Official ABC Bio</span>
                       </a>
                       </li>
                       {data.social_media.linkedin_url.length > 0 && (
@@ -172,11 +181,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                           target="_blank"
                           rel="noreferrer"
                           >
-                          <img
-                              alt="LinkedIn logo"
-                              className="secondary-social__icon"
-                              src="../logo-linkedin.svg"
-                              height="0"
+
+                          <Image
+                            src="/assets/logo-linkedin.svg"
+                            alt="LinkedIn logo"
+                            className="secondary-social__icon"
+                            height={40}
+                            width={40}
                           />
                           <span className="secondary-social__label">
                               LinkedIn: {data.social_media.linkedin_job}
