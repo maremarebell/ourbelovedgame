@@ -1,6 +1,6 @@
 'use client';
 
-import { playerData } from '../../data';
+import { playerData } from '../../data-17';
 import { Status } from '../../Status';
 import Image from 'next/image';
 
