@@ -1,4 +1,6 @@
 @import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Schibsted+Grotesk:wght@900&display=swap');
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -48,10 +50,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
-
 html {
   box-sizing: border-box;
 }
@@ -60,29 +58,22 @@ html {
   box-sizing: inherit;
 }
 
-/*--------------------------------------------------------*/
+
 /*--------------------------------------------------------*/
 /* General styles
 /*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
 
 body {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
+  padding: 10px;
+  background-color: #F23D5E;
+  background-image: linear-gradient(45deg, #F23D5E 0%, #F22E3E 52%, #730202 90%);
 }
 
 h1 {
   font-weight: 600;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 500;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  color: #fff;
+  padding: 10px;
 }
 
 .container {
@@ -91,715 +82,82 @@ h3 {
   margin: auto;
 }
 
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/* All Players*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.player-container {
-  text-align: left;
-  background-color: #ff00ff;
-  width: 100%;
-  padding: 6%;
-}
-
-.update-notice {
+.update-notice,
+.previous-season {
+  padding: 10px;
   color: #fff;
-  padding: 20px 0;
-  font-weight: 400;
-  text-align: left;
-}
-
-.all-player__title {
-  color: #fff;
-  font-size: 40px;
-}
-
-.tile__headshot {
-  float: left;
-}
-
-.tile__name {
   display: block;
 }
 
-.all-players__list {
-  width: 100%;
-  margin: auto;
-  font-size: 30px;
-  text-align: left;
-}
-
-.all-players__list li {
-  padding: 10px 0;
-  display: block;
-  position: relative;
-  width: 100%;
-  clear: both;
-}
-
-.all-players__list a {
-  color: #fff;
-}
-
-.all-players__player {
-  position: relative;
-}
-
-.all-players__player--sidelined,
-.all-players__player--dismissed,
-.all-players__player--eliminated,
-.all-players__player--self-eliminated {
-  text-decoration: line-through;
-  opacity: .5;
-}
-
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Player Header*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.player-header {
-  width: 100%;
-  height: 340px;
-  background: #000000 url("/assets/petals.png") repeat-x top left;
-  background-size: auto 100%;
-  color: #fff;
-  opacity: 10;
-}
-
-.player-header__pic:before {
-  content: "";
-  background: url("/assets/rose-transparent.png") no-repeat top left;
-  background-size: 210px auto;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  left: -16px;
-  top: 53px;
-}
-
-.player-header__pic {
-  height: 340px;
-  display: block;
-  width: 30%;
-  width: 50%;
-  float: left;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-.player-header__info {
-  display: block;
-  margin-top: 40px;
-  width: 50%;
-  text-align: left;
-}
-
-.player-header__headshot {
-  height: 320px;
-  display: inline-block;
-  z-index: 100;
-  vertical-align: bottom;
-}
-
-.player-header__name {
-  color: #fff;
-  font-size: 60px;
-  font-weight: 400;
-}
-
-.player-header__details {
-  font-size: 21px;
-  line-height: 26px;
-  margin: 18px 0 18px 0;
-  font-weight: 400;
-  color: #dcdcdc;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Secondary Social Link*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.secondary-social__links {
-  margin-right: 60px;
-  width: 100%;
-}
-
-.secondary-social__link a {
-  text-decoration: none;
-  color: #525252;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #D0D0CF;
-  display: block;
-}
-
-/*.secondary-social__link:last-child a {
-  border-bottom-width: 0;
-}*/
-
-.secondary-social__link {
-  text-decoration: none;
-  display: block;
-  overflow: hidden;
-}
-
-.secondary-social__link:hover {
-  background-color: #f5f4f4;
-}
-
-.secondary-social__icon {
-  height: 29px;
-  text-decoration: none;
-  transition: .3s;
-  color: #000;
-  display: inline-block;
-  fill: #000;
-  vertical-align: middle;
-  margin-left: 6px;
-}
-
-.secondary-social__label {
-  margin-left: 10px;
-  text-decoration: underline;
-  display: inline-block;
-  width: 75%;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Tags*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.tags {
-  margin: 40px 0 20px 0;
-}
-
-.tags__header {
-  margin-bottom: 18px;
-}
-
-.tags__tag {
-  border: 3px solid #da2817;
-  color: #da2817;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-radius: 20px;
-  padding: 3px 6px;
-  font-size: 14px;
-  display: inline-block;
-  margin-right: 4px;
-  margin-bottom: 6px;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Pill*/
-/*TODO: Clean this up, tag and pill are basically the same thing*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.pill {
-  border: 3px solid #fff;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border-radius: 20px;
-  padding: 3px 6px;
-  font-size: 14px;
-  display: inline-block;
-  margin-right: 4px;
-  margin-bottom: 6px;
-  margin-left: 6px;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Stats*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.stats {
-  padding: 0 0 0 0;
-  border: 1px solid #bbbbbb;
-  border-radius: 10px;
-  margin-bottom: 16px;
-}
-
-.stats__title {
-  padding: 6px 6px;
-  background-color: #7b7b7b;
-  color: #fff;
-  margin-top: -2px;
-  margin-left: -2px;
-  border-radius: 10px 10px 0 0;
-  margin-right: -2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.stats__row {
-  display: flex;
-  align-items: center;
-}
-
-.stat {
-  display: block;
-  width: 25%;
-  padding: 14px;
-  float: left;
-  height: 102px;
-  position: relative;
-}
-
-.stat:after {
-  background-color: #bbbbbb;
-  width: 1px;
-  height: 60px;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 20px;
-  content: " ";
-}
-
-.stat:last-child:after {
-  display: none;
-}
-
-.stat__title {
-  font-size: 14px;
-  text-align: center;
-  width: 100%;
-  display: block;
-  color: #676767;
-  text-transform: uppercase;
-}
-
-.stat__value {
-  font-size: 54px;
-  font-weight: bold;
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Profile Stuff*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.profile {
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-.player-content {
-  text-align: left;
-  background-color: #fff;
-  overflow: auto;
-  padding-bottom: 60px;
-}
-
-.profile__title {
-  font-size: 30px;
-  margin: 20px 0 19px 0;
-}
-
-.gor-review__other-notes {
-  display: block;
-  clear: both;
-}
-
-.column--secondary-info {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Gor Episode Callout*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.gor-review__title {
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 12px;
-  margin-top: 30px;
-}
-
-.gor-review__callout {
-  background-color: #ff00ff;
-  border-radius: 43px;
-  color: #fff;
-  font-weight: 400;
-  font-size: 20px;
-  width: 100%;
-  /* margin-left: 10%; */
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  margin-top: 14px;
-  padding: 13px;
-}
-
-.gor-review__callout:before {
-  display: block;
-  position: absolute;
-  top: -39px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  content: "";
-  border: solid;
-  border-width: 10px 10px 10px 10px;
-  border-color: transparent;
-  transform: translate(-50%, 100%);
-  color: #ffffff;
-  border-bottom-color: #ff00ff;
-}
-
-.gor-review__timestamp {
-  font-weight: 900;
-  font-size: 26px;
-  display: inline-block;
-  vertical-align: baseline;
-  background-color: yellow;
-  color: #ff00ff;
-  padding: 2px 12px;
-}
-
-.gor-review__predictions {
-  padding-top: 40px;
-  clear: both;
-  padding-bottom: 40px;
-}
-
-.gor-review__ball {
-  float: left;
-}
-
-.prediction {
-  padding: 5px 0;
-  color: #4a4a4a;
-}
-
-.prediction__attribute {
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.predictions {
-  width: 80%;
-  padding-left: 18%;
-}
-
-.predictions__title {
-  font-size: 18px;
+.previous-season {
   margin-bottom: 10px;
-  font-weight: 500;
 }
 
-
 /*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Player Status*/
-/*--------------------------------------------------------*/
+/* Player
 /*--------------------------------------------------------*/
 
-.player-status {
-  color: #ffffff;
-  margin-top: 10px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.player-status__dot {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  vertical-align: middle;
-}
-
-.player-status__dot--active {
-  background-color: #00ff7d;
-}
-
-.player-status__dot--dismissed,
-.player-status__dot--eliminated,
-.player-status__dot--sidelined,
-.player-status__dot--self-eliminated {
-  background-color: #ff0000;
-  border: 3px solid #ff5959;
-}
-
-.player-status__dot--undefined,
-.player-status__dot--unannounced {
-  background-color: #d9d9d9;
-}
-
-.player-status__label {
-   display: inline-block;
-   vertical-align: middle;
-   font-weight: 900;
-   letter-spacing: 3px;
-   font-size: 18px;
-   text-transform: uppercase;
-   margin-left: 10px;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Columns*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.cols {
-  overflow: hidden;
-}
-
-.col {
-  float: left;
-  position: relative;
-}
-
-.col-1 {
-  width: 40%;
-}
-
-.col-2 {
-  width: 60%;
-}
-
-.cols--backwards {
-  float: right;
-}
-.cols--backwards .col {
-  float: right;
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/* Media Queries
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-@media (max-width: 680px) {
-
-  .col {
-    width:  100%;
-    padding-left: 0;
-  }
-
-  .player-header {
-    height: auto;
-  }
-
-  .player-header__pic {
-    border-radius: 100%;
-    height: auto;
-  }
-
-  .player-header__headshot {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    display: block;
-    margin: auto;
-  }
-
-  .player-header__pic:before {
-    left: 13%;
-    top: 10%;
-    background-size: 167px;
-  }
-
-  .player-header__info {
-    background-color: #000;
-    margin-top: 0;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .player-header__name {
-    font-size: 30px;
-  }
-
-  .player-status__dot {
-    height: 14px;
-    width: 14px;
-  }
-
-  .player-status__label {
-    font-size: 14px;
-  }
-
-  .player-header__details {
-    font-size: 18px;
-  }
-
-  .secondary-social__links{
-    margin-right: 0;
-    padding: 0px 20px;
-  }
-
-  .tags {
-    margin: 10px 20px 60px 20px;
-  }
-
-  .profile {
-    padding: 0 20px;
-    padding-bottom: 19px;
-  }
-
-  .stat__title {
-    height: 23px;
-    font-size: 11px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .column--secondary-info {
-    padding-left: 0;
-  }
-}
-
-
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-/*Instagram Icon -- Needs Cleaned up*/
-/*--------------------------------------------------------*/
-/*--------------------------------------------------------*/
-
-.social-icon__text {
-  /* line-height: .8em; */
-  display: inline-block;
-  margin-left: 5px;
-  /* line-height: 17px; */
-  vertical-align: middle;
-  margin-top: -4px;
-  letter-spacing: .5px;
-}
-
-.social-icon__icon {
-  width: 28px;
-  color: #fff;
-  fill: #fff;
-  height: 30px;
-  /* margin-right: 10px; */
+.players {
   display: flex;
-  display: inline-block;
-  vertical-align: middle;
-  /* margin-top: 6px; */
+  flex-wrap: wrap;
+  padding: 0;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 80px;
 }
 
-.social-icon {
-  display: inline-block;
+.player {
+  flex: 1 0 250px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin: 10px;
+  border: 4px solid #fff;
+  border-radius: 10px;
+  padding-bottom: 0;
   position: relative;
-  width: auto;
-  padding: 10px 20px;
-  border-radius: 100px;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 25px;
-  text-decoration: none;
-  background-color: #ff00ff;
-  color: #fff;
+  height: 160px;
 }
 
-.social-icon--circle {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+.player--eliminated {
+  opacity: .6;
+}
+
+.player__headshot-container {
   text-align: center;
-  /* padding: 10px 14px; */
-  border-radius: 100%;
-  cursor: pointer;
-  /* font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
-  /* font-size: 30px; */
-  /* text-decoration: none; */
-  background-color: #949494;
-  color: #fff;
-}
-
-.social-icon:hover {
-  color: #fff;
-  background-color: #0000ff;
-  transition: 0.3s;
-}
-
-.social-icon:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50%, -150%);
-}
-
-.social-icon :active {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
-}
-
-/* Tooltips */
-.tooltip {
-  display: block;
+  margin: 10px;
+  border-radius: 4px;
+  margin-bottom: 0;
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 50%;
-  padding: 0.8rem 1rem;
-  border-radius: 40px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  opacity: 0;
-  pointer-events: none;
-  text-transform: uppercase;
-  transform: translate(-50%, -100%);
-  transition: all 0.3s ease;
+  bottom: 0;
+}
+
+.player__headshot {
+  display: block; 
+  z-index: 2;
+  position: relative;
+  margin: auto;
+}
+
+.player__info {
+  position: relative;
+  position: absolute;
+  bottom: 2px;
+  z-index: 3;
+  color: #730202;
+  width: 100%;
+}
+
+.player__name {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
   z-index: 1;
-  background-color: #0000ff;
-  width: auto;
- }
-
-.tooltip:after {
   display: block;
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  content: "";
-  border: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: transparent;
-  transform: translate(-50%, 100%);
-  color: #ffffff;
-  border-top-color: #0000ff;
+  width: 100%;
+  text-align: center;
 }

@@ -25,33 +25,24 @@ export default function Players() {
   const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
 
   return (
-    <>
-      <div className="player-container">
-        <h2 className="update-notice">Website last updated: 6/21 11:15AM ET 2023</h2>
-        <h1 className="all-player__title">UNDER CONSTRUCTION!</h1>
-        <br/><br/><br/>
+    <div className="container">
+      <h1>Season 20 Players</h1>
+      <p className="update-notice">Website last updated: 6/21 11:15AM ET 2023</p>
 
-        <Link href={`/season-17`}>
-          Check out previous players of Season 17
-        </Link>
+      <Link href="/season-17" className="previous-season">
+        Check out previous players of Season 17
+      </Link>
 
-        <ul className="all-players__list">
-          {groupOrder.map((status) => (
-            <React.Fragment key={status}>
-              {groupedPlayers[status] && (
-                <div className={`players-group ${status}`}>
-                  <ul className="all-players__list">
-                    {groupedPlayers[status].map((player, index) => (
-                      <PlayerTile key={index} data={player} />
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-        </ul>
 
-      </div>
-    </>
+      <ul className="players">
+        {groupOrder.map((status) => (
+          <React.Fragment key={status}>
+            {groupedPlayers[status] && groupedPlayers[status].map((player, index) => (
+              <PlayerTile key={index} data={player} />
+            ))}
+          </React.Fragment>
+        ))}
+      </ul>
+    </div>
   );
 }
