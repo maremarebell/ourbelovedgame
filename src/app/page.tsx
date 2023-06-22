@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import playerData from "./data-20";
+import playerData from "./data-20.json";
 import { PlayerTile } from "./PlayerTile";
 import Link from 'next/link';
 
