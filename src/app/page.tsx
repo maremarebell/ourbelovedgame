@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { playerData } from "./season-17/data-17";
+import playerData from "./data-20";
 import { PlayerTile } from "./PlayerTile";
 import Link from 'next/link';
 
@@ -30,9 +30,27 @@ export default function Players() {
         <h2 className="update-notice">Website last updated: 6/21 11:15AM ET 2023</h2>
         <h1 className="all-player__title">UNDER CONSTRUCTION!</h1>
         <br/><br/><br/>
+
         <Link href={`/season-17`}>
           Check out previous players of Season 17
         </Link>
+
+        <ul className="all-players__list">
+          {groupOrder.map((status) => (
+            <React.Fragment key={status}>
+              {groupedPlayers[status] && (
+                <div className={`players-group ${status}`}>
+                  <ul className="all-players__list">
+                    {groupedPlayers[status].map((player, index) => (
+                      <PlayerTile key={index} data={player} />
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </ul>
+
       </div>
     </>
   );

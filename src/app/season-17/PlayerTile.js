@@ -1,12 +1,12 @@
 import React from "react";
-import { Status } from "./Status";
+import { Status } from "../Status";
 import Link from 'next/link';
 import Image from 'next/image';
 
 
 export const PlayerTile = (props) => {
 
-  const imagePath = `/assets/players/${props.data.slug}.png`;
+  const imagePath = `/assets/players/player-${props.data.slug}.png`;
 
   return (
     <li className={`tile all-players__player--${props.data.player_status}`}>

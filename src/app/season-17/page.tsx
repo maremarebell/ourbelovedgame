@@ -2,13 +2,14 @@
 
 import React from "react";
 import { playerData } from "./data-17";
-import { PlayerTile } from "../PlayerTile";
+import { PlayerTile } from "./PlayerTile";
 
 interface Player {
   player_status: string;
 }
 
 export default function Players() {
+
   // Group the players based on player_status
   const groupedPlayers = playerData.reduce<{ [key: string]: Player[] }>((groups, player) => {
     const { player_status } = player;
