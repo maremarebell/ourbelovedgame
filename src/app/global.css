@@ -1,4 +1,3 @@
-@import '~normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Schibsted+Grotesk:wght@900&display=swap');
 
 
@@ -73,6 +72,7 @@ h1 {
   font-family: 'Schibsted Grotesk', sans-serif;
   color: #fff;
   padding: 10px;
+  font-size: 34px;
 }
 
 .container {
@@ -90,6 +90,13 @@ h1 {
 
 .previous-season {
   margin-bottom: 10px;
+}
+
+.update-notice {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 /*--------------------------------------------------------*/
@@ -137,6 +144,7 @@ h1 {
   position: relative;
   margin: auto;
   height: 100%;
+  width: auto;
 }
 
 .player__info {

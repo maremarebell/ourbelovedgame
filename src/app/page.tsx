@@ -27,11 +27,7 @@ export default function Players() {
   return (
     <div className="container">
       <h1>Season 20 Players</h1>
-      <p className="update-notice">Last updated: 6/21 11:15AM ET 2023</p>
-
-      <Link href="/season-17" className="previous-season">
-        Check out previous players of Season 17
-      </Link>
+      <p className="update-notice">Last updated: 6/22 6:42PM ET 2023</p>
 
       <ul className="players">
         {groupOrder.map((status) => (
@@ -42,6 +38,10 @@ export default function Players() {
           </React.Fragment>
         ))}
       </ul>
+
+      <Link href="/season-17" className="previous-season">
+        Check out previous players of Season 17
+      </Link>
     </div>
   );
 }
