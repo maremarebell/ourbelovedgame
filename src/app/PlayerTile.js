@@ -11,9 +11,9 @@ export const PlayerTile = (props) => {
   return (
     <li className={`player player--${props.data.player_status}`}>
 
-      <Link className="player__name" href={`/player/${props.data.slug}`}>
-        {props.data.name}
-      </Link>
+      <Link className="player__link" href={`/player/${props.data.slug}`}></Link>
+
+      <span className="player__name">{props.data.name}</span>
 
       {/* <div className="player__info">
         <Status data={props.data} />

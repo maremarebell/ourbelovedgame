@@ -27,12 +27,11 @@ export default function Players() {
   return (
     <div className="container">
       <h1>Season 20 Players</h1>
-      <p className="update-notice">Website last updated: 6/21 11:15AM ET 2023</p>
+      <p className="update-notice">Last updated: 6/21 11:15AM ET 2023</p>
 
       <Link href="/season-17" className="previous-season">
         Check out previous players of Season 17
       </Link>
-
 
       <ul className="players">
         {groupOrder.map((status) => (
