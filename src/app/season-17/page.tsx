@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { playerData } from "../data-17";
+import { playerData } from "./data-17";
 import { PlayerTile } from "../PlayerTile";
 
 interface Player {
