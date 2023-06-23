@@ -18,7 +18,7 @@ export const PlayerTile = (props) => {
         width={120}
       />
       <div className="tile__info">
-        <Link className="tile__name" href={`/player/${props.data.slug}`}>
+        <Link className="tile__name" href={`season-17/player/${props.data.slug}`}>
           {props.data.name}
         </Link>
 
