@@ -17,15 +17,12 @@ export default function Page({ params }: { params: { slug: string } }) {
     : null;
 
   let data = player;
-
-  // Dynamically construct the image path based on the slug
   const imagePath = `/assets/players/${params.slug}.png`;
-
 
   let tiktokHandle = "";
   let instagramHandle = "";
 
-  if (data?.tiktok_url !== "NA") {
+  if (data?.tiktok_url !== undefined && data?.tiktok_url.length > 0) {
     const tiktokparts = data?.tiktok_url.split('/');
 
     if (tiktokparts !== undefined) {
@@ -35,7 +32,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const instaparts = data?.instagram_url.split('/');
 
-  if (instaparts !== undefined) {
+  if (instaparts !== undefined && instaparts.length > 0) {
     instagramHandle = instaparts[instaparts.length - 2];
   }
 
@@ -74,10 +71,8 @@ export default function Page({ params }: { params: { slug: string } }) {
               width={40}
             />
 
-            {instagramHandle}
+            instagram handle: {instagramHandle}
           </a>
-
-          {data.name}
          
           <h3>Pre-Season Predictions</h3>
 
@@ -95,7 +90,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               ))}
           </ul>
 
-          {data.tiktok_url !== "NA" && tiktokHandle !== undefined && (
+          {data.tiktok_url.length > 0 && tiktokHandle !== undefined && (
             <li>
                 <a href={`${data.tiktok_url}`} target="_blank" rel="noreferrer">
 
@@ -139,9 +134,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                   height={40}
                   width={40}
                 />
-                <span>
-                  LinkedIn: {data.linkedin_job}
-                </span>
+               
+                LinkedIn: {data.linkedin_job}
+            
               </a>
             </li>
           )}
