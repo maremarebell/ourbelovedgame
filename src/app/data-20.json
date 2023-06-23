@@ -296,7 +296,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "joey-graziadei",
@@ -319,7 +319,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "john-henry-spurlock",
@@ -342,7 +342,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "kaleb-kim",
@@ -365,7 +365,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "aaron-bryant",
@@ -388,7 +388,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "josh-young",
@@ -411,7 +411,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "sean-mclaughlin",
@@ -434,7 +434,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "michael-barbour",
@@ -457,7 +457,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "tanner-courtad",
@@ -480,7 +480,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "khalid-hassan",
@@ -503,7 +503,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "caleb-balgaard",
@@ -526,7 +526,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "adrian-hassan",
@@ -549,7 +549,7 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   },
   {
     "slug": "peter-cappio",
@@ -572,6 +572,6 @@
     "gor_assessment_epi": "",
     "gor_assessment_timestamp": "",
     "gor_assessment_timestamp_remaining": "",
-    "player_status": ""
+    "player_status": "active"
   }
 ]
