@@ -21,6 +21,10 @@ export default function Page({ params }: { params: { slug: string } }) {
   // Dynamically construct the image path based on the slug
   const imagePath = `/assets/players/${params.slug}.png`;
 
+  const tiktokUrl = data?.tiktok_url;
+  const parts = tiktokUrl.split('/');
+  const tiktokHandle = parts[parts.length - 1];
+
   return (
     <>
       {data !== undefined && (
@@ -136,7 +140,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </div>
                   <div className="col col-1 column--secondary-info">
                   <ul className="secondary-social__links">
-                      {data.tiktok_url.length > 0 && (
+                      {data.tiktok_url.length !== "NA" && (
                       <li className="secondary-social__link">
                           <a href={`${data.tiktok_url}`} target="_blank" rel="noreferrer">
                           <img
@@ -146,7 +150,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                               height="0"
                           />
                           <span className="secondary-social__label">
-                              Tiktok: {data.tiktok_url}
+                              Tiktok: {tiktokHandle}
                           </span>
                           </a>
                       </li>
