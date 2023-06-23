@@ -10,7 +10,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const tagList = player?.tags
     ? player.tags.split(';').map((tag) => (
-        <span className='tags__tag' key={tag}>
+        <span key={tag}>
           {tag}
         </span>
       ))
@@ -21,182 +21,133 @@ export default function Page({ params }: { params: { slug: string } }) {
   // Dynamically construct the image path based on the slug
   const imagePath = `/assets/players/${params.slug}.png`;
 
-  const tiktokUrl = data?.tiktok_url;
-  const parts = tiktokUrl.split('/');
-  const tiktokHandle = parts[parts.length - 1];
+
+  let tiktokHandle = "";
+  let instagramHandle = "";
+
+  if (data?.tiktok_url !== "NA") {
+    const tiktokparts = data?.tiktok_url.split('/');
+
+    if (tiktokparts !== undefined) {
+      tiktokHandle = tiktokparts[tiktokparts.length - 1];
+    }
+  }
+
+  const instaparts = data?.instagram_url.split('/');
+
+  if (instaparts !== undefined) {
+    instagramHandle = instaparts[instaparts.length - 2];
+  }
 
   return (
     <>
       {data !== undefined && (
         <>
-          <section className="player-header">
-            <div className="container cols container--header">
-            <div className="player-header__pic col col-1">
-              <Image
-                src={imagePath}
-                alt={`headshot of ${data.name}`}
-                className="player-header__headshot"
-                height={320}
-                width={500}
-              />
-            </div>
+          <Image
+            src={imagePath}
+            alt={`headshot of ${data.name}`}
+            height={320}
+            width={500}
+          />
+          
+          <h1>{data.name}</h1>
+          <h2>{data.full_name}</h2>
+                
+          <Status data={data} />
 
-            <div className="player-header__info col col-2">
-                <h1 className="player-header__name">{data.name}</h1>
-                <div className="player-status">
-                <Status data={data} />
-                </div>
-                <ul className="player-header__details">
-                <li>{data.age}</li>
-                <li>{data.job}</li>
-                <li>{data.location}</li>
-                </ul>
-                <a
-                className="social-icon social-icon--instagram"
-                href={`data.instagram_handle`}
+          <ul>
+            <li>{data.age}</li>
+            <li>{data.job}</li>
+            <li>{data.location}</li>
+          </ul>
+        
+          <a
+            href={`data.instagram_url`}
+            target="_blank"
+            rel="noreferrer"
+          >
+
+            <Image
+              src="/assets/logo-instagram.svg"
+              alt="Instagram logo"
+              height={40}
+              width={40}
+            />
+
+            {instagramHandle}
+          </a>
+
+          {data.name}
+         
+          <h3>Pre-Season Predictions</h3>
+
+          <Image
+            src="/assets/image-ball.png"
+            alt="crystal ball emoji"
+            height={40}
+            width={40}
+          />
+
+          <ul>
+            {player?.gor_predictions &&
+              player.gor_predictions.split(';').map((prediction, index) => (
+                <li key={index}>{prediction}</li>
+              ))}
+          </ul>
+
+          {data.tiktok_url !== "NA" && tiktokHandle !== undefined && (
+            <li>
+                <a href={`${data.tiktok_url}`} target="_blank" rel="noreferrer">
+
+                  <Image
+                    src="/assets/logo-tiktok.svg"
+                    alt="TikTok logo"
+                    height={40}
+                    width={40}
+                  />
+
+                  <span>
+                      Tiktok: {tiktokHandle}
+                  </span>
+                </a>
+            </li>
+          )}
+
+          <li>
+            <a href={`${data.abc_profile}`} target="_blank" rel="noreferrer">
+              <Image
+                src="/assets/logo-abc.svg"
+                alt="ABC logo"
+                height={40}
+                width={40}
+              />
+              <span>Official ABC Bio</span>
+            </a>
+          </li>
+
+          {data.linkedin_url.length > 0 && (
+            <li>
+              <a
+                href={`${data.linkedin_url}`}
                 target="_blank"
                 rel="noreferrer"
-                >
+              >
 
                 <Image
-                  src="/assets/logo-instagram.svg"
-                  alt="Instagram logo"
-                  className="social-icon__icon"
+                  src="/assets/logo-linkedin.svg"
+                  alt="LinkedIn logo"
                   height={40}
                   width={40}
                 />
-
-                {/* <span className="social-icon__text">
-                    {data.social_media.instagram_handle}
+                <span>
+                  LinkedIn: {data.linkedin_job}
                 </span>
-                <div className="tooltip">instagram</div> */}
-                </a>
-            </div>
-            </div>
-          </section>
+              </a>
+            </li>
+          )}
 
-          <section className="player-content">
-              <div className="container">
-              <div className="cols cols--backwards">
-                  <div className="profile col col-2">
-                  <h1 className="profile__title">{data.name}</h1>
-                  <div className="stats">
-                      <h2 className="stats__title">Player Season Stats</h2>
-                      <div className="stats__row">
-                      <div className="stat">
-                          <span className="stat__title">Roses🌹</span>
-                          {/* <span className="stat__value">{data.season_stats.roses}</span>
-                          <span className="stat_detail"></span> */}
-                      </div>
-                      <div className="stat">
-                          <span className="stat__title">Hujus</span>
-                          {/* <span className="stat__value">{data.season_stats.hujus}</span>
-                          <span className="stat_detail"></span> */}
-                      </div>
-                      <div className="stat">
-                          <span className="stat__title">PTCs</span>
-                          {/* <span className="stat__value">{data.season_stats.ptcs}</span>
-                          <span className="stat_detail"></span> */}
-                      </div>
-                      <div className="stat">
-                          <span className="stat__title">Love Level</span>
-                          {/* <span className="stat__value"></span>
-                          <span className="stat_detail"></span> */}
-                      </div>
-                      </div>
-                  </div>
-                  
-                  <div className="gor-review">
-                    <h2 className="gor-review__title">GoR Pre-Game Assessment</h2>
-                    <p className="gor-review__callout">
-                        Listen to {data.name}&lsquo;s assessment at &nbsp;
-                        <span className="gor-review__timestamp">
-                        {data.gor_assessment_timestamp}
-                        </span>
-                        {/*({gor.gor_assessment_timestamp_remaining} remaining)*/}
-                    </p>
-                    <div className="gor-review__predictions">
-
-                      <h3 className="predictions__title">Pre-Season Predictions</h3>
-
-                      <Image
-                        src="/assets/image-ball.png"
-                        alt="crystal ball emoji"
-                        className="gor-review__ball"
-                        height={40}
-                        width={40}
-                      />
-
-                      <ul className="predictions">
-                        {player?.gor_predictions &&
-                          player.gor_predictions.split(';').map((prediction, index) => (
-                            <li key={index} className="prediction">{prediction}</li>
-                          ))}
-                      </ul>
-
-                  </div>
-                  </div>
-                  
-                  </div>
-                  <div className="col col-1 column--secondary-info">
-                  <ul className="secondary-social__links">
-                      {data.tiktok_url.length !== "NA" && (
-                      <li className="secondary-social__link">
-                          <a href={`${data.tiktok_url}`} target="_blank" rel="noreferrer">
-                          <img
-                              alt="TikTok logo"
-                              className="secondary-social__icon"
-                              src="/assets/logo-tiktok.svg"
-                              height="0"
-                          />
-                          <span className="secondary-social__label">
-                              Tiktok: {tiktokHandle}
-                          </span>
-                          </a>
-                      </li>
-                      )}
-                      <li className="secondary-social__link">
-                      <a href={`${data.abc_profile}`} target="_blank" rel="noreferrer">
-                        <Image
-                          src="/assets/logo-abc.svg"
-                          alt="ABC logo"
-                          className="secondary-social__icon"
-                          height={40}
-                          width={40}
-                        />
-                        <span className="secondary-social__label">Official ABC Bio</span>
-                      </a>
-                      </li>
-                      {data.linkedin_url.length > 0 && (
-                      <li className="secondary-social__link">
-                          <a
-                          href={`${data.linkedin_url}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          >
-
-                          <Image
-                            src="/assets/logo-linkedin.svg"
-                            alt="LinkedIn logo"
-                            className="secondary-social__icon"
-                            height={40}
-                            width={40}
-                          />
-                          <span className="secondary-social__label">
-                              LinkedIn: {data.linkedin_job}
-                          </span>
-                          </a>
-                      </li>
-                      )}
-                  </ul>
-                  <div className="tags">
-                      <h2 className="tags__header">Tags:</h2>
-                      {tagList}
-                  </div>
-                  </div>
-              </div>
-              </div>
-          </section>
+          Tags:
+          {tagList}
         </>
       )}
     </>

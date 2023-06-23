@@ -29,7 +29,6 @@ export const PlayerTile = (props) => {
     "pattern-vertical-stripes-lg",
     "pattern-grid-md",
     "pattern-vertical-lines-sm",
-    "pattern-horizontal-lines-xl",
     "pattern-checks-sm",
     "pattern-grid-lg",
     "pattern-dots-md",
