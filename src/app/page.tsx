@@ -33,7 +33,7 @@ export default function Players() {
         {groupOrder.map((status) => (
           <React.Fragment key={status}>
             {groupedPlayers[status] && groupedPlayers[status].map((player, index) => (
-              <PlayerTile key={index} data={player} />
+              <PlayerTile key={index} data={player} index={index} />
             ))}
           </React.Fragment>
         ))}
