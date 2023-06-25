@@ -1,4 +1,4 @@
-import './player.css'
+import './player.scss'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
