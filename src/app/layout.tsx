@@ -1,4 +1,4 @@
-import './global.css'
+import './global.scss'
 import './patterns.scss'
 import { Inter } from 'next/font/google'
 

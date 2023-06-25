@@ -6,7 +6,7 @@ export const Status = (props) => {
 
   switch (props.data.player_status) {
     case "active":
-      newStatus = "In The Game"
+      newStatus = "Still in the game"
       break;
     case "dismissed":
       newStatus = "Sent Home"
