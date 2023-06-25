@@ -325,3 +325,21 @@ h3 {
   display: block;
   text-align: center;
 }
+
+
+//--------------------------------------------------------
+// Predictions
+//--------------------------------------------------------
+
+.predictions {
+  font-size: 14px;
+}
+
+.prediction {
+  padding: 10px 0;
+  
+  &:before {
+    content: '\2022';
+    margin-right: 8px;
+  }
+}

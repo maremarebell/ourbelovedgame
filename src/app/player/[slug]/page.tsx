@@ -108,7 +108,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
                   <section className="profile__section">
                     
-                    <h3>Player Details</h3>
+                    <h3>🌹 Player Details</h3>
 
                     <div className="profile__details">
                       <div className="profile__tr">
@@ -194,7 +194,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </section>
                              
                   <section className="profile__section">
-                    <h3>Season Stats</h3>
+                    <h3>📊 Season Stats</h3>
                     <div className="stats">
                       <div className="stats__row">
                         <div className="stat">
@@ -222,18 +222,13 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </section>
 
                   <section className="profile__section">
-                    <h3>Pre-Season Predictions</h3>
-                    <Image
-                      src="/assets/image-ball.png"
-                      alt="crystal ball emoji"
-                      height={40}
-                      width={40}
-                    />
-                    <ul>
+                    <h3>🔮 Pre-Season Predictions</h3>
+                    <ul className="predictions">
                       {player?.gor_predictions &&
                         player.gor_predictions.split(';').map((prediction, index) => (
-                          <li key={index}>{prediction}</li>
-                        ))}
+                          <li key={index} className="prediction">{prediction.trim()}</li>
+                        ))
+                      }
                     </ul>    
                   </section>
                 </div>
