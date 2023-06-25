@@ -131,7 +131,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
                       <div className="profile__tr">
                         <div className="profile__td profile__label">
-                          <span>"Job":</span>
+                          <span>&quot;Job&quot;:</span>
                         </div>
 
                         <div className="profile__td">
