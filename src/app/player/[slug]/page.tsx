@@ -40,7 +40,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <>
       {data !== undefined && (
         <>
-          <svg className="svger" viewBox="0 0 94 20">
+          <svg className="profile__short-name" viewBox="0 0 94 20">
             <text x="50%" y="50%" textAnchor="middle" dominant-baseline="middle" opacity=".6">
               {data.name}
             </text>
@@ -58,7 +58,35 @@ export default function Page({ params }: { params: { slug: string } }) {
           </div>
           
           <div className="profile main-content">
-          <div className="profile__nameplate">
+
+            {/* Stats */}
+            <div className="stats">
+              <h2 className="stats__title">Player Season Stats</h2>
+              <div className="stats__row">
+                <div className="stat">
+                  <span className="stat__title">Dates</span>
+                  <span className="stat__value">0</span>
+                  <span className="stat_detail"></span>
+                </div>
+                <div className="stat">
+                  <span className="stat__title">Kisses</span>
+                  <span className="stat__value">0</span>
+                  <span className="stat_detail"></span>
+                </div>
+                <div className="stat">
+                  <span className="stat__title">PTCs</span>
+                  <span className="stat__value">0</span>
+                  <span className="stat_detail"></span>
+                </div>
+                <div className="stat">
+                  <span className="stat__title">Love Level</span>
+                  <span className="stat__value">0</span>
+                  <span className="stat_detail"></span>
+                </div>
+              </div>
+            </div>
+
+            <div className="profile__nameplate">
               
               <Status data={data} />
               <ul>
