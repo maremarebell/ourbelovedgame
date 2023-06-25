@@ -1,8 +1,8 @@
-$red-bright: #F22E3E;
+// --------------------------------
+// Da basics
+// --------------------------------
 
-.hero {
-  height: 320px;
-}
+$red-bright: #F22E3E;
 
 h1 {
   padding: 0;
@@ -17,25 +17,85 @@ h3 {
   margin-bottom: 10px;
 }
 
+
+// --------------------------------
+// Hero & main content
+// --------------------------------
+
+.hero {
+  height: 320px;
+}
+
+.hero__image {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.main-content {
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top: -110px;
+  padding: 20px;
+  padding-top: 120px;
+}
+
+.main-content__inner {
+  margin: auto;
+  max-width: 600px;
+}
+
+
+// --------------------------------
+// Nameplate
+// --------------------------------
+
+.profile__nameplate {
+  border: 4px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px -12px 34px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: -60px auto 0 auto;
+  width: 500px;
+  clear: both;
+  z-index: 3;
+  position: relative;
+  color: #3b383e;
+  text-align: center;
+  line-height: 1.4em;
+  font-size: 20px;
+}
+
+
+// --------------------------------
+// Profile
+// --------------------------------
+
 .profile__headline {
   color: #3b383e;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  max-width: 600px;
+  margin: 20px 0 10px 0;
 }
 
 .profile__details {
   display: table;
+  font-size: 14px;
 }
 
 .profile__tr {
   display: table-row;
+  vertical-align: middle;
 }
 
 .profile__td {
   display: table-cell;
   padding: 8px;
+  vertical-align: middle;
+
+  span {
+    margin-left: 4px;
+  }
 }
 
 .profile__td__logo {
@@ -47,26 +107,15 @@ h3 {
   width: 30%;
 }
 
-.hero__image {
-  display: block;
-  margin: auto;
-}
-
-.profile__details {
-  font-size: 14px;
-}
-
 .profile__tag {
   background-color: #e7e7e7;
   border-radius: 40px;
-  padding: 4px 8px; 
+  padding: 4px 11px;
   margin-right: 4px;
-  font-size: 14px;
+  font-size: 12px;
   color: #6c6666;
-}
-
-.profile__tags {
-
+  text-transform: uppercase;
+  letter-spacing: .5px;
 }
 
 .profile__section {
@@ -76,6 +125,10 @@ h3 {
   margin-top: -1px;
   padding: 20px 0;
   border-width: 0 0 1px 0;
+
+  &:last-child {
+    border-bottom-width: 0;
+  }
 }
 
 .profile__short-name {
@@ -92,29 +145,6 @@ h3 {
   }
 }
 
-.profile__nameplate {
-  padding: 10px;
-  border: 4px solid #fff;
-  border-radius: 10px;
-  color: #3b383e;
-  background-color: #fff;
-  clear: both;
-  max-width: 900px;
-  margin: auto;
-  box-shadow: 0px -12px 34px rgba(0, 0, 0, 0.2);
-  // margin-top: -60px;
-  width: 500px;
-  max-width: 100%;
-  z-index: 3;
-  position: relative;
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  line-height: 1.4em;
-  margin-top: -60px;
-}
-
 .profile__name {
   font-size: 40px;
 }
@@ -122,20 +152,6 @@ h3 {
 .profile__info {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.profile__logo {
-  display: block;
-}
-
-.main-content {
-  background-color: white;
-  position: relative;
-  overflow: hidden;
-  margin-top: -110px;
-  padding: 20px;
-  padding-top: 120px;
-  
 }
 
 
@@ -225,11 +241,13 @@ h3 {
   width: 28px;
   color: #fff;
   fill: $red-bright;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   display: inline-block;
   vertical-align: middle;
   color: $red-bright;
+  margin-top: -3px;
 
   path {
     fill: $red-bright;
@@ -259,26 +277,9 @@ h3 {
 //--------------------------------------------------------
 
 .stats {
-  padding: 0 0 0 0;
-  // border: 1px solid #bbbbbb;
-  border-radius: 10px;
-  margin-bottom: 16px;
+  padding: 0;
   clear: both;
 }
-
-// .stats__title {
-//   padding: 6px 6px;
-//   background-color: #7b7b7b;
-//   color: #fff;
-//   margin-top: -2px;
-//   margin-left: -2px;
-//   border-radius: 10px 10px 0 0;
-//   margin-right: -2px;
-//   font-size: 12px;
-//   text-transform: uppercase;
-//   letter-spacing: 1px;
-//   margin-bottom: 0;
-// }
 
 .stats__row {
   display: flex;
@@ -319,7 +320,7 @@ h3 {
 
 .stat__value {
   font-size: 54px;
-  font-weight: bold;
+  font-weight: 400;
   width: 100%;
   display: block;
   text-align: center;

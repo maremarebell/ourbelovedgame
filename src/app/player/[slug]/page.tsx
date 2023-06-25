@@ -64,10 +64,12 @@ export default function Page({ params }: { params: { slug: string } }) {
               <div className="profile__nameplate">
                 
                 <Status data={data} />
+
                 <ul className="profile__info">
                   <li>{data.age}, {data.job}</li>
                   <li className="profile__location">{data.location}</li>
                 </ul>
+
                 {data.tiktok_url.length > 0 && tiktokHandle !== undefined && (
                   <a 
                     href={`${data.tiktok_url}`} 
@@ -75,12 +77,15 @@ export default function Page({ params }: { params: { slug: string } }) {
                     rel="noreferrer"
                     className="profile__cta"
                   >
+
                     <SvgLogoTiktok className="profile__logo" />
+
                     <span className="profile__cta__text">
                       {tiktokHandle}
                     </span>
                   </a>
                 )}
+
                 <a
                   href={`${data.instagram_url}`} 
                   target="_blank"
@@ -106,10 +111,38 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <h3>Player Details</h3>
 
                     <div className="profile__details">
+                      <div className="profile__tr">
+                        <div className="profile__td profile__label">
+                          Age: 
+                        </div>
+                        <div className="profile__td">
+                          {data.age}
+                        </div>
+                      </div>
 
                       <div className="profile__tr">
                         <div className="profile__td profile__label">
-                          <Image className="profile__td__logo" src="/assets/logo-abc.svg" alt="ABC logo" height={20} width={20} /> Official ABC Bio:
+                          Location: 
+                        </div>
+                        <div className="profile__td">
+                          {data.location}
+                        </div>
+                      </div>
+
+                      <div className="profile__tr">
+                        <div className="profile__td profile__label">
+                          <span>"Job":</span>
+                        </div>
+
+                        <div className="profile__td">
+                          {data.job}
+                        </div>
+                      </div>
+
+                      <div className="profile__tr">
+                        <div className="profile__td profile__label">
+                          <Image className="profile__td__logo" src="/assets/logo-abc.svg" alt="ABC logo" height={20} width={20} />
+                          <span>Official ABC Bio:</span>
                         </div>
 
                         <div className="profile__td">
@@ -122,7 +155,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                       {data.linkedin_url.length > 0 && (
                         <div className="profile__tr">
                           <div className="profile__td profile__label">
-                            <Image className="profile__td__logo" src="/assets/logo-linkedin.svg" alt="LinkedIn logo" height={20} width={20} /> LinkedIn Title:
+                            <Image className="profile__td__logo" src="/assets/logo-linkedin.svg" alt="LinkedIn logo" height={20} width={20} />
+                            <span>LinkedIn Title:</span>
                           </div>
                           <div className="profile__td">
                             {data.linkedin_job}
@@ -133,7 +167,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                       {data.linkedin_url.length > 0 && (
                         <div className="profile__tr">
                           <div className="profile__td profile__label">
-                            <Image className="profile__td__logo" src="/assets/logo-linkedin.svg" alt="LinkedIn logo" height={20} width={20} /> LinkedIn Profile:
+                            <Image className="profile__td__logo" src="/assets/logo-linkedin.svg" alt="LinkedIn logo" height={20} width={20} />
+                            <span>LinkedIn Profile:</span>
                           </div>
                           <div className="profile__td">
                             <a
@@ -141,7 +176,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                               target="_blank"
                               rel="noreferrer"
                             >
-                              Link to LinkedIn profile
+                              {data.linkedin_url}
                             </a>
                           </div>
                         </div>
@@ -149,7 +184,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
                       <div className="profile__tr">
                         <div className="profile__td profile__label">
-                          Tags:
+                          <span>Tags:</span>
                         </div>
                         <div className="profile__td">
                           {tagList}
