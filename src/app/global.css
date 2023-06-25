@@ -78,6 +78,7 @@ h1 {
   width: 100%;
   max-width: 900px;
   margin: auto;
+  padding: 16px;
 }
 
 .update-notice,

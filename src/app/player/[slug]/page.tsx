@@ -40,14 +40,14 @@ export default function Page({ params }: { params: { slug: string } }) {
     <>
       {data !== undefined && (
         <>
+          <svg className="svger" viewBox="0 0 94 20">
+            <text x="50%" y="50%" textAnchor="middle" dominant-baseline="middle" opacity=".6">
+              {data.name}
+            </text>
+          </svg>
+
+          <div className="container">
           <div className="hero">
-
-            <svg className="svger" viewBox="0 0 94 20">
-              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" opacity=".6">
-                {data.name}
-              </text>
-            </svg>
-
             <Image
               src={imagePath}
               alt={`headshot of ${data.name}`}
@@ -158,7 +158,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
             Tags:
             {tagList}
-          </div>
+          </div></div>
         </>
       )}
     </>
