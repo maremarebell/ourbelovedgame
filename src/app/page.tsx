@@ -4,6 +4,9 @@ import React from "react";
 import playerData from "./data-20.json";
 import { PlayerTile } from "./PlayerTile";
 import Link from 'next/link';
+import { Schibsted_Grotesk } from 'next/font/google'
+
+const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
 interface Player {
   player_status: string;
@@ -26,7 +29,7 @@ export default function Players() {
 
   return (
     <div className="container">
-      <h1>Season 20 Players</h1>
+      <h1 className={sgfont.className}>Season 20 Players</h1>
       <p className="update-notice">Last updated: 6/22 6:42PM ET 2023</p>
 
       <ul className="players">
