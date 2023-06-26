@@ -2,7 +2,9 @@ import React from "react";
 import { Status } from "./Status";
 import Link from 'next/link';
 import Image from 'next/image';
+import { Schibsted_Grotesk } from 'next/font/google'
 
+const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
 export const PlayerTile = (props) => {
 
@@ -54,13 +56,9 @@ export const PlayerTile = (props) => {
   return (
     <li className={`player player--${props.data.player_status} ${pattern}`}>
 
-      <Link className="player__link" href={`/player/${props.data.slug}`}></Link>
+      <Link className={`player__link ${sgfont.className}`} href={`/player/${props.data.slug}`}></Link>
 
       <span className="player__name">{props.data.name}</span>
-
-      {/* <div className="player__info">
-        <Status data={props.data} />
-      </div> */}
 
       <div className="player__headshot-container">
         <Image

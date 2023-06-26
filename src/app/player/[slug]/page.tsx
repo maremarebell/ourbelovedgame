@@ -78,7 +78,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     href={`${data.tiktok_url}`} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="profile__cta"
+                    className={`profile__cta ${sgfont.className}`}
                   >
 
                     <SvgLogoTiktok className="profile__logo" />
@@ -107,11 +107,12 @@ export default function Page({ params }: { params: { slug: string } }) {
               <div className="main-content">
 
                 <div className="main-content__inner">
-                  <h1 className="profile__headline">{data.full_name}</h1>
+  
+                  <h1 className={`profile__headline ${sgfont.className}`}>{data.full_name}</h1>
 
                   <section className="profile__section">
                     
-                    <h3>🌹 Player Details</h3>
+                    <h3 className={sgfont.className}>🌹 Player Details</h3>
 
                     <div className="profile__details">
                       <div className="profile__tr">
@@ -197,7 +198,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </section>
                              
                   <section className="profile__section">
-                    <h3>📊 Season Stats</h3>
+                    <h3 className={sgfont.className}>📊 Season Stats</h3>
                     <div className="stats">
                       <div className="stats__row">
                         <div className="stat">
@@ -225,7 +226,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </section>
 
                   <section className="profile__section">
-                    <h3>🔮 Pre-Season Predictions</h3>
+                    <h3 className={sgfont.className}>🔮 Pre-Season Predictions</h3>
                     <ul className="predictions">
                       {player?.gor_predictions &&
                         player.gor_predictions.split(';').map((prediction, index) => (
