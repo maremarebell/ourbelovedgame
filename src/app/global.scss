@@ -235,6 +235,7 @@ h1 {
   top: 0;
   width: 100%;
   text-align: center;
+  font-weight: 900;
 }
 
 
@@ -434,5 +435,39 @@ h1 {
 
   .player__headshot-container {
     padding-top: 0;
+  }
+}
+
+
+@media print {
+  .players__header,
+  .previous-season {
+    display: none;
+  }
+
+  .player__headshot-container,
+  .player__headshot {
+    width: 100px;
+    height: auto;
+    margin-left: -10px;
+  }
+
+  .players {
+    display: block;
+  }
+
+  .player {
+    float: left;
+    display: block;
+    border: 1px solid #000;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    height: 130px;
+  }
+
+  .player__name {
+    color: #000;
+    font-size: 20px;
   }
 }
