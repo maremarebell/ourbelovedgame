@@ -3,15 +3,19 @@
 import React, { useState } from 'react';
 import playerData from "./data-20.json";
 import { PlayerTile } from "./PlayerTile";
+import { PlayerLine } from "./PlayerLine"; 
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
-import {ReorderIcon} from './utils/logos.js';
+import { ReorderIcon } from './utils/logos.js';
+import { ListIcon } from './utils/logos.js';
+import { GalleryIcon } from './utils/logos.js';
+
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
 interface Player {
   player_status: string;
-  slug: string; // Assuming slug is a property in the Player interface
+  slug: string;
 }
 
 export default function Players() {
@@ -29,9 +33,14 @@ export default function Players() {
   const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
 
   const [isAlphabetical, setIsAlphabetical] = useState(true); // State to track the order
+  const [isPlayerTile, setIsPlayerTile] = useState(true); // State to track the selected component type
 
   const toggleOrder = () => {
     setIsAlphabetical((prevState) => !prevState);
+  };
+
+  const toggleComponent = () => {
+    setIsPlayerTile((prevState) => !prevState);
   };
 
   // Create a new array with players in the desired order
@@ -59,11 +68,31 @@ export default function Players() {
             <ReorderIcon />
             {isAlphabetical ? 'Reorder by GOR IG anlyses' : 'Reorder alphabteically'}
           </button>
+
+          <button onClick={toggleComponent} className="toggle button">
+            {isPlayerTile ? (
+              <>
+                <span className="toggle__option toggle__option--right toggle__option--active"><GalleryIcon /></span>
+                <span className="toggle__option toggle__option--left "><ListIcon /></span>
+              </>
+            ) : (
+              <>
+                <span className="toggle__option toggle__option--right"><GalleryIcon /></span>
+                <span className="toggle__option toggle__option--left toggle__option--active"><ListIcon /></span>
+                
+              </>
+            )}
+          </button>
         </div>
 
         <ul className="players">
           {orderedPlayers.map((player, index) => (
-            <PlayerTile key={index} data={player} index={index} />
+            // Conditionally render the component based on the value of isPlayerTile
+            isPlayerTile ? (
+              <PlayerTile key={index} data={player} index={index} />
+            ) : (
+              <PlayerLine key={index} data={player} index={index} />
+            )
           ))}
         </ul>
 

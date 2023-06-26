@@ -42,3 +42,15 @@ export const ReorderIcon = (props) => (
     </g>
   </svg>
 );
+
+export const GalleryIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+    <path id="Path_3" data-name="Path 3" d="M9,9H5V5H9Zm0,1H5v4H9Zm0,5H5v4H9ZM14,5H10V9h4Zm0,5H10v4h4Zm0,5H10v4h4ZM19,5H15V9h4Zm0,5H15v4h4Zm0,5H15v4h4Z" transform="translate(-5 -5)"/>
+  </svg>
+);
+
+export const ListIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+    <path id="Path_3" data-name="Path 3" d="M19,9H5V5H19Zm0,1H5v4H19Zm0,5H5v4H19ZM19,5V5Z" transform="translate(-5 -5)"/>
+  </svg>
+);
