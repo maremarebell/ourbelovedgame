@@ -39,9 +39,11 @@ export default function Players() {
         <meta name="twitter:description" content="Check out the men of Katie's Season 17 of the Bachelorette." />
         <meta name="twitter:image" content="https://ourbelovedgame.com/twitter-charity.png" />
       </Head>
+
       <div className="container">
         <h1 className={sgfont.className}>Season 20 Players</h1>
-        <p className="update-notice">Last updated: 6/22 6:42PM ET 2023</p>
+        <p className="message">Click headshots to see the players' profiles.</p>
+        <p className="update-notice">Last updated: 6/25 10:00PM ET 2023</p>
 
         <ul className="players">
           {groupOrder.map((status) => (
