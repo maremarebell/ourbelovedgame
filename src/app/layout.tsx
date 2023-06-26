@@ -1,8 +1,9 @@
 import './global.scss'
 import './patterns.scss'
 import { Inter } from 'next/font/google'
+import { Schibsted_Grotesk } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Our Beloved Game',
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body suppressHydrationWarning={true} className={sgfont.className}>
         {children}
       </body>
     </html>
