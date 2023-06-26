@@ -1,11 +1,13 @@
 'use client';
 
-import React from "react";
+import React, { useEffect } from 'react';
 import playerData from "./data-20.json";
 import { PlayerTile } from "./PlayerTile";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
 import Head from 'next/head';
+import { initGA, logPageView } from './analytics';
+
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -14,6 +16,11 @@ interface Player {
 }
 
 export default function Players() {
+
+  useEffect(() => {
+    initGA();
+    logPageView();
+  }, []);
 
   // Group the players based on player_status
   const groupedPlayers = playerData.reduce<{ [key: string]: Player[] }>((groups, player) => {
