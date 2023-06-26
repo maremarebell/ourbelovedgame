@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const PlayerTile = (props) => {
 
-  const imagePath = `/assets/players/player-${props.data.slug}.png`;
+  const imagePath = `/assets/players/season-17/player-${props.data.slug}.png`;
 
   return (
     <li className={`tile all-players__player--${props.data.player_status}`}>

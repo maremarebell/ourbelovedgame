@@ -9,6 +9,7 @@ const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 export const PlayerTile = (props) => {
 
   const imagePath = `/assets/players/${props.data.slug}.png`;
+  const blurImagePath = `/assets/players/${props.data.slug}-blur.png`;
 
   var patterns = [
     "pattern-checks-md",
@@ -67,6 +68,8 @@ export const PlayerTile = (props) => {
           className="player__headshot"
           height={128}
           width={200}
+          placeholder="blur"
+          blurDataURL={blurImagePath}
         />
       </div>
     </li>
