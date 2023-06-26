@@ -59,6 +59,8 @@ html {
 /* General styles
 /*--------------------------------------------------------*/
 
+$red-bright: #F22E3E;
+
 body {
   background-color: #F23D5E;
   background-image: linear-gradient(90deg, #F23D5E 0%, #F22E3E 52%, #b91a24 90%);
@@ -66,9 +68,8 @@ body {
 
 h1 {
   font-weight: 600;
-  color: #fff;
-  padding: 10px;
   font-size: 34px;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -78,30 +79,80 @@ h1 {
   padding: 16px;
 }
 
-.update-notice,
-.previous-season {
+.players__header {
   padding: 10px;
   color: #fff;
+  overflow: hidden;
+}
+
+.players__header__update-notice,
+.players__header__previous-season {
   display: block;
 }
 
-.message {
-  padding: 10px;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-}
-
-.previous-season {
+.players__header__message {
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
-.update-notice {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 10px;
+.players__header__update-notice {
   font-size: 12px;
+  margin-bottom: 30px;
 }
+
+.previous-season {
+  color: #fff;
+  padding: 10px;
+}
+
+
+/*--------------------------------------------------------*/
+/* Button
+/*--------------------------------------------------------*/
+
+.button {
+  padding: 4px 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-weight: 500;
+  border: 2px solid #fff;
+  background-color: transparent;
+
+  svg {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 4px;
+    height: 14px;
+    width: 14px;
+    margin-top: -3px;
+  }
+  
+  path {
+    fill: #fff;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: $red-bright;
+    transition: 0.3s;
+
+    path {
+      fill: $red-bright;
+      transition: 0.3s;
+    }
+  }
+}
+
+.button--reorder {
+  float: right;
+  clear: both;
+  display: block;
+}
+
 
 /*--------------------------------------------------------*/
 /* Player

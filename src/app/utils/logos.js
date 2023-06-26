@@ -30,3 +30,15 @@ export const SvgLogoInstagram = (props) => (
     />
   </svg>
 );
+
+export const ReorderIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="30.916" height="43.104" viewBox="0 0 30.916 43.104">
+    <g id="noun-reorder-1297618" transform="translate(-35.042 -28.948)">
+      <g id="Group_3" data-name="Group 3">
+        <g id="Group_2" data-name="Group 2">
+          <path id="Path_2" data-name="Path 2" d="M65.958,55.688v6.364L56,72.052l-9.958-10V55.688l7.717,7.75V47.37h4.481V63.438ZM35.042,45.312V38.948l9.958-10,9.958,10v6.364l-7.717-7.75V53.63H42.759V37.562Z"/>
+        </g>
+      </g>
+    </g>
+  </svg>
+);

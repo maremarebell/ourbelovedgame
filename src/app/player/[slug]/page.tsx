@@ -2,8 +2,8 @@
 
 import playerData from "../../data-20.json";
 import { Status } from '../../Status';
-import {SvgLogoInstagram} from './logos';
-import {SvgLogoTiktok} from './logos';
+import {SvgLogoInstagram} from '../../utils/logos';
+import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google'
 
