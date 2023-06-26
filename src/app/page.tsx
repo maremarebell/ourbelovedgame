@@ -42,7 +42,7 @@ export default function Players() {
 
       <div className="container">
         <h1 className={sgfont.className}>Season 20 Players</h1>
-        <p className="message">Click headshots to see the players' profiles.</p>
+        <p className="message">Click headshots to see the players&apos; profiles.</p>
         <p className="update-notice">Last updated: 6/25 10:00PM ET 2023</p>
 
         <ul className="players">

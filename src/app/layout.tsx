@@ -1,10 +1,7 @@
 import './global.scss'
 import './patterns.scss'
 import { Inter } from 'next/font/google'
-import { Schibsted_Grotesk } from 'next/font/google'
-import Head from 'next/head';
 
-const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
