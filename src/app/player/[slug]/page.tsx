@@ -5,6 +5,9 @@ import { Status } from '../../Status';
 import {SvgLogoInstagram} from './logos';
 import {SvgLogoTiktok} from './logos';
 import Image from 'next/image';
+import { Schibsted_Grotesk } from 'next/font/google'
+
+const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
 export default function Page({ params }: { params: { slug: string } }) {
 
@@ -42,8 +45,8 @@ export default function Page({ params }: { params: { slug: string } }) {
     <>
       {data !== undefined && (
         <>
-          <svg className="profile__short-name" viewBox="0 0 94 20">
-            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" opacity=".6">
+          <svg className="profile__short-name " viewBox="0 0 94 20">
+            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" opacity=".6" className={sgfont.className}>
               {data.name}
             </text>
           </svg>
