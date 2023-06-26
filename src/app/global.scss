@@ -179,6 +179,7 @@ h1 {
   height: 160px;
   color: rgb(255, 255, 255, .2);
   font-weight: 900;
+  overflow: hidden;
 
   &:last-child {
     flex-basis: calc(33.33% - 20px); /* Adjust the width as desired */
@@ -413,16 +414,13 @@ h1 {
   }
 
   .player__name--line {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .player__link--line {
-    font-size: 14px;
+    font-size: 12px;
     right: 0;
-  }
-
-  .player__name {
-    font-size: 20px;
+    top: 6px;
   }
 
   .player__headshot {
