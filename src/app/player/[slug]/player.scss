@@ -56,9 +56,10 @@ h3 {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px -12px 34px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 0 10px 20px 10px;
   margin: -60px auto 0 auto;
-  width: 500px;
+  width: 100%;
+  max-width: 600px;
   clear: both;
   z-index: 3;
   position: relative;
@@ -383,5 +384,13 @@ h3 {
 
   .profile__label img {
     display: none;
+  }
+
+  .stat__title {
+    height: 23px;
+    font-size: 11px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
 }
