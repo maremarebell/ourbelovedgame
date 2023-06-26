@@ -8,6 +8,7 @@ const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL('https://ourbelovedgame.com/'),
   title: 'Our Beloved Game',
   description: 'Player info for Our Beloved Game, The Bachelor and The Bachelorette',
 }
