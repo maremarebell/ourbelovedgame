@@ -44,9 +44,9 @@ export default function Players() {
   };
 
   // Create a new array with players in the desired order
-  const orderedPlayers = groupOrder.reduce<Player[]>((ordered, slug) => {
-    if (groupedPlayers[slug]) {
-      ordered.push(...groupedPlayers[slug]);
+  const orderedPlayers = groupOrder.reduce<Player[]>((ordered, status) => {
+    if (groupedPlayers[status]) {
+      ordered.push(...groupedPlayers[status]);
     }
     return ordered;
   }, []);
