@@ -1,5 +1,4 @@
 import React from "react";
-import { Status } from "./Status";
 import Link from 'next/link';
 import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google'
@@ -54,7 +53,7 @@ export const PlayerLine = (props) => {
         />
       </div>
 
-      <span className="player__name--line">{props.data.name}</span>
+      <span className={`player__name--line ${sgfont.className}`}>{props.data.name}</span>
 
       <Link className={`player__link--line ${sgfont.className}`} href={`/player/${props.data.slug}`}>Go to profile</Link>
     </li>
