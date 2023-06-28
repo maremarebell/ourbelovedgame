@@ -16,6 +16,7 @@ const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 interface Player {
   player_status: string;
   slug: string;
+  gorder: number;
 }
 
 export default function Players() {
@@ -32,11 +33,11 @@ export default function Players() {
   // Define the order of groups
   const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
 
-  const [isAlphabetical, setIsAlphabetical] = useState(true); // State to track the order
+  const [isGorder, setGorder] = useState(false); // State to track the order
   const [isPlayerTile, setIsPlayerTile] = useState(true); // State to track the selected component type
 
   const toggleOrder = () => {
-    setIsAlphabetical((prevState) => !prevState);
+    setGorder((prevState) => !prevState);
   };
 
   const toggleComponent = () => {
@@ -51,9 +52,9 @@ export default function Players() {
     return ordered;
   }, []);
 
-  // Sort the players alphabetically if the state is set to alphabetical
-  if (isAlphabetical) {
-    orderedPlayers.sort((a, b) => a.slug.localeCompare(b.slug));
+  // Sort the players in the GOR order if the state is set to GOR order
+  if (isGorder) {
+    orderedPlayers.sort((a, b) => a.gorder - b.gorder);
   }
 
   return (
@@ -66,7 +67,7 @@ export default function Players() {
 
           <button onClick={toggleOrder} className="button button--reorder">
             <ReorderIcon />
-            {isAlphabetical ? 'Reorder by GOR IG anlyses' : 'Reorder alphabteically'}
+            {isGorder ? 'Reorder by GOR IG analyses' : 'Reorder alphabteically'}
           </button>
 
           <button onClick={toggleComponent} className="toggle button">
