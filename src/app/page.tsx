@@ -67,7 +67,7 @@ export default function Players() {
 
           <button onClick={toggleOrder} className="button button--reorder">
             <ReorderIcon />
-            {isGorder ? 'Reorder by GOR IG analyses' : 'Reorder alphabteically'}
+            {isGorder ? 'Reorder alphabteically' : 'Reorder by GOR IG analyses'}
           </button>
 
           <button onClick={toggleComponent} className="toggle button">
