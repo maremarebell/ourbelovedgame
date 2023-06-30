@@ -1,6 +1,6 @@
 'use client';
 
-import playerData from "../../data-20.json";
+import playerData from "../../data/data-20-players.json";
 import { Status } from '../../Status';
 import {SvgLogoInstagram} from '../../utils/logos';
 import {SvgLogoTiktok} from '../../utils/logos';

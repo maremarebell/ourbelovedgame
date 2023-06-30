@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import playerData from "./data-20.json";
+import playerData from "./data/data-20-players.json";
 import { PlayerTile } from "./PlayerTile";
 import { PlayerLine } from "./PlayerLine"; 
 import Link from 'next/link';
