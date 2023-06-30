@@ -17,6 +17,10 @@ h3 {
   margin-bottom: 10px;
 }
 
+strong {
+  font-weight: 700;
+}
+
 
 //--------------------------------------------------------
 // Hero & main content
@@ -156,6 +160,12 @@ h3 {
 
 .profile__info {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile__p {
+  font-size: 14px;
+  line-height: 1.4em;
   margin-bottom: 10px;
 }
 
