@@ -463,14 +463,20 @@ h1 {
     float: left;
     display: block;
     border: 1px solid #000;
-    width: 25%;
+    width: 32%;
     padding: 0;
     margin: 0;
-    height: 130px;
+    height: 126px;
+    margin: 2px;
   }
 
   .player__name {
     color: #000;
     font-size: 20px;
+  }
+
+  // Don't display eliminated players in the notes printout
+  .player--eliminated {
+    display: none;
   }
 }
