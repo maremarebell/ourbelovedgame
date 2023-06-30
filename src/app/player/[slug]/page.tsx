@@ -6,6 +6,7 @@ import {SvgLogoInstagram} from '../../utils/logos';
 import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google'
+import { textWithLinks } from '../../utils/textUtils';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -234,7 +235,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <ul className="predictions">
                       {player?.gor_predictions &&
                         player.gor_predictions.split(';').map((prediction, index) => (
-                          <li key={index} className="prediction">{prediction.trim()}</li>
+                          <li key={index} className="prediction">{textWithLinks(prediction.trim())}</li>
                         ))
                       }
                     </ul>    

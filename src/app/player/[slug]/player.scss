@@ -351,6 +351,8 @@ strong {
 
 .prediction {
   padding: 10px 0;
+  text-indent: -16px;
+  padding-left: 20px;
   
   &:before {
     content: '\2022';
