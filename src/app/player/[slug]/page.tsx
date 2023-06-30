@@ -5,10 +5,10 @@ import { Status } from '../../Status';
 import {SvgLogoInstagram} from '../../utils/logos';
 import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';
-import { Schibsted_Grotesk } from 'next/font/google'
-import { textWithLinks } from '../../utils/textUtils';
+import { Schibsted_Grotesk } from 'next/font/google';
+import Sections from '../../components/Sections';
 
-const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
+const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
 export default function Page({ params }: { params: { slug: string } }) {
 
@@ -226,20 +226,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div> 
                   </section>
 
-                  <section className="profile__section">
-                    <h3 className={sgfont.className}>🔮 Pre-Season Predictions</h3>
-                    <p className="profile__p">
-                      Predictions come from <a href="https://linktr.ee/gameofroses" target="_blank">Game of Roses</a> <strong>Season 20 IG Analysis</strong>, which you can find
-                      wherever you listen to podcasts.
-                    </p>
-                    <ul className="predictions">
-                      {player?.gor_predictions &&
-                        player.gor_predictions.split(';').map((prediction, index) => (
-                          <li key={index} className="prediction">{textWithLinks(prediction.trim())}</li>
-                        ))
-                      }
-                    </ul>    
-                  </section>
+                  <Sections data={data} player={player} key={player?.gorder} />
+            
                 </div>
               </div>
             </div>
