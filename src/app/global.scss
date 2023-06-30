@@ -185,6 +185,11 @@ h1 {
     flex-basis: calc(33.33% - 20px); /* Adjust the width as desired */
     flex-grow: 0;
   }
+
+  &:hover {
+    transition: .3s;
+    color: rgb(255, 255, 255, .6);
+  }
 }
 
 .player--eliminated {
