@@ -30,23 +30,23 @@ function Sections({ data, player }) {
 
   return (
     <div>
-      <section className="profile__section">
+      {episodesData.map((episodeData, index) => (
+        <Episode key={index} episodeData={episodeData} player={player} epiNumber={index+1} />
+      ))}
+
+      <section className="profile__section profile__section--epis">
         <h3 className={sgfont.className}>🔮 Pre-Season Predictions</h3>
         <p className="profile__p">
           Predictions come from <a href="https://linktr.ee/gameofroses" target="_blank">Game of Roses</a> <strong>Season 20 IG Analysis</strong>, which you can find
           wherever you listen to podcasts.
         </p>
-        <ul className="predictions">
+        <ul className="profile__list">
           {player?.gor_predictions &&
             player.gor_predictions.split(';').map((prediction, index) => (
-              <li key={index} className="prediction">{textWithLinks(prediction.trim())}</li>
+              <li key={index} className="profile__list__item">{textWithLinks(prediction.trim())}</li>
             ))}
         </ul>
       </section>
-
-      {/* {episodesData.map((episodeData, index) => (
-        <Episode key={index} episodeData={episodeData} player={player} epiNumber={index+1} />
-      ))} */}
     </div>
   );
 }

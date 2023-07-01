@@ -140,6 +140,15 @@ strong {
   }
 }
 
+.profile__section--epis {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+.episode__key {
+  text-transform: capitalize;
+}
+
 .profile__short-name {
   fill: #fff;
   width: 100%;
@@ -341,15 +350,11 @@ strong {
 
 
 //--------------------------------------------------------
-// Predictions
+// Profile List
 //--------------------------------------------------------
 
-.predictions {
-  font-size: 14px;
-}
-
-.prediction {
-  padding: 10px 0;
+.profile__list__item {
+  padding: 6px 0;
   text-indent: -16px;
   padding-left: 20px;
   
