@@ -199,7 +199,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div>
                   </section>
                              
-                  <Stats />
+                  <Stats data={data} player={player} />
 
                   <Sections data={data} player={player} key={player?.gorder} />
             
