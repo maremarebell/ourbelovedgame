@@ -11,36 +11,96 @@ function Episode({ episodeData, player, epiNumber }) {
     <section className="profile__section episode profile__section--epis">
       <h3 className={sgfont.className}>Episode {epiNumber}</h3>
 
-      {/* Display data from episodeData using player.slug */}
       {dataForPlayer && (
         <div>
-          {Object.entries(dataForPlayer).map(([key, value]) => {
-            const formattedKey = key.replace('_', ' '); // Remove underscores from the key
 
-            if (formattedKey !== 'slug' && value) { // Exclude the 'slug' key
-              if (typeof value === 'string' && value.includes(';')) {
+          {dataForPlayer.awards && (
+            <div>
+              <h4>Awards:</h4>
+              <ul>
+                {dataForPlayer.awards.split(';').map((item) => {
+                  const trimmedItem = item.trim();
+                  let className = '';
 
-                // Convert semicolon-separated text into a list
-                const listItems = value.split(';').map((item) => (
-                  <li key={item} className="profile__list__item">{item.trim()}</li>
-                ));
+                  if (trimmedItem.startsWith("Clue's")) {
+                    className = 'award--clues';
+                  } else if (trimmedItem.startsWith("Pacecase's")) {
+                    className = 'award--pacecase';
+                  }
 
-                return (
-                  <div className="profile__p" key={formattedKey}>
-                    <strong className="episode__key">{formattedKey}:</strong>
-                    <ul className="profile__list">{listItems}</ul>
-                  </div>
-                );
-              }
+                  const colonIndex = trimmedItem.indexOf(':');
 
-              return (
-                <p className="episode__key profile__p" key={formattedKey}>
-                  <strong>{formattedKey}:</strong> {value}
-                </p>
-              );
-            }
-            return null; // Skip empty values or the 'slug' key
-          })}
+                  return (
+                    <li key={item} className={`award ${className}`}>
+                      {colonIndex !== -1 ? (
+                        <p>
+                          <strong>{trimmedItem.slice(0, colonIndex + 1)}</strong>
+                          {trimmedItem.slice(colonIndex + 1)}
+                        </p>
+                      ) : (
+                        <strong>{trimmedItem}</strong>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
+          {dataForPlayer.events && (
+            <div>
+              <h4>Events:</h4>
+              <ul className="profile__list">
+                {dataForPlayer.events.split(';').map((item) => (
+                  <li key={item} className="profile__list__item">
+                    {item.trim()}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <h4>Limo Exit:</h4>
+          <p className="profile__p">{dataForPlayer.limo_exit}</p>
+
+          {dataForPlayer.love_levels && (
+            <div>
+              <h4>Love Levels:</h4>
+              <ul className="profile__list">
+                {dataForPlayer.love_levels.split(';').map((item) => (
+                  <li key={item} className="profile__list__item">
+                    {item.trim()}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {dataForPlayer.ptcs && (
+            <div>
+              <h4>PTCs:</h4>
+              <ul className="profile__list">
+                {dataForPlayer.ptcs.split(';').map((item) => (
+                  <li key={item} className="profile__list__item">
+                    {item.trim()}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {dataForPlayer.notes && (
+            <div>
+              <h4>Notes:</h4>
+              <ul className="profile__list">
+                {dataForPlayer.notes.split(';').map((item) => (
+                  <li key={item} className="profile__list__item">
+                    {item.trim()}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       )}
     </section>

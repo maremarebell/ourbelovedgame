@@ -17,8 +17,44 @@ h3 {
   margin-bottom: 10px;
 }
 
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
 strong {
   font-weight: 700;
+}
+
+//--------------------------------------------------------
+// Awards
+//--------------------------------------------------------
+
+.award {
+  padding: 6px 14px;
+  margin: 4px 0;
+  border-radius: 10px;
+  display: flex;
+
+  &:before {
+    content: "🏆";
+    position: relative;
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 16px;
+  }
+}
+
+.award--clues {
+  background-color: rgb(229, 248, 254);
+}
+
+.award--pacecase {
+  background-color: rgb(255, 209, 255); 
 }
 
 
@@ -352,6 +388,10 @@ strong {
 //--------------------------------------------------------
 // Profile List
 //--------------------------------------------------------
+
+.profile__list {
+  margin-bottom: 10px;
+}
 
 .profile__list__item {
   padding: 6px 0;
