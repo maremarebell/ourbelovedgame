@@ -7,6 +7,7 @@ import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google';
 import Sections from '../../components/Sections';
+import Stats from '../../components/Stats';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
@@ -198,33 +199,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </div>
                   </section>
                              
-                  <section className="profile__section">
-                    <h3 className={sgfont.className}>📊 Season Stats</h3>
-                    <div className="stats">
-                      <div className="stats__row">
-                        <div className="stat">
-                          <span className="stat__title">Dates</span>
-                          <span className="stat__value">0</span>
-                          <span className="stat_detail"></span>
-                        </div>
-                        <div className="stat">
-                          <span className="stat__title">Kisses</span>
-                          <span className="stat__value">0</span>
-                          <span className="stat_detail"></span>
-                        </div>
-                        <div className="stat">
-                          <span className="stat__title">PTCs</span>
-                          <span className="stat__value">0</span>
-                          <span className="stat_detail"></span>
-                        </div>
-                        <div className="stat">
-                          <span className="stat__title">Love Level</span>
-                          <span className="stat__value">0</span>
-                          <span className="stat_detail"></span>
-                        </div>
-                      </div>
-                    </div> 
-                  </section>
+                  <Stats />
 
                   <Sections data={data} player={player} key={player?.gorder} />
             
