@@ -1,5 +1,6 @@
 import React from 'react';
 import { Schibsted_Grotesk } from 'next/font/google';
+// import AwardCard from './AwardCard';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
@@ -17,6 +18,8 @@ function Episode({ episodeData, player, epiNumber }) {
         <div className="epi-stats__metric"><span>💋</span><span>{dataForPlayer.kisses}</span></div>
         <div className="epi-stats__metric"><span>🏆</span><span>{awardsCount}</span></div>
       </div>
+
+      {/* <AwardCard /> */}
 
       {dataForPlayer && (
         <div>
