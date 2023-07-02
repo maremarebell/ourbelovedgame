@@ -59,6 +59,31 @@ strong {
 
 
 //--------------------------------------------------------
+// Episode Stats
+//--------------------------------------------------------
+
+.epi-stats {
+  display: flex;
+  position: absolute;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+  right: 0;
+  top: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.epi-stats__metric {
+  margin: 0 6px;
+
+  span {
+    padding: 0 2px;
+  }
+}
+
+
+//--------------------------------------------------------
 // Hero & main content
 //--------------------------------------------------------
 
@@ -170,6 +195,7 @@ strong {
   margin-top: -1px;
   padding: 20px 0;
   border-width: 0 0 1px 0;
+  position: relative;
 
   &:last-child {
     border-bottom-width: 0;

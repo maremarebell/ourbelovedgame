@@ -7,9 +7,16 @@ function Episode({ episodeData, player, epiNumber }) {
   // Find the data corresponding to player.slug
   const dataForPlayer = episodeData.find((data) => data.slug === player.slug);
 
+  const awardsCount = dataForPlayer.awards ? dataForPlayer.awards.split(';').length : 0;
+
   return (
     <section className="profile__section episode profile__section--epis">
       <h3 className={sgfont.className}>Episode {epiNumber}</h3>
+
+      <div className="epi-stats">
+        <div className="epi-stats__metric"><span>💋</span><span>{dataForPlayer.kisses}</span></div>
+        <div className="epi-stats__metric"><span>🏆</span><span>{awardsCount}</span></div>
+      </div>
 
       {dataForPlayer && (
         <div>
@@ -49,7 +56,7 @@ function Episode({ episodeData, player, epiNumber }) {
 
           {dataForPlayer.events && (
             <div>
-              <h4>Events:</h4>
+              <h4>Other Achievements:</h4>
               <ul className="profile__list">
                 {dataForPlayer.events.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
