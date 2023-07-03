@@ -54,11 +54,17 @@ export const PlayerTile = (props) => {
   var pattern = patterns[props.index];
 
   return (
-    <li className={`player player--${props.data.player_status} ${pattern}`}>
+    <li className={`player player--${props.data.player_status}`}>
+
+      <div class={`player__background ${pattern}`}></div>
 
       <Link className="player__link" href={`/player/${props.data.slug}`}></Link>
 
       <span className={`player__name ${sgfont.className}`}>{props.data.name}</span>
+
+      <div className="player__details">
+        {props.data.age}, {props.data.job}
+      </div>
 
       <div className="player__headshot-container">
         <Image

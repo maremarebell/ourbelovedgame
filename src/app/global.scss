@@ -177,19 +177,40 @@ h1 {
   padding-bottom: 0;
   position: relative;
   height: 160px;
-  color: rgb(255, 255, 255, .2);
   font-weight: 900;
   overflow: hidden;
+  cursor: pointer;
 
   &:last-child {
-    flex-basis: calc(33.33% - 20px); /* Adjust the width as desired */
+    flex-basis: calc(33.33% - 20px);
     flex-grow: 0;
   }
 
   &:hover {
-    transition: .3s;
-    color: rgb(255, 255, 255, .6);
+    .player__background {
+      transition: .3s;
+      color: rgb(255, 255, 255, .6);
+    }
   }
+}
+
+.player__background {
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255, .2);
+}
+
+.player__details {
+  z-index: 40;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  padding: 4px 0 2px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e52a38;
 }
 
 .player--eliminated {
@@ -212,15 +233,6 @@ h1 {
   margin: auto;
   height: 100%;
   width: auto;
-}
-
-.player__info {
-  position: relative;
-  position: absolute;
-  bottom: 2px;
-  z-index: 3;
-  color: #730202;
-  width: 100%;
 }
 
 .player__link {
@@ -430,6 +442,11 @@ h1 {
     font-size: 12px;
     right: 0;
     top: 6px;
+  }
+
+  .player__details {
+    font-size: 10px;
+    padding: 2px 0 0 0;
   }
 
   .player__headshot {
