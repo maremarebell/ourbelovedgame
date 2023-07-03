@@ -56,7 +56,7 @@ export const PlayerTile = (props) => {
   return (
     <li className={`player player--${props.data.player_status}`}>
 
-      <div class={`player__background ${pattern}`}></div>
+      <div className={`player__background ${pattern}`}></div>
 
       <Link className="player__link" href={`/player/${props.data.slug}`}></Link>
 
