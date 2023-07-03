@@ -67,14 +67,10 @@ export const PlayerTile = (props) => {
       </div>
 
       <div className="player__headshot-container">
-        <Image
+        <img
           src={imagePath}
           alt={`headshot of ${props.data.name}`}
           className="player__headshot"
-          height={128}
-          width={200}
-          placeholder="blur"
-          blurDataURL={blurImagePath}
         />
       </div>
     </li>
