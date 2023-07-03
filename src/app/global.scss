@@ -72,6 +72,12 @@ h1 {
   margin-bottom: 10px;
 }
 
+p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
 .container {
   width: 100%;
   max-width: 900px;
@@ -125,7 +131,6 @@ h1 {
   svg {
     vertical-align: middle;
     display: inline-block;
-    margin-right: 4px;
     height: 14px;
     width: 14px;
     margin-top: -3px;
@@ -151,6 +156,10 @@ h1 {
   float: right;
   clear: both;
   display: block;
+
+  svg {
+    margin-right: 4px;
+  }
 }
 
 
@@ -306,67 +315,34 @@ h1 {
   padding: 20px;
 }
 
-// Lol this is all a mess, fix it later
-.toggle__option {
-  svg {
-    margin: 0;
-    margin-top: -1px;
-  }
-}
 
-.toggle.button:hover {
-  background-color: transparent;
-
-  .toggle__option svg path {
-    fill: white;
-  }
-
-  .toggle__option--active svg path {
-    fill: $red-bright;
-  }
-}
+//--------------------------------------------------------
+// Toggle
+//--------------------------------------------------------
 
 .toggle {
+  border-radius: 100px;
+  border: 2px solid #fff;
+  width: auto;
+  display: inline-block;
   padding-left: 0;
   padding-right: 0;
-  height: 30px;
-
-  &:active
-  &:hover {
-    background-color: transparent;
-
-    .toggle__option {
-      background-color: transparent;
-    
-      svg path {
-        fill: white;
-      }
-    }
-
-    .toggle__option--active {
-      background-color: white;
-    
-      svg path {
-        fill: $red-bright
-      }
-    }
-
-  }
-}
-
-.toggle__option {
-  padding: 7px;
+  height: auto;
 }
 
 .toggle__option--active {
   background-color: #fff;
-  border-radius: 20px;
-  
+
   svg path {
     fill: $red-bright;
   }
 }
-// End of toggle mess
+
+.button--toggle {
+  border-color: transparent;
+  padding: 8px 10px;
+}
+
 
 //--------------------------------------------------------
 // Media queries 

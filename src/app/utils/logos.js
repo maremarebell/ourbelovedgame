@@ -54,3 +54,9 @@ export const ListIcon = (props) => (
     <path id="Path_3" data-name="Path 3" d="M19,9H5V5H19Zm0,1H5v4H19Zm0,5H5v4H19ZM19,5V5Z" transform="translate(-5 -5)"/>
   </svg>
 );
+
+export const FullscreenIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="96" height="84" viewBox="0 0 96 84">
+    <path id="Path_2" data-name="Path 2" d="M11,77H32v6a9,9,0,0,0,9,9H59a9,9,0,0,0,9-9V77H89a9,9,0,0,0,9-9V17a9,9,0,0,0-9-9H11a9,9,0,0,0-9,9V68a9,9,0,0,0,9,9Zm3-57H86V65H14Z" transform="translate(-2 -8)"/>
+  </svg>
+);

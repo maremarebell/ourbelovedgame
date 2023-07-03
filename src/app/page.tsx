@@ -3,13 +3,14 @@
 import React, { useState } from 'react';
 import playerData from "./data/data-20-players.json";
 import { PlayerTile } from "./PlayerTile";
-import { PlayerLine } from "./PlayerLine"; 
+import { PlayerLine } from "./PlayerLine";
+import { PlayerDetailed } from "./PlayerDetailed";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
 import { ReorderIcon } from './utils/logos.js';
 import { ListIcon } from './utils/logos.js';
 import { GalleryIcon } from './utils/logos.js';
-
+import { FullscreenIcon } from './utils/logos.js';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -34,14 +35,14 @@ export default function Players() {
   const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
 
   const [isGorder, setGorder] = useState(false); // State to track the order
-  const [isPlayerTile, setIsPlayerTile] = useState(true); // State to track the selected component type
+  const [selectedOption, setSelectedOption] = useState("tile");
 
-  const toggleOrder = () => {
-    setGorder((prevState) => !prevState);
+  const handleToggle = (option: React.SetStateAction<string>) => {
+    setSelectedOption(option);
   };
 
-  const toggleComponent = () => {
-    setIsPlayerTile((prevState) => !prevState);
+  const toggleOrder = () => {
+    setGorder(!isGorder);
   };
 
   // Create a new array with players in the desired order
@@ -65,36 +66,49 @@ export default function Players() {
           <p className="players__header__message">Click headshots to see players profiles.</p>
           <p className="players__header__update-notice">Last updated: 6/25 10:00PM ET 2023</p>
 
+          <div className="toggle">
+            <button
+              className={`button button--toggle ${selectedOption === "tile" ? 'toggle__option--active' : ''}`}
+              onClick={() => handleToggle("tile")}
+            >
+              <GalleryIcon />
+            </button>
+            <button
+              className={`button button--toggle ${selectedOption === "line" ? 'toggle__option--active' : ''}`}
+              onClick={() => handleToggle("line")}
+            >
+              <ListIcon />
+            </button>
+            <button
+              className={`button button--toggle ${selectedOption === "detailed" ? 'toggle__option--active' : ''}`}
+              onClick={() => handleToggle("detailed")}
+            >
+              <FullscreenIcon />
+            </button>
+          </div>
+
           <button onClick={toggleOrder} className="button button--reorder">
             <ReorderIcon />
             {isGorder ? 'Reorder alphabteically' : 'Reorder by GOR IG analyses'}
           </button>
-
-          <button onClick={toggleComponent} className="toggle button">
-            {isPlayerTile ? (
-              <>
-                <span className="toggle__option toggle__option--right toggle__option--active"><GalleryIcon /></span>
-                <span className="toggle__option toggle__option--left "><ListIcon /></span>
-              </>
-            ) : (
-              <>
-                <span className="toggle__option toggle__option--right"><GalleryIcon /></span>
-                <span className="toggle__option toggle__option--left toggle__option--active"><ListIcon /></span>
-                
-              </>
-            )}
-          </button>
         </div>
 
         <ul className="players">
-          {orderedPlayers.map((player, index) => (
-            // Conditionally render the component based on the value of isPlayerTile
-            isPlayerTile ? (
+          {selectedOption === "tile" && (
+            orderedPlayers.map((player, index) => (
               <PlayerTile key={index} data={player} index={index} />
-            ) : (
+            ))
+          )}
+
+          {selectedOption === "line" && (
+            orderedPlayers.map((player, index) => (
               <PlayerLine key={index} data={player} index={index} />
-            )
-          ))}
+            ))
+          )}
+
+          {selectedOption === "detailed" && (
+            <p>Fullscreen mode under development!</p>
+          )}
         </ul>
 
         <Link href="/season-17" className="previous-season">
