@@ -465,16 +465,11 @@ h1 {
 
 
 @media print {
+
+  // Remove header stuff in printout
   .players__header,
   .previous-season {
     display: none;
-  }
-
-  .player__headshot-container,
-  .player__headshot {
-    width: 120px;
-    height: auto;
-    margin-left: -10px;
   }
 
   .players {
@@ -487,14 +482,32 @@ h1 {
     border: 1px solid #000;
     width: 32%;
     padding: 0;
-    margin: 0;
     height: 126px;
     margin: 2px;
+    position: relative;
   }
 
   .player__name {
     color: #000;
-    font-size: 20px;
+    font-size: 16px;
+  }
+
+  .player__details {
+    font-size: 10px;
+    position: top;
+    top: 16px;
+  }
+
+  .player__headshot-container,
+  .player__headshot {
+    height: auto;
+    z-index: 100;
+  }
+
+  .player__headshot-container {
+    bottom: 0;
+    left: -20px;
+    width: 100px;
   }
 
   // Don't display eliminated players in the notes printout
