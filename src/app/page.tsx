@@ -66,31 +66,33 @@ export default function Players() {
           <p className="players__header__message">Click headshots to see players profiles.</p>
           <p className="players__header__update-notice">Last updated: 6/25 10:00PM ET 2023</p>
 
-          <div className="toggle">
-            <button
-              className={`button button--toggle ${selectedOption === "tile" ? 'toggle__option--active' : ''}`}
-              onClick={() => handleToggle("tile")}
-            >
-              <GalleryIcon />
-            </button>
-            <button
-              className={`button button--toggle ${selectedOption === "line" ? 'toggle__option--active' : ''}`}
-              onClick={() => handleToggle("line")}
-            >
-              <ListIcon />
-            </button>
-            <button
-              className={`button button--toggle ${selectedOption === "detailed" ? 'toggle__option--active' : ''}`}
-              onClick={() => handleToggle("detailed")}
-            >
-              <FullscreenIcon />
+          <div className="controls">
+            <div className="toggle">
+              <button
+                className={`button button--toggle ${selectedOption === "tile" ? 'toggle__option--active' : ''}`}
+                onClick={() => handleToggle("tile")}
+              >
+                <GalleryIcon />
+              </button>
+              <button
+                className={`button button--toggle ${selectedOption === "line" ? 'toggle__option--active' : ''}`}
+                onClick={() => handleToggle("line")}
+              >
+                <ListIcon />
+              </button>
+              <button
+                className={`button button--toggle ${selectedOption === "detailed" ? 'toggle__option--active' : ''}`}
+                onClick={() => handleToggle("detailed")}
+              >
+                <FullscreenIcon />
+              </button>
+            </div>
+
+            <button onClick={toggleOrder} className="button button--reorder">
+              <ReorderIcon />
+              {isGorder ? 'Reorder alphabteically' : 'Reorder by GOR analyses'}
             </button>
           </div>
-
-          <button onClick={toggleOrder} className="button button--reorder">
-            <ReorderIcon />
-            {isGorder ? 'Reorder alphabteically' : 'Reorder by GOR IG analyses'}
-          </button>
         </div>
 
         <ul className="players">

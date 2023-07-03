@@ -153,9 +153,8 @@ p {
 }
 
 .button--reorder {
-  float: right;
-  clear: both;
-  display: block;
+  height: 32px;
+  font-size: 10px;
 
   svg {
     margin-right: 4px;
@@ -341,6 +340,12 @@ p {
 .button--toggle {
   border-color: transparent;
   padding: 8px 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
