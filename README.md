@@ -11,6 +11,8 @@ The data for this site is currently JSON files exported from Google Sheets: [Thi
 
 This is just for fun and I'd love to have other people contribute if they'd like. If you have ideas / edits you'd like to create, let's use Issues to start the conversation. Then we can move to PR -> approval -> deploy (Netlify automatically deploys changes that are merged to main). You can also just start with a PR and surprise me 😂. 
 
+Please also feel free to submit bugs as Issues and I'll try to tackle them as I go.
+
 ## Getting Started
 
 First, run the development server:
