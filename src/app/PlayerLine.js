@@ -1,6 +1,5 @@
 import React from "react";
 import Link from 'next/link';
-import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google'
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
@@ -42,14 +41,10 @@ export const PlayerLine = (props) => {
   return (
     <li className={`player player--${props.data.player_status} ${pattern} player--line`}>
       <div className="player__headshot-container--line">
-        <Image
+        <img
           src={imagePath}
           alt={`headshot of ${props.data.name}`}
           className="player__headshot--line"
-          height={128}
-          width={200}
-          placeholder="blur"
-          blurDataURL={blurImagePath}
         />
       </div>
 
