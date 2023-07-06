@@ -8,7 +8,7 @@ function Episode({ episodeData, player, epiNumber }) {
   // Find the data corresponding to player.slug
   const dataForPlayer = episodeData.find((data) => data.slug === player.slug);
 
-  const awardsCount = dataForPlayer.awards ? dataForPlayer.awards.split(';').length : 0;
+  const awardsCount = dataForPlayer.gor_awards ? dataForPlayer.gor_awards.split(';').length : 0;
 
   return (
     <section className="profile__section episode profile__section--epis">
@@ -24,11 +24,11 @@ function Episode({ episodeData, player, epiNumber }) {
       {dataForPlayer && (
         <div>
 
-          {dataForPlayer.awards && (
+          {dataForPlayer.gor_awards && (
             <div>
-              <h4>Awards:</h4>
+              <h4>GoR Awards:</h4>
               <ul>
-                {dataForPlayer.awards.split(';').map((item) => {
+                {dataForPlayer.gor_awards.split(';').map((item) => {
                   const trimmedItem = item.trim();
                   let className = '';
 

@@ -49,7 +49,7 @@ function Stats({ data, player }) {
           </div>
           <div className="stat">
             <span className="stat__title">Awards</span>
-            <span className="stat__value">{statsData.awards ? statsData.awards.split(';').length : 0}</span>
+            <span className="stat__value">{statsData.gor_awards ? statsData.gor_awards.split(';').length : 0}</span>
             <span className="stat_detail"></span>
           </div>
         </div>
