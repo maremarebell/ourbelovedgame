@@ -11,7 +11,7 @@ function Sections({ data, player }) {
   useEffect(() => {
     const fetchEpisodeData = async () => {
       try {
-        const episodeNumbers = [1];
+        const episodeNumbers = [1, 2];
         const episodesData = await Promise.all(
           episodeNumbers.map(async (episodeNumber) => {
             const response = await fetch(`/data/data-20-epi-${episodeNumber}.json`);
@@ -28,10 +28,12 @@ function Sections({ data, player }) {
     fetchEpisodeData();
   }, []);
 
+  const reversedEpisodesData = [...episodesData].reverse();
+
   return (
     <div>
-      {episodesData.map((episodeData, index) => (
-        <Episode key={index} episodeData={episodeData} player={player} epiNumber={index+1} />
+      {reversedEpisodesData.map((episodeData, index) => (
+        <Episode key={index} episodeData={episodeData} player={player} epiNumber={reversedEpisodesData.length - index} />
       ))}
 
       <section className="profile__section profile__section--epis">
