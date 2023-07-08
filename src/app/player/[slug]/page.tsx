@@ -7,7 +7,6 @@ import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';
 import { Schibsted_Grotesk } from 'next/font/google';
 import Sections from '../../components/Sections';
-import Stats from '../../components/Stats';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
@@ -198,11 +197,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                       </div>
                     </div>
                   </section>
-                             
-                  <Stats data={data} player={player} />
 
-                  <Sections data={data} player={player} key={player?.gorder} />
-            
+                  <Sections playerData={data} key={data?.gorder} />
                 </div>
               </div>
             </div>

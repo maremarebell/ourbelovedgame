@@ -1,32 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import Episode from './Episode';
-import { textWithLinks } from '../utils/textUtils';
 import { Schibsted_Grotesk } from 'next/font/google';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
-function Stats({ data, player }) {
-  const [statsData, setStatsData] = useState([]);
+function Stats({ playerData, episodesData }) {
 
-  useEffect(() => {
-    const fetchStatsData = async () => {
-      try {
-        // Fetch stats data from JSON file 
-        const response = await fetch(`/data/data-20-epi-1.json`);
-        const data = await response.json();
+  const playerSlug = playerData.slug;
 
-        const statsForPlayer = data.find((data) => data.slug === player.slug);
-    
-        setStatsData(statsForPlayer); // Update the statsData state with the fetched data
+  // Flatten the episodesData array into a single array of episodes
+  const allEpisodes = episodesData.flat();
 
-      } catch (error) {
-        console.error('Error fetching episode data:', error);
-      }
-    };
+  // Filter the episodes for the specific player
+  const playerEpisodes = allEpisodes.filter((episode) => episode.slug === playerSlug);
 
-    fetchStatsData();
-  }, []);
-
+  // Calculate the total number of kisses for the player
+  const totalKisses = playerEpisodes.reduce((total, episode) => total + episode.kisses, 0);
+  
   return (
     <section className="profile__section">
       <h3 className={sgfont.className}>📊 Season Stats</h3>
@@ -34,22 +23,22 @@ function Stats({ data, player }) {
         <div className="stats__row">
           <div className="stat">
             <span className="stat__title">Dates</span>
-            <span className="stat__value">{statsData.dates_count || 0}</span>
+            {/* <span className="stat__value">{statsData.dates_count || 0}</span> */}
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">Kisses</span>
-            <span className="stat__value">{statsData.kisses || 0}</span>
+            <span className="stat__value">{totalKisses}</span>
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">PTCs</span>
-            <span className="stat__value">{statsData.ptc_count || 0}</span>
+            {/* <span className="stat__value">{statsData.ptc_count || 0}</span> */}
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">Awards</span>
-            <span className="stat__value">{statsData.gor_awards ? statsData.gor_awards.split(';').length : 0}</span>
+            {/* <span className="stat__value">{statsData.gor_awards ? statsData.gor_awards.split(';').length : 0}</span> */}
             <span className="stat_detail"></span>
           </div>
         </div>

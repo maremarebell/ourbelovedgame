@@ -4,31 +4,29 @@ import { Schibsted_Grotesk } from 'next/font/google';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
-function Episode({ episodeData, player, epiNumber }) {
-  // Find the data corresponding to player.slug
-  const dataForPlayer = episodeData.find((data) => data.slug === player.slug);
+function Episode({ playerEpisodeData, epiNumber }) {
 
-  const awardsCount = dataForPlayer.gor_awards ? dataForPlayer.gor_awards.split(';').length : 0;
+  const awardsCount = playerEpisodeData.gor_awards ? playerEpisodeData.gor_awards.split(';').length : 0;
 
   return (
     <section className="profile__section episode profile__section--epis">
       <h3 className={sgfont.className}>Episode {epiNumber}</h3>
 
       <div className="epi-stats">
-        <div className="epi-stats__metric"><span>💋</span><span>{dataForPlayer.kisses}</span></div>
+        <div className="epi-stats__metric"><span>💋</span><span>{playerEpisodeData.kisses}</span></div>
         <div className="epi-stats__metric"><span>🏆</span><span>{awardsCount}</span></div>
       </div>
 
       {/* <AwardCard /> */}
 
-      {dataForPlayer && (
+      {playerEpisodeData && (
         <div>
 
-          {dataForPlayer.gor_awards && (
+          {playerEpisodeData.gor_awards && (
             <div>
               <h4>GoR Awards:</h4>
               <ul>
-                {dataForPlayer.gor_awards.split(';').map((item) => {
+                {playerEpisodeData.gor_awards.split(';').map((item) => {
                   const trimmedItem = item.trim();
                   let className = '';
 
@@ -57,11 +55,11 @@ function Episode({ episodeData, player, epiNumber }) {
             </div>
           )}
 
-          {dataForPlayer.events && (
+          {playerEpisodeData.events && (
             <div>
               <h4>Other Achievements:</h4>
               <ul className="profile__list">
-                {dataForPlayer.events.split(';').map((item) => (
+                {playerEpisodeData.events.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -70,18 +68,18 @@ function Episode({ episodeData, player, epiNumber }) {
             </div>
           )}
 
-          {dataForPlayer.limo_exit && (
+          {playerEpisodeData.limo_exit && (
             <div>
               <h4>Limo Exit:</h4>
-              <p className="profile__p">{dataForPlayer.limo_exit}</p>
+              <p className="profile__p">{playerEpisodeData.limo_exit}</p>
             </div>
           )}
 
-          {dataForPlayer.love_levels && (
+          {playerEpisodeData.love_levels && (
             <div>
               <h4>Love Levels:</h4>
               <ul className="profile__list">
-                {dataForPlayer.love_levels.split(';').map((item) => (
+                {playerEpisodeData.love_levels.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -90,11 +88,11 @@ function Episode({ episodeData, player, epiNumber }) {
             </div>
           )}
 
-          {dataForPlayer.ptcs && (
+          {playerEpisodeData.ptcs && (
             <div>
               <h4>PTCs:</h4>
               <ul className="profile__list">
-                {dataForPlayer.ptcs.split(';').map((item) => (
+                {playerEpisodeData.ptcs.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -103,11 +101,11 @@ function Episode({ episodeData, player, epiNumber }) {
             </div>
           )}
 
-          {dataForPlayer.notes && (
+          {playerEpisodeData.notes && (
             <div>
               <h4>Notes:</h4>
               <ul className="profile__list">
-                {dataForPlayer.notes.split(';').map((item) => (
+                {playerEpisodeData.notes.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
