@@ -70,8 +70,12 @@ function Episode({ episodeData, player, epiNumber }) {
             </div>
           )}
 
-          <h4>Limo Exit:</h4>
-          <p className="profile__p">{dataForPlayer.limo_exit}</p>
+          {dataForPlayer.limo_exit && (
+            <div>
+              <h4>Limo Exit:</h4>
+              <p className="profile__p">{dataForPlayer.limo_exit}</p>
+            </div>
+          )}
 
           {dataForPlayer.love_levels && (
             <div>
