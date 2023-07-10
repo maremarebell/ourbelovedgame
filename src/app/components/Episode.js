@@ -75,11 +75,11 @@ function Episode({ playerEpisodeData, epiNumber }) {
             </div>
           )}
 
-          {playerEpisodeData.love_levels && (
+          {playerEpisodeData.love_level_details && (
             <div>
               <h4>Love Levels:</h4>
               <ul className="profile__list">
-                {playerEpisodeData.love_levels.split(';').map((item) => (
+                {playerEpisodeData.love_level_details.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
