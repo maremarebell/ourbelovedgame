@@ -27,7 +27,13 @@ function Stats({ playerData, episodesData }) {
     }
     return total;
   }, 0);
-  
+
+  // Calculate the total of 1_1_count for the player
+  const total11Count = playerEpisodes.reduce((total, episode) => total + (episode['1_1_count'] || 0), 0);
+
+  // Calculate the total of gd_count for the player
+  const totalGDCount = playerEpisodes.reduce((total, episode) => total + (episode.gd_count || 0), 0);
+
   return (
     <section className="profile__section">
       <h3 className={sgfont.className}>📊 Season Stats</h3>
@@ -35,21 +41,29 @@ function Stats({ playerData, episodesData }) {
         <div className="stats__row">
           <div className="stat">
             <span className="stat__title">Dates</span>
-            {/* <span className="stat__value">{statsData.dates_count || 0}</span> */}
+            <span className="stat__subtitle">1:1 | GD</span>
+            <span className="stat__value">
+              {total11Count}
+              <span className="stat__divider"></span>
+              {totalGDCount}
+            </span>
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">Kisses</span>
+            <span className="stat__spacer"></span>
             <span className="stat__value">{totalKisses}</span>
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">PTCs</span>
+            <span className="stat__spacer"></span>
             <span className="stat__value">{totalPTCs}</span>
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
             <span className="stat__title">Awards</span>
+            <span className="stat__spacer"></span>
             <span className="stat__value">{totalAwards}</span>
             <span className="stat_detail"></span>
           </div>
