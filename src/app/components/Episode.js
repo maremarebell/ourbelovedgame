@@ -57,7 +57,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
 
           {playerEpisodeData.events && (
             <div>
-              <h4>Other Achievements:</h4>
+              <h4>Achievements:</h4>
               <ul className="profile__list">
                 {playerEpisodeData.events.split(';').map((item) => (
                   <li key={item} className="profile__list__item">
