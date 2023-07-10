@@ -16,6 +16,9 @@ function Stats({ playerData, episodesData }) {
   // Calculate the total number of kisses for the player
   const totalKisses = playerEpisodes.reduce((total, episode) => total + episode.kisses, 0);
 
+  // Calculate the total number of PTCs for the player
+  const totalPTCs = playerEpisodes.reduce((total, episode) => total + episode.ptc_count, 0);
+
   // Calculate the total number of awards for the player
   const totalAwards = playerEpisodes.reduce((total, episode) => {
     if (episode.gor_awards) {
@@ -42,7 +45,7 @@ function Stats({ playerData, episodesData }) {
           </div>
           <div className="stat">
             <span className="stat__title">PTCs</span>
-            {/* <span className="stat__value">{statsData.ptc_count || 0}</span> */}
+            <span className="stat__value">{totalPTCs}</span>
             <span className="stat_detail"></span>
           </div>
           <div className="stat">
