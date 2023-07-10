@@ -15,6 +15,15 @@ function Stats({ playerData, episodesData }) {
 
   // Calculate the total number of kisses for the player
   const totalKisses = playerEpisodes.reduce((total, episode) => total + episode.kisses, 0);
+
+  // Calculate the total number of awards for the player
+  const totalAwards = playerEpisodes.reduce((total, episode) => {
+    if (episode.gor_awards) {
+      const awards = episode.gor_awards.split(';').filter((award) => award.trim().length > 0).length;
+      return total + awards;
+    }
+    return total;
+  }, 0);
   
   return (
     <section className="profile__section">
@@ -38,7 +47,7 @@ function Stats({ playerData, episodesData }) {
           </div>
           <div className="stat">
             <span className="stat__title">Awards</span>
-            {/* <span className="stat__value">{statsData.gor_awards ? statsData.gor_awards.split(';').length : 0}</span> */}
+            <span className="stat__value">{totalAwards}</span>
             <span className="stat_detail"></span>
           </div>
         </div>
