@@ -26,7 +26,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>GoR Awards:</h4>
               <ul>
-                {playerEpisodeData.gor_awards.split(';').map((item) => {
+                {playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0).map((item) => {
                   const trimmedItem = item.trim();
                   let className = '';
 
