@@ -12,7 +12,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "🚗 First out of the limo (Alpha); 🌹 First flower",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "aaron-schwartzman",
@@ -27,7 +28,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "🍷 First responder",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "adrian-hassan",
@@ -42,7 +44,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "brayden-bowers",
@@ -57,7 +60,8 @@
     "gor_awards_count": 4,
     "date_count": 0,
     "events": "🌹 FIMP recipient",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "caleb-arthur",
@@ -72,7 +76,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "caleb-balgaard",
@@ -87,7 +92,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "chris-spell",
@@ -102,7 +108,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "dotun-olubeko",
@@ -117,7 +124,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "🚗 Last out of the limo (Omega)",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "james-pierce",
@@ -132,7 +140,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "joe-menzia",
@@ -147,7 +156,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "joey-graziadei",
@@ -162,7 +172,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": "1️⃣ Loaded LL1 from C - “Joey gives me butterflies”"
+    "love_level_max": 1,
+    "love_level_details": "1️⃣ Loaded LL1 from C - “Joey gives me butterflies”"
   },
   {
     "slug": "john-buresh",
@@ -177,7 +188,8 @@
     "gor_awards_count": 1,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "john-henry-spurlock",
@@ -192,7 +204,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "josh-young",
@@ -207,7 +220,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "kaleb-kim",
@@ -222,7 +236,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "khalid-hassan",
@@ -237,7 +252,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "michael-barbour",
@@ -252,7 +268,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "nic-barner",
@@ -267,7 +284,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "peter-cappio",
@@ -282,7 +300,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "sean-mclaughlin",
@@ -297,7 +316,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "spencer-storbeck",
@@ -312,7 +332,8 @@
     "gor_awards_count": 2,
     "date_count": 0,
     "events": "🚗 Worst limo exit; 🌹 Last rose",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "tanner-courtad",
@@ -327,7 +348,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "taylor-pegg",
@@ -342,7 +364,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "Eliminated Night One",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "warwick-reider",
@@ -357,7 +380,8 @@
     "gor_awards_count": 0,
     "date_count": 0,
     "events": "",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   },
   {
     "slug": "xavier-bonner",
@@ -372,6 +396,7 @@
     "gor_awards_count": 1,
     "date_count": 0,
     "events": "😘 First kiss of the season",
-    "love_levels": ""
+    "love_level_max": "",
+    "love_level_details": ""
   }
 ]
