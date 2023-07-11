@@ -34,6 +34,9 @@ function Stats({ playerData, episodesData }) {
   // Calculate the total of gd_count for the player
   const totalGDCount = playerEpisodes.reduce((total, episode) => total + (episode.gd_count || 0), 0);
 
+  // Find the highest love_level_max among the episodes for the player
+  const highestLoveLevel = Math.max(...playerEpisodes.map((episode) => episode.love_level_max));
+
   return (
     <section className="profile__section">
       <h3 className={sgfont.className}>📊 Season Stats</h3>
@@ -65,6 +68,12 @@ function Stats({ playerData, episodesData }) {
             <span className="stat__title">Awards</span>
             <span className="stat__spacer"></span>
             <span className="stat__value">{totalAwards}</span>
+            <span className="stat_detail"></span>
+          </div>
+          <div className="stat">
+            <span className="stat__title">Love Level</span>
+            <span className="stat__spacer"></span>
+            <span className="stat__value">{highestLoveLevel}</span>
             <span className="stat_detail"></span>
           </div>
         </div>
