@@ -26,7 +26,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>GoR Awards:</h4>
               <ul>
-                {playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0).map((item) => {
+                { playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0).map((item) => {
                   const trimmedItem = item.trim();
                   let className = '';
 
@@ -39,16 +39,18 @@ function Episode({ playerEpisodeData, epiNumber }) {
                   const colonIndex = trimmedItem.indexOf(':');
 
                   return (
-                    <li key={item} className={`award ${className}`}>
-                      {colonIndex !== -1 ? (
-                        <p>
-                          <strong>{trimmedItem.slice(0, colonIndex + 1)}</strong>
-                          {trimmedItem.slice(colonIndex + 1)}
-                        </p>
-                      ) : (
-                        <strong>{trimmedItem}</strong>
-                      )}
-                    </li>
+                    trimmedItem.length > 0 && (
+                      <li key={item} className={`award ${className}`}>
+                        {colonIndex !== -1 ? (
+                          <p>
+                            <strong>{trimmedItem.slice(0, colonIndex + 1)}</strong>
+                            {trimmedItem.slice(colonIndex + 1)}
+                          </p>
+                        ) : (
+                          <strong>{trimmedItem}</strong>
+                        )}
+                      </li>
+                    )
                   );
                 })}
               </ul>
@@ -59,7 +61,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>Achievements:</h4>
               <ul className="profile__list">
-                {playerEpisodeData.events.split(';').map((item) => (
+                {playerEpisodeData.events.split(';').filter((item) => item.trim().length > 0).map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -68,7 +70,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             </div>
           )}
 
-          {playerEpisodeData.limo_exit && (
+          {playerEpisodeData.limo_exit && playerEpisodeData.limo_exit.trim().length > 0 && (
             <div>
               <h4>Limo Exit:</h4>
               <p className="profile__p">{playerEpisodeData.limo_exit}</p>
@@ -79,7 +81,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>Love Levels:</h4>
               <ul className="profile__list">
-                {playerEpisodeData.love_level_details.split(';').map((item) => (
+                {playerEpisodeData.love_level_details.split(';').filter((item) => item.trim().length > 0).map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -92,7 +94,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>PTCs:</h4>
               <ul className="profile__list">
-                {playerEpisodeData.ptcs.split(';').map((item) => (
+                {playerEpisodeData.ptcs.split(';').filter((item) => item.trim().length > 0).map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
@@ -105,7 +107,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             <div>
               <h4>Notes:</h4>
               <ul className="profile__list">
-                {playerEpisodeData.notes.split(';').map((item) => (
+                {playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0).map((item) => (
                   <li key={item} className="profile__list__item">
                     {item.trim()}
                   </li>
