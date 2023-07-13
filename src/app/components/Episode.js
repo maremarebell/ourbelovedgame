@@ -5,27 +5,32 @@ import { Schibsted_Grotesk } from 'next/font/google';
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
 function Episode({ playerEpisodeData, epiNumber }) {
-  const awardsCount = playerEpisodeData.gor_awards ? playerEpisodeData.gor_awards.split(';').length : 0;
 
-  const filteredAwards = playerEpisodeData.gor_awards
-    ? playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  // TODO: Clean this up
 
-  const filteredEvents = playerEpisodeData.events
-    ? playerEpisodeData.events.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  const awardsCount = playerEpisodeData && playerEpisodeData.gor_awards
+  ? playerEpisodeData.gor_awards.split(';').length
+  : 0;
 
-  const filteredLoveLevels = playerEpisodeData.love_level_details
-    ? playerEpisodeData.love_level_details.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  const filteredAwards = playerEpisodeData && playerEpisodeData.gor_awards
+  ? playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0)
+  : [];
 
-  const filteredPTCs = playerEpisodeData.ptcs
-    ? playerEpisodeData.ptcs.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  const filteredEvents = playerEpisodeData && playerEpisodeData.events
+  ? playerEpisodeData.events.split(';').filter((item) => item.trim().length > 0)
+  : [];
 
-  const filteredNotes = playerEpisodeData.notes
-    ? playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  const filteredLoveLevels = playerEpisodeData && playerEpisodeData.love_level_details
+  ? playerEpisodeData.love_level_details.split(';').filter((item) => item.trim().length > 0)
+  : [];
+
+  const filteredPTCs = playerEpisodeData && playerEpisodeData.ptcs
+  ? playerEpisodeData.ptcs.split(';').filter((item) => item.trim().length > 0)
+  : [];
+
+  const filteredNotes = playerEpisodeData && playerEpisodeData.notes
+  ? playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0)
+  : [];
 
   const renderAwards = filteredAwards.map((item) => {
     const trimmedItem = item.trim();
@@ -70,7 +75,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
       <div className="epi-stats">
         <div className="epi-stats__metric">
           <span>💋</span>
-          <span>{playerEpisodeData.kisses}</span>
+          <span>{playerEpisodeData && playerEpisodeData.hasOwnProperty('kisses') ? playerEpisodeData.kisses : 0}</span>
         </div>
         <div className="epi-stats__metric">
           <span>🏆</span>
