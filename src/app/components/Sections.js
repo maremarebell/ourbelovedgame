@@ -39,19 +39,22 @@ function Sections({ playerData }) {
   return (
     <div>
       <Stats playerData={playerData} episodesData={episodesData} />
-
+  
       {reversedEpisodesData.map((episodeData, index) => {
         const playerEpisodeData = episodeData.find((data) => data.slug === playerData.slug);
         
-        return (
-          <Episode
-            key={index}
-            playerEpisodeData={playerEpisodeData}
-            epiNumber={reversedEpisodesData.length - index}
-          />
-        );
+        // Check if playerEpisodeData exists (truthy) before rendering the Episode component
+        if (playerEpisodeData) {
+          return (
+            <Episode
+              key={index}
+              playerEpisodeData={playerEpisodeData}
+              epiNumber={reversedEpisodesData.length - index}
+            />
+          );
+        }
       })}
-
+  
       <section className="profile__section profile__section--epis">
         <h3 className={sgfont.className}>🔮 Pre-Season Predictions</h3>
         <p className="profile__p">
