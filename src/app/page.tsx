@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import playerData from "./data/data-20-players.json";
 import { PlayerTile } from "./components/PlayerTile";
 import { PlayerLine } from "./components/PlayerLine";
-import { PlayerDetailed } from "./PlayerDetailed";
+import { PlayerDetailed } from "./components/PlayerDetailed";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
 import { ReorderIcon } from './utils/logos.js';
