@@ -1,7 +1,7 @@
 'use client';
 
 import playerData from "../../data/data-20-players.json";
-import { Status } from '../../Status';
+import { Status } from '../../components/Status';
 import {SvgLogoInstagram} from '../../utils/logos';
 import {SvgLogoTiktok} from '../../utils/logos';
 import Image from 'next/image';

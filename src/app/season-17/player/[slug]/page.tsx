@@ -1,7 +1,7 @@
 'use client';
 
 import { playerData } from '../../../season-17/data-17';
-import { Status } from '../../../Status';
+import { Status } from '../../../components/Status';
 import Image from 'next/image';
 
 export default function Page({ params }: { params: { slug: string } }) {
