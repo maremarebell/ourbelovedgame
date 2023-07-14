@@ -12,7 +12,7 @@ function Sections({ playerData }) {
   useEffect(() => {
     const fetchEpisodesData = async () => {
       try {
-        const episodeNumbers = [1, 2];
+        const episodeNumbers = [1, 2, 3];
         const episodesData = await Promise.all(
           episodeNumbers.map(async (episodeNumber) => {
             const response = await fetch(`/data/data-20-epi-${episodeNumber}.json`);
