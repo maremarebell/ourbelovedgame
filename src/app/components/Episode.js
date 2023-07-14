@@ -1,6 +1,6 @@
 import React from 'react';
 import { Schibsted_Grotesk } from 'next/font/google';
-// import AwardCard from './AwardCard';
+import AwardCard from './AwardCard';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
@@ -29,28 +29,12 @@ function Episode({ playerEpisodeData, epiNumber }) {
 
   const renderAwards = filteredAwards.map((item) => {
     const trimmedItem = item.trim();
-    let className = '';
-
-    if (trimmedItem.startsWith("Clue's")) {
-      className = 'award--clues';
-    } else if (trimmedItem.startsWith("Pacecase's")) {
-      className = 'award--pacecase';
-    }
 
     const colonIndex = trimmedItem.indexOf(':');
 
     return (
       trimmedItem.length > 0 && (
-        <li key={item} className={`award ${className}`}>
-          {colonIndex !== -1 ? (
-            <p>
-              <strong>{trimmedItem.slice(0, colonIndex + 1)}</strong>
-              {trimmedItem.slice(colonIndex + 1)}
-            </p>
-          ) : (
-            <strong>{trimmedItem}</strong>
-          )}
-        </li>
+        <AwardCard key={colonIndex} award={trimmedItem} /> 
       )
     );
   });
@@ -78,14 +62,14 @@ function Episode({ playerEpisodeData, epiNumber }) {
         </div>
       </div>
 
-      {/* <AwardCard /> */}
-
       {playerEpisodeData && (
         <div>
           {filteredAwards.length > 0 && (
             <div>
               <h4>GoR Awards:</h4>
-              <ul>{renderAwards}</ul>
+              <div class="awards">
+                {renderAwards}
+              </div>
             </div>
           )}
 
