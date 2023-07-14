@@ -54,7 +54,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
       <div className="epi-stats">
         <div className="epi-stats__metric">
           <span>💋</span>
-          <span>{playerEpisodeData && playerEpisodeData.hasOwnProperty('kisses') ? playerEpisodeData.kisses : 0}</span>
+          <span>{playerEpisodeData.kisses !== '' ? playerEpisodeData.kisses : 0}</span>
         </div>
         <div className="epi-stats__metric">
           <span>🏆</span>
@@ -67,7 +67,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
           {filteredAwards.length > 0 && (
             <div>
               <h4>GoR Awards:</h4>
-              <div class="awards">
+              <div className="awards">
                 {renderAwards}
               </div>
             </div>
