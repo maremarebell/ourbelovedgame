@@ -65,11 +65,8 @@ function Episode({ playerEpisodeData, epiNumber }) {
       {playerEpisodeData && (
         <div>
           {filteredAwards.length > 0 && (
-            <div>
-              <h4>GoR Awards:</h4>
-              <div className="awards">
-                {renderAwards}
-              </div>
+            <div className="awards">
+              {renderAwards}
             </div>
           )}
 

@@ -34,85 +34,93 @@ strong {
 // Awards
 //--------------------------------------------------------
 
-
-.award--clues {
-  background-color: rgb(229, 248, 254);
-}
-
-.award--pacecase {
-  background-color: rgb(255, 209, 255); 
-}
-
 .awards {
- display: flex;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .award {
   border-radius: 10px;
-  box-shadow: 0 0 14px 0px rgb(0 0 0 / 26%);
-  border-radius: 100%;
-  width: 120px;
-  height: 120px;
-  border: 4px solid #fff;
+  width: 31%;
+  margin: 1%;
   position: relative;
-  margin: 2px;
+}
+
+.award--red {
+  border: 4px solid #F22E3E;
+
+  .award__image-wrapper {
+    background-color: #F22E3E;
+  }
+}
+
+.award--green {
+  border: 4px solid #0ed0a3;
+
+  .award__image-wrapper {
+    background-color: #0ed0a3;
+  }
+}
+
+.award__sponsor-image {
+  width: 60px;
+  height: 60px;
+  border: 4px solid #F22E3E;
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.award__background__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 70px;
+  font-weight: 900;
+  height: 100px;
+}
+
+.award__background {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  fill: #fff;
+  opacity: .5;
+  z-index: -2;
+  margin-top: 6px;
 }
 
 .award__image-wrapper {
-  width: 100%;
-  height: 100%;
   display: flex;
-  border-radius: 100%;
-  text-align: center;
   justify-content: center;
+  background-color: #fff;
+  padding: 4px;
+  height: 100px;
+  align-items: center;
+  overflow: hidden;
 }
 
 .award__image {
-  font-size: 44px;
-  align-items: center;
-  display: flex;
-  margin-top: -10px;
+  font-size: 60px;
+  height: 60px;
+  width: 60px;
+  padding-top: 20px;
+  z-index: 4;
 }
 
 .award__details {
-  text-align: center;
+  padding: 10px;
 }
 
-.award__p {
-  font-size: 12px;
-  line-height: 1.4em;
+.award__title {
+  font-size: 20px;
 }
 
-.award__sponsor {
-  font-size: 11px;
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  display: block;
-  font-weight: 600;
-}
-
-.award__name {
-  font-weight: 700;
-  font-size: 18px;
-  position: absolute; 
-  display: block;
-  width: 100%;
-  bottom: 18px;
-  left: 0;
-  text-align: center;
-
-  small {
-    font-size: 10px;
-    display: block;
-    position: absolute;
-    width: 100%;
-    font-weight: 500;
-    bottom: -14px;
-  }
-}
 
 //--------------------------------------------------------
 // Episode Stats
