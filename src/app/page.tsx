@@ -109,7 +109,9 @@ export default function Players() {
           )}
 
           {selectedOption === "detailed" && (
-            <p>Fullscreen mode under development!</p>
+            orderedPlayers.map((player, index) => (
+              <PlayerDetailed key={index} player={player} index={index} />
+            ))
           )}
         </ul>
 

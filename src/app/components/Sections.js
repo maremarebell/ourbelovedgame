@@ -38,7 +38,10 @@ function Sections({ playerData }) {
 
   return (
     <div>
-      <Stats playerData={playerData} episodesData={episodesData} />
+      <section className="profile__section">
+        <h3 className={sgfont.className}>📊 Season Stats</h3>
+        <Stats playerData={playerData} episodesData={episodesData} />
+      </section>
   
       {reversedEpisodesData.map((episodeData, index) => {
         const playerEpisodeData = episodeData.find((data) => data.slug === playerData.slug);

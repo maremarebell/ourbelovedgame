@@ -1,0 +1,57 @@
+//--------------------------------------------------------
+// Player - Detailed
+//--------------------------------------------------------
+
+.player--detailed {
+  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  color: #fff;
+  height: 130px;
+
+  &:last-child {
+    flex-basis: 100%;
+  }
+
+  .stat__title,
+  .stat__subtitle {
+    color: #fff;
+  }
+
+  .player__name {
+    display: block;
+    position: relative;
+    width: 200px;
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .player__details {
+    z-index: 40;
+    position: absolute;
+    text-align: left;
+    background: transparent;
+    padding: 4px 0 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    left: 200px;
+    bottom: 4px;
+    position: absolute;
+  }
+
+  .player__headshot-container {
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: auto;
+    bottom: 0;
+    left: 0;
+  }
+
+  .stats {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+}
