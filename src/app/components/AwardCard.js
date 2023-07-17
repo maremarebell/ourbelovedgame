@@ -22,8 +22,8 @@ function AwardCard({ award }) {
     sponsorImagePath= '/clues.png';
   } else if (award.startsWith("Pacecase's")) {
     className = 'award--pacecase';
-    awardSponsor = 'Pasecase\'s'
-    sponsorImagePath= '/pasecase.png';
+    awardSponsor = 'Pacecase\'s'
+    sponsorImagePath= '/pacecase.png';
   }
 
   if (award.includes("MVP")) {

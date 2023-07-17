@@ -56,7 +56,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "",
-        game_length: "PaseCase's Top 4",
+        game_length: "PaceCase's Top 4",
       },
     },
     season_stats: {
@@ -495,7 +495,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "Kind look; Charming & intimiate; Kind & gentle; 4TRR",
-        game_length: "Going to crush the game; PaseCase's Top 4",
+        game_length: "Going to crush the game; PaceCase's Top 4",
         notes: "",
       },
     },
@@ -654,7 +654,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "Strong 3rd audience game",
-        game_length: "Front-runner; Hometowns; PaseCase and Bachelor Clue's Top 4",
+        game_length: "Front-runner; Hometowns; PaceCase and Bachelor Clue's Top 4",
         notes: "Strong parasocial gaze",
       },
     },
@@ -963,7 +963,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "",
-        game_length: "A contender; Top 4; BachelorClues Top 4 and PaseCase's #5",
+        game_length: "A contender; Top 4; BachelorClues Top 4 and PaceCase's #5",
         notes: "Josh Murray + Wells Adams",
       },
     },
@@ -1200,7 +1200,7 @@ export const playerData = [
       predictions: {
         limo_exit: "",
         gameplay: "PTC of mother passing away; Romantic gestures",
-        game_length: "Contender; Strong Instagram; PaseCase and Bachelor Clue's Top 4",
+        game_length: "Contender; Strong Instagram; PaceCase and Bachelor Clue's Top 4",
       },
     },
     season_stats: {
