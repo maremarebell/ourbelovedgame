@@ -30,14 +30,14 @@
     z-index: 40;
     position: absolute;
     text-align: left;
-    background: transparent;
     padding: 4px 0 2px 0;
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
-    left: 200px;
-    bottom: 4px;
+    font-size: 12px;
     position: absolute;
+    width: 100%;
+    text-align: right;
+
   }
 
   .player__headshot-container {
@@ -55,3 +55,52 @@
     width: 100%;
   }
 }
+
+@media (max-width: 540px) {
+  .player--detailed {
+
+    display: block;
+
+    .player__headshot {
+      height: 100%;
+      width: auto;
+    }
+
+    .player__headshot-container {
+      height: 80px;
+      left: -24px;
+    }
+
+    .stats {
+      width: 100%;
+      padding-left: 60px;
+    }
+
+    .stat {
+      padding: 6px;
+    }
+
+    .stat__title {
+      font-size: 9px;
+    }
+
+    .stat__subtitle {
+      font-size: 9px;
+    }
+
+    .stat__value {
+      font-size: 24px;
+    }
+
+    .player__name {
+      text-align: left;
+      font-size: 18px;
+      padding: 2px;
+    }
+  }
+}
+
+// @media (max-width: 420px) {
+//   .player--detailed {
+//   }
+// }
