@@ -1,5 +1,6 @@
 import React from 'react';
 import { Schibsted_Grotesk } from 'next/font/google';
+import './award-card.scss';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
