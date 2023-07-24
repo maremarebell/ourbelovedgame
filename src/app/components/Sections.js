@@ -3,32 +3,26 @@ import Episode from './Episode';
 import { textWithLinks } from '../utils/textUtils';
 import { Schibsted_Grotesk } from 'next/font/google';
 import Stats from './Stats';
+import { fetchEpisodesData } from '../utils/api';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
 function Sections({ playerData }) {
+
   const [episodesData, setEpisodesData] = useState([]);
 
   useEffect(() => {
-    const fetchEpisodesData = async () => {
+    const fetchData = async () => {
       try {
-        const episodeNumbers = [1, 2, 3, 4];
-        const episodesData = await Promise.all(
-          episodeNumbers.map(async (episodeNumber) => {
-            const response = await fetch(`/data/data-20-epi-${episodeNumber}.json`);
-            const data = await response.json();
-            return data;
-          })
-        );
-        setEpisodesData(episodesData);
+        const data = await fetchEpisodesData();
+        setEpisodesData(data);
       } catch (error) {
-        console.error('Error fetching episode data:', error);
+        console.error('Error in fetchEpisodesData');
       }
     };
 
-    fetchEpisodesData();
+    fetchData();
   }, []);
-
   const reversedEpisodesData = [...episodesData].reverse();
 
   // Conditional rendering: Show loading or placeholder if episodesData is empty
