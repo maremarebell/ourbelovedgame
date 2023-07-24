@@ -16,7 +16,10 @@ function Stats({ playerData, episodesData }) {
   const playerEpisodes = allEpisodes.filter((episode) => episode.slug === playerSlug);
 
   // Calculate the total number of kisses for the player
-  const totalKisses = playerEpisodes.reduce((total, episode) => total + episode.kisses, 0);
+  const totalKisses = playerEpisodes.reduce((total, episode) => {
+    const kissesCount = typeof episode.kisses === 'number' && !isNaN(episode.kisses) ? episode.kisses : 0;
+    return total + kissesCount;
+  }, 0);
 
   // Calculate the total number of PTCs for the player
   const totalPTCs = playerEpisodes.reduce((total, episode) => {
