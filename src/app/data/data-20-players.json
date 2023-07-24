@@ -15,7 +15,7 @@
     "linkedin_job": "Realtor",
     "tags": "beachy; ex-football; cooks cajun; photographer; piano",
     "gorder": 17,
-    "gor_predictions": "Friends with Aaron Clancy & James Bonsall? https://www.instagram.com/p/CSAx1Z-FXYq/; Going to paradise; Making it to epi 5 or 6",
+    "gor_predictions": "✅ Friends with Aaron Clancy & James Bonsall? https://www.instagram.com/p/CSAx1Z-FXYq/; Going to paradise; Making it to epi 5 or 6",
     "player_status_last_update": "",
     "player_status": "active"
   },
@@ -35,7 +35,7 @@
     "linkedin_job": "Firefighter Paramedic at Oakland City Fire Dept",
     "tags": "strong jaw; vascular dominance",
     "gorder": 6,
-    "gor_predictions": "4TRR; Or complete villain; Makes it past night one, at least mid-season",
+    "gor_predictions": "✅ 4TRR; ❌ Or complete villain; ✅ Makes it past night one, at least mid-season",
     "player_status_last_update": 3,
     "player_status": "eliminated"
   },
@@ -55,7 +55,7 @@
     "linkedin_job": "",
     "tags": "Christian; package deal; tall",
     "gorder": 24,
-    "gor_predictions": "Night one guy or mid-season floater",
+    "gor_predictions": "✅ Night one guy or mid-season floater",
     "player_status_last_update": 3,
     "player_status": "eliminated"
   },
@@ -76,8 +76,8 @@
     "tags": "military; Christian; nurse",
     "gorder": 8,
     "gor_predictions": "✅ Potential villain",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "player_status_last_update": 4,
+    "player_status": "eliminated"
   },
   {
     "slug": "caleb-arthur",
@@ -116,8 +116,8 @@
     "tags": "Christian; baseball",
     "gorder": 23,
     "gor_predictions": "❌ Good TV, wild in this show; Goes home week 2 or 3",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "player_status_last_update": 4,
+    "player_status": "eliminated"
   },
   {
     "slug": "chris-spell",
@@ -155,7 +155,7 @@
     "linkedin_job": "Integrative Medicine & Functional Health",
     "tags": "fun; Nigerian;",
     "gorder": 9,
-    "gor_predictions": "✅ Strong second audience game; Fun; ✅ 4TRR; Sticking around to episode 3 or 4; Paradise potential",
+    "gor_predictions": "✅ Strong second audience game; Fun; ✅ 4TRR; ❌ Sticking around to episode 3 or 4; Paradise potential",
     "player_status_last_update": "",
     "player_status": "active"
   },
@@ -233,11 +233,11 @@
     "abc_profile": "https://abc.com/shows/the-bachelorette/cast/john-2023",
     "linkedin_url": "https://www.linkedin.com/in/john-buresh/",
     "linkedin_job": "Data Scientist",
-    "tags": "Christian",
+    "tags": "Christian; Guitar",
     "gorder": 11,
-    "gor_predictions": "Consensus that he's a contender; ✅ 4TRR",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "gor_predictions": "❌ Consensus that he's a contender; ✅ 4TRR",
+    "player_status_last_update": 4,
+    "player_status": "eliminated"
   },
   {
     "slug": "john-henry-spurlock",
@@ -335,9 +335,9 @@
     "linkedin_job": "",
     "tags": "Christian; bearded; one to watch; Good parasocial gaze",
     "gorder": 20,
-    "gor_predictions": "Christian charminance; Strong player; Could be a contender; On a boat date",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "gor_predictions": "❌ Christian charminance; ❌ Strong player; ❌ Could be a contender; ❌ On a boat date",
+    "player_status_last_update": 4,
+    "player_status": "eliminated"
   },
   {
     "slug": "nic-barner",
@@ -395,7 +395,7 @@
     "linkedin_job": "Executive Sales Representative at Paycom",
     "tags": "golfer; Christian; dog dad; Jordan Kimball",
     "gorder": 19,
-    "gor_predictions": "Third audience pick; Villain or fool, definitely a character; Hair will be in a hair prep clip; Shoe-in for BIP",
+    "gor_predictions": "✅ Third audience pick; ✅ Villain or fool, definitely a character; Hair will be in a hair prep clip; Shoe-in for BIP",
     "player_status_last_update": "",
     "player_status": "active"
   },
@@ -475,7 +475,7 @@
     "linkedin_job": "Project Manager",
     "tags": "speaks Japanese",
     "gorder": 12,
-    "gor_predictions": "90% chance next Bachelor and the DWAB-ender; Deep run, top 4 guaranteed",
+    "gor_predictions": "❌ 90% chance next Bachelor and the DWAB-ender; ❌ Deep run, top 4 guaranteed",
     "player_status_last_update": 3,
     "player_status": "eliminated"
   },
