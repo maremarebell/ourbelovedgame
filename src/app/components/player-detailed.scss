@@ -13,11 +13,6 @@
     flex-basis: 100%;
   }
 
-  .stat__title,
-  .stat__subtitle {
-    color: #fff;
-  }
-
   .player__name {
     display: block;
     position: relative;
@@ -36,8 +31,7 @@
     font-size: 12px;
     position: absolute;
     width: 100%;
-    text-align: right;
-
+    text-align: left;
   }
 
   .player__headshot-container {
@@ -54,11 +48,15 @@
     position: relative;
     width: 100%;
   }
+
+  .stat__title,
+  .stat__subtitle {
+    color: #fff;
+  }
 }
 
 @media (max-width: 540px) {
   .player--detailed {
-
     display: block;
 
     .player__headshot {
@@ -69,6 +67,12 @@
     .player__headshot-container {
       height: 80px;
       left: -24px;
+    }
+
+    .player__name {
+      text-align: left;
+      font-size: 18px;
+      padding: 2px;
     }
 
     .stats {
@@ -91,16 +95,5 @@
     .stat__value {
       font-size: 24px;
     }
-
-    .player__name {
-      text-align: left;
-      font-size: 18px;
-      padding: 2px;
-    }
   }
 }
-
-// @media (max-width: 420px) {
-//   .player--detailed {
-//   }
-// }
