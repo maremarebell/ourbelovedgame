@@ -395,9 +395,9 @@
     "linkedin_job": "Executive Sales Representative at Paycom",
     "tags": "golfer; Christian; dog dad; Jordan Kimball",
     "gorder": 19,
-    "gor_predictions": "✅ Third audience pick; ✅ Villain or fool, definitely a character; Hair will be in a hair prep clip; Shoe-in for BIP",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "gor_predictions": "✅ Third audience pick; ✅ Villain or fool, definitely a character; ❌ Hair will be in a hair prep clip; Shoe-in for BIP",
+    "player_status_last_update": 5,
+    "player_status": "eliminated"
   },
   {
     "slug": "spencer-storbeck",
@@ -435,9 +435,9 @@
     "linkedin_job": "Customer Experience Manager and Sales at Kiavi",
     "tags": "gym bro; model; fitness instructor; Pittsburgh",
     "gorder": 21,
-    "gor_predictions": "Could be a villain; Model thing gives him a 4TWR vibe",
-    "player_status_last_update": "",
-    "player_status": "active"
+    "gor_predictions": "❌ Could be a villain; ❌ Model thing gives him a 4TWR vibe",
+    "player_status_last_update": 5,
+    "player_status": "eliminated"
   },
   {
     "slug": "taylor-pegg",
