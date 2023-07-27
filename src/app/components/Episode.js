@@ -1,6 +1,8 @@
 import React from 'react';
 import { Schibsted_Grotesk } from 'next/font/google';
 import AwardCard from './AwardCard';
+import { Tooltip } from 'react-tooltip';
+import './tooltip.scss';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
@@ -86,7 +88,18 @@ function Episode({ playerEpisodeData, epiNumber }) {
 
           {filteredLoveLevels.length > 0 && (
             <div>
-              <h4>Love Levels:</h4>
+              <h4>
+                Love Levels:
+                <a data-tooltip-id="ll-tooltip" 
+                data-tooltip-html="Love Levels: <br/>LL1 - I like you<br>
+                LL2 - I’m starting to fall for you<br>
+                LL3 - I’m falling in love with you<br>
+                LL4 - I’m in love with you <br>
+                “Loaded” means mentioned in an ITM"
+                className="toolytip__trigger"
+                >?</a>
+                <Tooltip id="ll-tooltip" className="toolytip" />
+              </h4>
               <ul className="profile__list">{renderItems(filteredLoveLevels)}</ul>
             </div>
           )}
