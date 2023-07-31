@@ -72,13 +72,6 @@ function Episode({ playerEpisodeData, epiNumber }) {
             </div>
           )}
 
-          {playerEpisodeData.limo_exit && playerEpisodeData.limo_exit.trim().length > 0 && (
-            <div>
-              <h4>Limo Exit:</h4>
-              <p className="profile__p">{playerEpisodeData.limo_exit}</p>
-            </div>
-          )}
-
           {filteredEvents.length > 0 && (
             <div>
               <h4>Achievements:</h4>
