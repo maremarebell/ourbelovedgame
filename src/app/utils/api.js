@@ -1,5 +1,5 @@
 export async function fetchEpisodesData() {
-  const episodeNumbers = [1, 2, 3, 4];
+  const episodeNumbers = [1, 2, 3, 4, 5];
   console.log('well ya got here')
   try {
     const episodesData = await Promise.all(
