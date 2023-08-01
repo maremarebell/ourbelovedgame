@@ -59,6 +59,19 @@ strong {
   opacity: .1;
 }
 
+// Make emojis all the same width
+.epi-stats__metric :first-child {
+  display: inline-block;
+  width: 24px;
+}
+
+// Make numbers all the same width
+.epi-stats__metric :last-child {
+  display: inline-block;
+  width: 18px;
+}
+
+
 //--------------------------------------------------------
 // Hero & main content
 //--------------------------------------------------------
