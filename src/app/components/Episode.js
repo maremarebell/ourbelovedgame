@@ -13,21 +13,16 @@ function Episode({ playerEpisodeData, epiNumber }) {
     ? playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0)
     : [];
 
-  const filteredEvents = playerEpisodeData.events
-    ? playerEpisodeData.events.split(';').filter((item) => item.trim().length > 0)
-    : [];
-
-  const filteredLoveLevels = playerEpisodeData.love_level_details
-    ? playerEpisodeData.love_level_details.split(';').filter((item) => item.trim().length > 0)
-    : [];
-
-  const filteredPTCs = playerEpisodeData.ptcs
-    ? playerEpisodeData.ptcs.split(';').filter((item) => item.trim().length > 0)
-    : [];
-
-  const filteredNotes = playerEpisodeData.notes
+    const filteredNotes = playerEpisodeData.notes
     ? playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0)
     : [];
+
+    let ptcCount = 0;
+    filteredNotes.forEach((note) => {
+      if (note.includes('😟')) {
+        ptcCount++;
+      }
+    });
 
   const renderAwards = filteredAwards.map((item) => {
     const trimmedItem = item.trim();
@@ -59,9 +54,13 @@ function Episode({ playerEpisodeData, epiNumber }) {
           <span>{playerEpisodeData.kisses !== '' ? playerEpisodeData.kisses : 0}</span>
         </div>
         <div className="epi-stats__metric">
+          <span>😟</span>
+          <span>{ptcCount}</span>
+        </div>
+        {/* <div className="epi-stats__metric">
           <span>🏆</span>
           <span>{awardsCount}</span>
-        </div>
+        </div> */}
       </div>
 
       {playerEpisodeData && (
@@ -72,14 +71,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
             </div>
           )}
 
-          {filteredEvents.length > 0 && (
-            <div>
-              <h4>Achievements:</h4>
-              <ul className="profile__list">{renderItems(filteredEvents)}</ul>
-            </div>
-          )}
-
-          {filteredLoveLevels.length > 0 && (
+          {/* {filteredLoveLevels.length > 0 && (
             <div>
               <h4>
                 Love Levels:
@@ -95,18 +87,10 @@ function Episode({ playerEpisodeData, epiNumber }) {
               </h4>
               <ul className="profile__list">{renderItems(filteredLoveLevels)}</ul>
             </div>
-          )}
-
-          {filteredPTCs.length > 0 && (
-            <div>
-              <h4>PTCs:</h4>
-              <ul className="profile__list">{renderItems(filteredPTCs)}</ul>
-            </div>
-          )}
+          )} */}
 
           {filteredNotes.length > 0 && (
             <div>
-              <h4>Notes:</h4>
               <ul className="profile__list">{renderItems(filteredNotes)}</ul>
             </div>
           )}
