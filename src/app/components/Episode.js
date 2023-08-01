@@ -70,23 +70,23 @@ function Episode({ playerEpisodeData, epiNumber }) {
       <h3 className={sgfont.className}>Episode {epiNumber}</h3>
 
       <div className="epi-stats">
-        <div className="epi-stats__metric">
+        <div className={`epi-stats__metric ${playerEpisodeData.kisses !== '' && playerEpisodeData.kisses !== 0 ? '' : ' epi-stats__metric--nothing'}`}>
           <span>💋</span>
           <span>{playerEpisodeData.kisses !== '' ? playerEpisodeData.kisses : 0}</span>
         </div>
-        <div className="epi-stats__metric">
+        <div className={`epi-stats__metric  ${ptcCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
           <span>😟</span>
           <span>{ptcCount}</span>
         </div>
-        <div className="epi-stats__metric">
+        <div className={`epi-stats__metric  ${playsCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
           <span>🏅</span>
           <span>{playsCount}</span>
         </div>
-        <div className="epi-stats__metric">
+        <div className={`epi-stats__metric  ${rosesCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
           <span>🌹</span>
           <span>{rosesCount}</span>
         </div>
-        <div className="epi-stats__metric">
+        <div className={`epi-stats__metric  ${errorCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
           <span>🚫</span>
           <span>{errorCount}</span>
         </div>
