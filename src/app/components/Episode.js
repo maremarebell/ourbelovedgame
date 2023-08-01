@@ -13,16 +13,37 @@ function Episode({ playerEpisodeData, epiNumber }) {
     ? playerEpisodeData.gor_awards.split(';').filter((item) => item.trim().length > 0)
     : [];
 
-    const filteredNotes = playerEpisodeData.notes
-    ? playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0)
-    : [];
+  const filteredNotes = playerEpisodeData.notes
+  ? playerEpisodeData.notes.split(';').filter((item) => item.trim().length > 0)
+  : [];
 
-    let ptcCount = 0;
-    filteredNotes.forEach((note) => {
-      if (note.includes('😟')) {
-        ptcCount++;
-      }
-    });
+  let ptcCount = 0;
+  filteredNotes.forEach((note) => {
+    if (note.includes('😟')) {
+      ptcCount++;
+    }
+  });
+
+  let playsCount = 0;
+  filteredNotes.forEach((note) => {
+    if (note.includes('🏅')) {
+      playsCount++;
+    }
+  });
+
+  let rosesCount = 0;
+  filteredNotes.forEach((note) => {
+    if (note.includes('🌹')) {
+      rosesCount++;
+    }
+  });
+
+  let errorCount = 0;
+  filteredNotes.forEach((note) => {
+    if (note.includes('🚫')) {
+      errorCount++;
+    }
+  });
 
   const renderAwards = filteredAwards.map((item) => {
     const trimmedItem = item.trim();
@@ -57,10 +78,18 @@ function Episode({ playerEpisodeData, epiNumber }) {
           <span>😟</span>
           <span>{ptcCount}</span>
         </div>
-        {/* <div className="epi-stats__metric">
-          <span>🏆</span>
-          <span>{awardsCount}</span>
-        </div> */}
+        <div className="epi-stats__metric">
+          <span>🏅</span>
+          <span>{playsCount}</span>
+        </div>
+        <div className="epi-stats__metric">
+          <span>🌹</span>
+          <span>{rosesCount}</span>
+        </div>
+        <div className="epi-stats__metric">
+          <span>🚫</span>
+          <span>{errorCount}</span>
+        </div>
       </div>
 
       {playerEpisodeData && (
