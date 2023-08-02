@@ -45,6 +45,13 @@ function Episode({ playerEpisodeData, epiNumber }) {
     }
   });
 
+  let oneOnOneCount = 0;
+  filteredNotes.forEach((note) => {
+    if (note.includes('👤')) {
+      oneOnOneCount++;
+    }
+  });
+
   const renderAwards = filteredAwards.map((item) => {
     const trimmedItem = item.trim();
 
@@ -73,6 +80,10 @@ function Episode({ playerEpisodeData, epiNumber }) {
         <div className={`epi-stats__metric ${playerEpisodeData.kisses !== '' && playerEpisodeData.kisses !== 0 ? '' : ' epi-stats__metric--nothing'}`}>
           <span>💋</span>
           <span>{playerEpisodeData.kisses !== '' ? playerEpisodeData.kisses : 0}</span>
+        </div>        
+        <div className={`epi-stats__metric  ${oneOnOneCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
+          <span>👤</span>
+          <span>{oneOnOneCount}</span>
         </div>
         <div className={`epi-stats__metric  ${ptcCount === 0 ? ' epi-stats__metric--nothing' : ''}`}>
           <span>😟</span>
