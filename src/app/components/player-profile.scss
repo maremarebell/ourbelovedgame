@@ -32,47 +32,6 @@ strong {
 
 
 //--------------------------------------------------------
-// Episode Stats
-//--------------------------------------------------------
-
-.epi-stats {
-  display: flex;
-  position: absolute;
-  border: 1px solid #d9d9d9;
-  border-radius: 10px;
-  padding: 10px;
-  right: 0;
-  top: 10px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.epi-stats__metric {
-  margin: 0 6px;
-
-  span {
-    padding: 0 2px;
-  }
-}
-
-.epi-stats__metric--nothing {
-  opacity: .1;
-}
-
-// Make emojis all the same width
-.epi-stats__metric :first-child {
-  display: inline-block;
-  width: 24px;
-}
-
-// Make numbers all the same width
-.epi-stats__metric :last-child {
-  display: inline-block;
-  width: 18px;
-}
-
-
-//--------------------------------------------------------
 // Hero & main content
 //--------------------------------------------------------
 
@@ -193,16 +152,6 @@ strong {
 
 .profile__section__title {
   margin-bottom: 20px;
-}
-
-.profile__section--epis {
-  font-size: 14px;
-  line-height: 1.4em;
-  padding-bottom: 10px;
-}
-
-.episode__key {
-  text-transform: capitalize;
 }
 
 .profile__short-name {

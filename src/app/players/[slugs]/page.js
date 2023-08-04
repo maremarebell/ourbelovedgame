@@ -6,7 +6,6 @@ import "../../components/player-table.scss";
 import { fetchEpisodesData } from "../../utils/api";
 import Episode from '../../components/Episode';
 
-
 export default function Page({ params }) {
   const requestedSlugs = decodeURIComponent(params.slugs).toLowerCase().split(",");
 
@@ -61,7 +60,7 @@ export default function Page({ params }) {
     const fetchData = async () => {
       try {
         const data = await fetchEpisodesData();
-        setEpisodesData(data);
+        setEpisodesData([...data].reverse()); // Reverse the order of episodesData
       } catch (error) {
         console.error('Error in fetchEpisodesData');
       }
@@ -83,29 +82,37 @@ export default function Page({ params }) {
           {generateTableRows("age", "Age")}
           {generateTableRows("location", "Location")}
           {generateTableRows("job", "Job")}
-          
+
           <tr>
-            <td>Episodes</td>
-            {players.map((player, index) => (
-              <td key={index}>
-                {episodesData.map((episodeData, episodeIndex) => {
-                  const playerEpisodeData = episodeData.find((data) => data.slug === player.slug);
-                  
-                  if (playerEpisodeData) {
-                    return (
-                      <Episode
-                        key={episodeIndex}
-                        playerEpisodeData={playerEpisodeData}
-                        epiNumber={episodesData.length - episodeIndex}
-                      />
-                    );
-                  } else {
-                    return null;
-                  }
-                })}
-              </td>
+            <td>Tags</td>
+            {players.map((data, index) => (
+              <React.Fragment key={index}>{generateTagsCell(data?.tags)}</React.Fragment>
             ))}
           </tr>
+
+          {/* Generate rows for each episode (1-6) in reverse order */}
+          {[...Array(6).keys()].reverse().map((episodeNumber) => (
+            <tr key={episodeNumber + 1}>
+              <td>Episode {episodeNumber + 1}</td>
+              {players.map((player, index) => {
+                // Reverse the order of episodesData for each player
+                const playerEpisodeData = episodesData[5 - episodeNumber].find((data) => data.slug === player.slug);
+                return (
+                  <td key={index}>
+                    {playerEpisodeData ? (
+                      <Episode
+                        key={index}
+                        playerEpisodeData={playerEpisodeData}
+                        epiNumber={episodeNumber + 1}
+                      />
+                    ) : (
+                      <div>Episode {episodeNumber + 1} not available for {player.full_name}</div>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
