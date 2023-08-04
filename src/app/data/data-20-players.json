@@ -2,6 +2,7 @@
   {
     "slug": "aaron-bryant",
     "name": "Aaron B",
+    "other_slugs": "aaron, aaron-b",
     "full_name": "Aaron Bryant",
     "age": 29,
     "job": "Software Salesman",
@@ -22,6 +23,7 @@
   {
     "slug": "aaron-schwartzman",
     "name": "Aaron S",
+    "other_slugs": "aaron-s",
     "full_name": "Aaron Schwartzman",
     "age": 33,
     "job": "Firefighter",
@@ -42,6 +44,7 @@
   {
     "slug": "adrian-hassan",
     "name": "Adrian",
+    "other_slugs": "adrian",
     "full_name": "Adrian Hassan",
     "age": 33,
     "job": "Realtor",
@@ -62,6 +65,7 @@
   {
     "slug": "brayden-bowers",
     "name": "Brayden",
+    "other_slugs": "brayden",
     "full_name": "Brayden Bowers",
     "age": 24,
     "job": "Travel Nurse",
@@ -82,6 +86,7 @@
   {
     "slug": "caleb-arthur",
     "name": "Caleb A.",
+    "other_slugs": "caleb-a",
     "full_name": "Caleb Arthur",
     "age": 29,
     "job": "Resident Physician",
@@ -102,6 +107,7 @@
   {
     "slug": "caleb-balgaard",
     "name": "Caleb B.",
+    "other_slugs": "caleb-b",
     "full_name": "Caleb Balgaard",
     "age": 24,
     "job": "Pro Wrestler",
@@ -122,6 +128,7 @@
   {
     "slug": "chris-spell",
     "name": "Chris",
+    "other_slugs": "chris",
     "full_name": "Christopher Spell",
     "age": 27,
     "job": "World Record Jumper",
@@ -142,6 +149,7 @@
   {
     "slug": "dotun-olubeko",
     "name": "Dotun",
+    "other_slugs": "dotun",
     "full_name": "Dotun Olubeko",
     "age": 30,
     "job": "Integrative Medicine Specialist",
@@ -162,6 +170,7 @@
   {
     "slug": "james-pierce",
     "name": "James",
+    "other_slugs": "james",
     "full_name": "James Pierce",
     "age": 28,
     "job": "Attorney",
@@ -182,6 +191,7 @@
   {
     "slug": "joe-menzia",
     "name": "Joe",
+    "other_slugs": "joe",
     "full_name": "Joe Menzia",
     "age": 32,
     "job": "Tech Operations Director",
@@ -202,6 +212,7 @@
   {
     "slug": "joey-graziadei",
     "name": "Joey",
+    "other_slugs": "joey",
     "full_name": "Joey Graziadei",
     "age": 27,
     "job": "Tennis Pro",
@@ -222,6 +233,7 @@
   {
     "slug": "john-buresh",
     "name": "John",
+    "other_slugs": "john",
     "full_name": "John Buresh",
     "age": 27,
     "job": "Data Scientist",
@@ -242,6 +254,7 @@
   {
     "slug": "john-henry-spurlock",
     "name": "John Henry",
+    "other_slugs": "john-henry",
     "full_name": "John Henry Spurlock",
     "age": 30,
     "job": "Underwater Welder",
@@ -262,6 +275,7 @@
   {
     "slug": "josh-young",
     "name": "Josh",
+    "other_slugs": "josh",
     "full_name": "Josh Young",
     "age": 28,
     "job": "Harvard Grad Student",
@@ -282,6 +296,7 @@
   {
     "slug": "kaleb-kim",
     "name": "Kaleb",
+    "other_slugs": "kaleb, kaleb-k",
     "full_name": "Kaleb Kim",
     "age": 26,
     "job": "Construction Salesman",
@@ -302,6 +317,7 @@
   {
     "slug": "khalid-hassan",
     "name": "Khalid",
+    "other_slugs": "khalid",
     "full_name": "Khalid Hassan",
     "age": 28,
     "job": "Tech Recruiter",
@@ -322,6 +338,7 @@
   {
     "slug": "michael-barbour",
     "name": "Michael",
+    "other_slugs": "michael",
     "full_name": "Michael Barbour",
     "age": 28,
     "job": "Yacht Captain",
@@ -342,6 +359,7 @@
   {
     "slug": "nic-barner",
     "name": "Nic",
+    "other_slugs": "nic, nick",
     "full_name": "Nic Barber",
     "age": 32,
     "job": "HR Executive",
@@ -362,6 +380,7 @@
   {
     "slug": "peter-cappio",
     "name": "Peter",
+    "other_slugs": "peter",
     "full_name": "Peter Cappio",
     "age": 33,
     "job": "Airline Pilot",
@@ -382,6 +401,7 @@
   {
     "slug": "sean-mclaughlin",
     "name": "Sean",
+    "other_slugs": "sean",
     "full_name": "Sean McLaughlin",
     "age": 25,
     "job": "Software Sales Rep",
@@ -402,6 +422,7 @@
   {
     "slug": "spencer-storbeck",
     "name": "Spencer",
+    "other_slugs": "spencer",
     "full_name": "Spencer Storbeck",
     "age": 32,
     "job": "Medical Sales Director",
@@ -422,6 +443,7 @@
   {
     "slug": "tanner-courtad",
     "name": "Tanner",
+    "other_slugs": "tanner",
     "full_name": "Tanner Courtad",
     "age": 30,
     "job": "Mortgage Lender",
@@ -442,6 +464,7 @@
   {
     "slug": "taylor-pegg",
     "name": "Taylor",
+    "other_slugs": "taylor",
     "full_name": "Taylor Pegg",
     "age": 32,
     "job": "Loan Officer",
@@ -462,6 +485,7 @@
   {
     "slug": "warwick-reider",
     "name": "Warwick",
+    "other_slugs": "warwick",
     "full_name": "Warwick Reider",
     "age": 27,
     "job": "Construction Manager",
@@ -482,6 +506,7 @@
   {
     "slug": "xavier-bonner",
     "name": "Xavier",
+    "other_slugs": "",
     "full_name": "Xavier Bonner",
     "age": 27,
     "job": "Biomedical Scientist",
