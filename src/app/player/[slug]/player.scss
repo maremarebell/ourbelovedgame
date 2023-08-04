@@ -191,9 +191,14 @@ strong {
   }
 }
 
+.profile__section__title {
+  margin-bottom: 20px;
+}
+
 .profile__section--epis {
   font-size: 14px;
   line-height: 1.4em;
+  padding-bottom: 10px;
 }
 
 .episode__key {
@@ -354,7 +359,7 @@ strong {
 //--------------------------------------------------------
 
 .profile__list {
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 }
 
 .profile__list__item {

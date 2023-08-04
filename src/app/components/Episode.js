@@ -74,7 +74,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
 
   return (
     <section className="profile__section episode profile__section--epis">
-      <h3 className={sgfont.className}>Episode {epiNumber}</h3>
+      <h3 className={`profile__section__title ${sgfont.className}`}>Episode {epiNumber}</h3>
 
       <div className="epi-stats">
         <div className={`epi-stats__metric ${playerEpisodeData.kisses !== '' && playerEpisodeData.kisses !== 0 ? '' : ' epi-stats__metric--nothing'}`}>

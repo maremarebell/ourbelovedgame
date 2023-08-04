@@ -33,7 +33,7 @@ function Sections({ playerData }) {
   return (
     <div>
       <section className="profile__section">
-        <h3 className={sgfont.className}>📊 Season Stats</h3>
+        <h3 className={`profile__section__title ${sgfont.className}`}>📊 Season Stats</h3>
         <Stats playerData={playerData} episodesData={episodesData} />
       </section>
   
@@ -53,7 +53,7 @@ function Sections({ playerData }) {
       })}
   
       <section className="profile__section profile__section--epis">
-        <h3 className={sgfont.className}>🔮 Pre-Season Predictions</h3>
+        <h3 className={`profile__section__title ${sgfont.className}`}>🔮 Pre-Season Predictions</h3>
         <p className="profile__p">
           Predictions come from <a href="https://linktr.ee/gameofroses" target="_blank">Game of Roses</a> <strong>Season 20 IG Analysis</strong>, which you can find
           wherever you listen to podcasts.

@@ -112,8 +112,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                   <h1 className={`profile__headline ${sgfont.className}`}>{data.full_name}</h1>
 
                   <section className="profile__section">
-                    
-                    <h3 className={sgfont.className}>🌹 Player Details</h3>
+
+                    <h3 className={`profile__section__title ${sgfont.className}`}>🌹 Player Details</h3>
 
                     <div className="profile__details">
                       <div className="profile__tr">
