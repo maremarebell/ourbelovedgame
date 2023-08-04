@@ -6,6 +6,7 @@ import { Status } from './Status';
 import {SvgLogoInstagram, SvgLogoTiktok} from '../utils/logos';
 import Image from 'next/image';
 import Sections from './Sections';
+import './player-profile.scss'
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -39,7 +40,6 @@ export const PlayerProfile = (props) => {
         </span>
       ))
     : null;
-
 
   return (
     <>

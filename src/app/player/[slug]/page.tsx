@@ -1,12 +1,6 @@
 'use client';
 
 import playerData from "../../data/data-20-players.json";
-import { Status } from '../../components/Status';
-import {SvgLogoInstagram} from '../../utils/logos';
-import {SvgLogoTiktok} from '../../utils/logos';
-import Image from 'next/image';
-import { Schibsted_Grotesk } from 'next/font/google';
-import Sections from '../../components/Sections';
 import PlayerProfile from '../../components/PlayerProfile';
 
 export default function Page({ params }: { params: { slug: string } }) {
