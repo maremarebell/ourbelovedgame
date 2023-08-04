@@ -6,8 +6,6 @@ const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
 function AwardCard({ award }) {
 
-  console.log(award);
-
   let className = '';
   let awardSponsor = '';
   let awardName = '';
