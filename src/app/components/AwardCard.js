@@ -62,21 +62,12 @@ function AwardCard({ award }) {
 
   return (
     <div className={`award ${className} award--${awardColor}`}>
-      <div className="award__image-wrapper">
-        <div className="award__background__wrapper">
-          <svg className="award__background " viewBox="0 0 140 124">
-            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" opacity=".6" className={sgfont.className}>
-            {shortAwardName}
-            </text>
-          </svg>
-        </div>
-        <img className="award__sponsor-image" src={sponsorImagePath} />
-        <div className="award__image">{awardIcon}</div>
-      </div>
-      
+      {/* <img className="award__sponsor-image" src={sponsorImagePath} /> */}
       <div className="award__details" style={{ fontFamily: sgfont }}>
-        <h3 className="award__title">{awardSponsor} {awardName}</h3>
-        <p className="award__p">{awardDetails}</p>
+        <p className="award__p">
+          <strong className="award__title">{awardIcon} {awardSponsor} {awardName}:</strong>
+          {awardDetails}
+        </p>
       </div>
     </div>
   );
