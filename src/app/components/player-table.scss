@@ -1,8 +1,10 @@
 .player-table {
-  border: 1px solid #000;
+  border: 4px solid #F22E3E;
 }
 
 .player-table td {
-  border: 1px solid #000;
+  border-left: 4px solid #F22E3E;
+  border-right: 4px solid #F22E3E;
   padding: 10px;
+  background-color: #fff;
 }

@@ -106,7 +106,7 @@ export default function Page({ params }) {
                         epiNumber={episodeNumber + 1}
                       />
                     ) : (
-                      <div>Episode {episodeNumber + 1} not available for {player.full_name}</div>
+                      <div>Didn't play this game.</div>
                     )}
                   </td>
                 );
