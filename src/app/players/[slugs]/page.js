@@ -1,6 +1,11 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import playerData from "../../data/data-20-players.json";
-import '../../components/player-table.scss';
+import "../../components/player-table.scss";
+import { fetchEpisodesData } from "../../utils/api";
+import Episode from '../../components/Episode';
+
 
 export default function Page({ params }) {
   const requestedSlugs = decodeURIComponent(params.slugs).toLowerCase().split(",");
@@ -36,6 +41,40 @@ export default function Page({ params }) {
     </tr>
   );
 
+  const generateTagsCell = (tags) => (
+    <td>
+      {tags ? (
+        tags.split(";").map((tag, index) => (
+          <span key={index} className="profile__tag">
+            {tag}
+          </span>
+        ))
+      ) : (
+        <span className="profile__tag">No tags</span>
+      )}
+    </td>
+  );
+
+  const [episodesData, setEpisodesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchEpisodesData();
+        setEpisodesData(data);
+      } catch (error) {
+        console.error('Error in fetchEpisodesData');
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Conditional rendering: Show loading or placeholder if episodesData is empty
+  if (episodesData.length === 0) {
+    return <p>Loading...</p>; // Or any other loading indicator
+  }
+
   return (
     <>
       <table className="player-table">
@@ -44,6 +83,29 @@ export default function Page({ params }) {
           {generateTableRows("age", "Age")}
           {generateTableRows("location", "Location")}
           {generateTableRows("job", "Job")}
+          
+          <tr>
+            <td>Episodes</td>
+            {players.map((player, index) => (
+              <td key={index}>
+                {episodesData.map((episodeData, episodeIndex) => {
+                  const playerEpisodeData = episodeData.find((data) => data.slug === player.slug);
+                  
+                  if (playerEpisodeData) {
+                    return (
+                      <Episode
+                        key={episodeIndex}
+                        playerEpisodeData={playerEpisodeData}
+                        epiNumber={episodesData.length - episodeIndex}
+                      />
+                    );
+                  } else {
+                    return null;
+                  }
+                })}
+              </td>
+            ))}
+          </tr>
         </tbody>
       </table>
     </>
