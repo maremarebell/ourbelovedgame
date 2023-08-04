@@ -29,15 +29,13 @@ export default function Page({ params }: { params: { slugs: string } }) {
 
   return (
     <>
-      {players.map((player, index) => (
-        <React.Fragment key={index}>
-          {player ? (
-            <PlayerProfile data={player} />
-          ) : (
-            <div>Player doesn't exist</div>
-          )}
-        </React.Fragment>
-      ))}
+      {players.map((player, index) =>
+        player ? (
+          <PlayerProfile key={index} data={player} />
+        ) : (
+          <div key={index}>Player doesn't exist</div>
+        )
+      )}
     </>
   );
 }

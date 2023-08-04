@@ -27,7 +27,7 @@ export const Status = (props) => {
       newStatus = "Status Unknown";
   }
 
- return (
+  return (
     <div className="player-status">
       <span className={`player-status__dot player-status__dot--${props.data.player_status}`}></span>
       <span className="player-status__label">
