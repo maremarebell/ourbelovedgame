@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import playerData from "../../data/data-20-players.json";
 import "../../components/player-table.scss";
 import { fetchEpisodesData } from "../../utils/api";
+import { generateTags } from "../../utils/textUtils";
 import Episode from '../../components/Episode';
 
 export default function Page({ params }) {
@@ -43,20 +44,6 @@ export default function Page({ params }) {
         <td key={index}>{data ? data[propertyKey] : defaultValue}</td>
       ))}
     </tr>
-  );
-
-  const generateTagsCell = (tags) => (
-    <td>
-      {tags ? (
-        tags.split(";").map((tag, index) => (
-          <span key={index} className="profile__tag">
-            {tag}
-          </span>
-        ))
-      ) : (
-        <span className="profile__tag">No tags</span>
-      )}
-    </td>
   );
 
   const [episodesData, setEpisodesData] = useState([]);
@@ -112,9 +99,12 @@ export default function Page({ params }) {
           <tr>
             <td>Tags</td>
             {players.map((data, index) => (
-              <React.Fragment key={index}>{generateTagsCell(data?.tags)}</React.Fragment>
+              <td>
+                {generateTags(data?.tags)}
+              </td>
             ))}
           </tr>
+
 
           {/* Generate rows for each episode (1-6) in reverse order */}
           {[...Array(6).keys()].reverse().map((episodeNumber) => (

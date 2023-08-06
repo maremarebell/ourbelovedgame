@@ -1,3 +1,5 @@
+import "../components/tags.scss";
+
 export function textWithLinks(text) {
   // Regular expression to find links
   const linkRegex = /(http[s]?:\/\/[^\s]+)/g;
@@ -21,3 +23,21 @@ export function textWithLinks(text) {
   // Return the mapped array as JSX
   return <>{textWithLinks}</>;
 }
+
+export const generateTags = (tags) => {
+  if (tags) {
+    return (
+      tags.split(";").map((tag, index) => (
+        <span key={index} className="profile__tag">
+          {tag}
+        </span>
+      ))
+    );
+  } else {
+    return (
+      <span className="profile__tag">
+        No tags
+      </span>
+    );
+  }
+};

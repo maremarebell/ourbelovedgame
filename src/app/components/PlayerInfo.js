@@ -1,19 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import {generateTags} from '../utils/textUtils';
 
 import { Schibsted_Grotesk } from 'next/font/google';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] });
 
 export const PlayerInfo = (props) => {
-
-  const tagList = props.data?.tags
-    ? props.data.tags.split(';').map((tag) => (
-        <span key={tag} className="profile__tag">
-          {tag}
-        </span>
-      ))
-    : null;
 
   return (
     <>
@@ -100,7 +93,7 @@ export const PlayerInfo = (props) => {
               <span>Tags:</span>
             </div>
             <div className="profile__td">
-              {tagList}
+              {generateTags(props.data?.tags)}
             </div>
           </div>
         </div>
