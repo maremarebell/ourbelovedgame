@@ -31,6 +31,11 @@ export default function Page({ params }) {
     }
   });
 
+  // If there is only one player, message to add more
+  if (players.length === 1) {
+    return 'Choose 2 or more players to compare.';
+  }
+
   const generateTableRows = (propertyKey, label, defaultValue = "Player doesn't exist") => (
     <tr>
       <td>{label}</td>
@@ -77,6 +82,27 @@ export default function Page({ params }) {
   return (
     <>
       <table className="player-table">
+        {/* Conditionally render the <thead> based on the number of players
+        TODO: This is sloppy hehe */}
+        {players.length <= 2 && (
+          <thead>
+            <tr>
+              <th width="10%"></th>
+              <th width="45%"></th>
+              <th width="45%"></th>
+            </tr>
+          </thead>
+        )}
+        {players.length === 3 && (
+          <thead>
+            <tr>
+              <th width="7%"></th>
+              <th width="31%"></th>
+              <th width="31%"></th>
+              <th width="31%"></th>
+            </tr>
+          </thead>
+        )}
         <tbody>
           {generateTableRows("full_name", "Name")}
           {generateTableRows("age", "Age")}
@@ -93,7 +119,9 @@ export default function Page({ params }) {
           {/* Generate rows for each episode (1-6) in reverse order */}
           {[...Array(6).keys()].reverse().map((episodeNumber) => (
             <tr key={episodeNumber + 1}>
-              <td>Episode {episodeNumber + 1}</td>
+              <td>
+                <h3>Episode {episodeNumber + 1}</h3>
+              </td>
               {players.map((player, index) => {
                 // Reverse the order of episodesData for each player
                 const playerEpisodeData = episodesData[5 - episodeNumber].find((data) => data.slug === player.slug);
