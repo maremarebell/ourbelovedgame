@@ -11,7 +11,7 @@ export default function Page({ params }) {
   const requestedSlugs = decodeURIComponent(params.slugs).toLowerCase().split(",");
 
   if (requestedSlugs.length === 0) {
-    return <div>Ya gotta pick some playas</div>;
+    return <div>You gotta pick some playas</div>;
   }
 
   const players = requestedSlugs.map((requestedSlug) => {
@@ -63,7 +63,7 @@ export default function Page({ params }) {
 
   // Conditional rendering: Show loading or placeholder if episodesData is empty
   if (episodesData.length === 0) {
-    return <p>Loading...</p>; // Or any other loading indicator
+    return <p>Loading...</p>; 
   }
 
   return (
@@ -99,17 +99,16 @@ export default function Page({ params }) {
           <tr>
             <td>Tags</td>
             {players.map((data, index) => (
-              <td>
+              <td key={index}>
                 {generateTags(data?.tags)}
               </td>
             ))}
           </tr>
 
-
           {/* Generate rows for each episode (1-6) in reverse order */}
           {[...Array(6).keys()].reverse().map((episodeNumber) => (
             <tr key={episodeNumber + 1}>
-              <td>
+              <td key={episodeNumber + 1}>
                 <h3>Episode {episodeNumber + 1}</h3>
               </td>
               {players.map((player, index) => {
