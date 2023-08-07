@@ -35,11 +35,26 @@
     display: flex;
     margin-bottom: 20px;
     outline: 1px solid transparent;
-    height: 40px;
     min-width: 310px;
   }
 
   .epi-stats__metric {
     margin: auto;
+    background-color: #ededed;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  .epi-stats__metric :last-child {
+    width: auto;
+  }
+
+  .epi-stats--total {
+    border: 2px solid #F22E3E;
+  }
+
+  .epi-stats {
+    margin-bottom: 10px;
+    padding: 6px;
   }
 }

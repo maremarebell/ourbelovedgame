@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import playerData from "../../data/data-20-players.json";
 import Episode from '../../components/Episode';
 import PlayerHero from '../../components/PlayerHero';
+import StatsTotals from '../../components/StatsTotals';
 import { fetchEpisodesData } from "../../utils/api";
 import { generateTags } from "../../utils/textUtils";
 import "../../components/player-table.scss";
@@ -70,6 +71,17 @@ export default function Page({ params }) {
     </tr>
   );  
 
+  const generateStatsRows = () => (
+    <tr>
+      <td className="td--stats">Season Stats</td>
+      {players.map((data, index) => (
+        <td key={index} className="td--stats">
+          <StatsTotals episodesData={episodesData} playerData={data} />
+        </td>
+      ))}
+    </tr>
+  );  
+
   const [episodesData, setEpisodesData] = useState([]);
 
   useEffect(() => {
@@ -117,7 +129,6 @@ export default function Page({ params }) {
         <tbody>
           {generateHeaderRows()} 
           {generateProfileRows()} 
-
           {generateTableRows("full_name", "Name")}
           {generateTableRows("age", "Age")}
           {generateTableRows("location", "Location")}
@@ -131,6 +142,8 @@ export default function Page({ params }) {
               </td>
             ))}
           </tr>
+
+          {generateStatsRows()} 
 
           {/* Generate rows for each episode (1-6) in reverse order */}
           {[...Array(6).keys()].reverse().map((episodeNumber) => (
