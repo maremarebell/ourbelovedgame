@@ -2,10 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import playerData from "../../data/data-20-players.json";
-import "../../components/player-table.scss";
+import Episode from '../../components/Episode';
+import PlayerHero from '../../components/PlayerHero';
 import { fetchEpisodesData } from "../../utils/api";
 import { generateTags } from "../../utils/textUtils";
-import Episode from '../../components/Episode';
+import "../../components/player-table.scss";
+import "../../components/player-comparison.scss";
 
 export default function Page({ params }) {
   const requestedSlugs = decodeURIComponent(params.slugs).toLowerCase().split(",");
@@ -45,6 +47,28 @@ export default function Page({ params }) {
       ))}
     </tr>
   );
+
+  const generateHeaderRows = () => (
+    <tr>
+      <td className="hero__td"></td>
+      {players.map((data, index) => (
+        <td key={index} className="hero__td">
+          <PlayerHero data={data} />
+        </td>
+      ))}
+    </tr>
+  );
+
+  const generateProfileRows = () => (
+    <tr>
+      <td className="td--info"></td>
+      {players.map((data, index) => (
+        <td key={index} className="td--info">
+          <a href={`/player/${data.slug}`} target="_blank">View {data.name}'s full profile</a>
+        </td>
+      ))}
+    </tr>
+  );  
 
   const [episodesData, setEpisodesData] = useState([]);
 
@@ -91,6 +115,9 @@ export default function Page({ params }) {
           </thead>
         )}
         <tbody>
+          {generateHeaderRows()} 
+          {generateProfileRows()} 
+
           {generateTableRows("full_name", "Name")}
           {generateTableRows("age", "Age")}
           {generateTableRows("location", "Location")}

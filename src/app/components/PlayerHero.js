@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import './player-hero.scss'
 
 import { Schibsted_Grotesk } from 'next/font/google';
 

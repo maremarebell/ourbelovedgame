@@ -1,0 +1,22 @@
+.hero {
+  height: 320px;
+}
+
+.hero__image {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.profile__short-name {
+  fill: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: .9;
+
+  text {
+    font-weight: 900;
+  }
+}

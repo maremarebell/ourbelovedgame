@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  height: auto;
+}
+
+.hero__td {
+  background-color: #F22E3E !important;
+  padding: 0 !important;
+}
+
+.profile__short-name {
+  z-index: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.hero__image {
+  z-index: 1;
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.player-table {
+  font-size: 14px;
+
+  h3 {
+    font-weight: 700;
+  }
+
+  .epi-stats {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    outline: 1px solid transparent;
+    height: 40px;
+    min-width: 310px;
+  }
+
+  .epi-stats__metric {
+    margin: auto;
+  }
+}
