@@ -14,7 +14,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   );
 
   if (!player) {
-    return <div>Player doesn't exist</div>;
+    return <div>Player does not exist</div>;
   }
 
   // De-capitalize the name

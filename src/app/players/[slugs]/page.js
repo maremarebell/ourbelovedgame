@@ -40,7 +40,7 @@ export default function Page({ params }) {
     return 'Choose 2 or more players to compare.';
   }
 
-  const generateTableRows = (propertyKey, label, defaultValue = "Player doesn't exist") => (
+  const generateTableRows = (propertyKey, label, defaultValue = "Player does not exist") => (
     <tr>
       <td>{label}</td>
       {players.map((data, index) => (
@@ -65,7 +65,7 @@ export default function Page({ params }) {
       <td className="td--info"></td>
       {players.map((data, index) => (
         <td key={index} className="td--info">
-          <a href={`/player/${data.slug}`} target="_blank">View {data.name}'s full profile</a>
+          <a href={`/player/${data.slug}`} target="_blank">View {data.name}&apos;s full profile</a>
         </td>
       ))}
     </tr>
@@ -163,7 +163,7 @@ export default function Page({ params }) {
                         epiNumber={episodeNumber + 1}
                       />
                     ) : (
-                      <div>Didn't play this game.</div>
+                      <div>Did not play this game.</div>
                     )}
                   </td>
                 );
