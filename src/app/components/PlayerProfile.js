@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Schibsted_Grotesk } from 'next/font/google'
-import Image from 'next/image';
 import Sections from './Sections';
 import PlayerHero from './PlayerHero';
 import PlayerNameplate from './PlayerNameplate';

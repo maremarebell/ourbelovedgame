@@ -104,7 +104,7 @@ function Episode({ playerEpisodeData, epiNumber }) {
       </div>
 
       {playerEpisodeData && (
-        <div>
+        <>
           {filteredAwards.length > 0 && (
             <div className="awards">
               {renderAwards}
@@ -130,11 +130,9 @@ function Episode({ playerEpisodeData, epiNumber }) {
           )} */}
 
           {filteredNotes.length > 0 && (
-            <div>
-              <ul className="profile__list">{renderItems(filteredNotes)}</ul>
-            </div>
+            <ul className="profile__list">{renderItems(filteredNotes)}</ul>
           )}
-        </div>
+        </>
       )}
     </section>
   );
