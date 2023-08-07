@@ -13,10 +13,6 @@ import "../../components/player-comparison.scss";
 export default function Page({ params }) {
   const requestedSlugs = decodeURIComponent(params.slugs).toLowerCase().split(",");
 
-  if (requestedSlugs.length === 0) {
-    return <div>You gotta pick some playas</div>;
-  }
-
   const players = requestedSlugs.map((requestedSlug) => {
     const player = playerData.find(
       (data) =>
@@ -35,7 +31,30 @@ export default function Page({ params }) {
     }
   });
 
-  // If there is only one player, message to add more
+  const [episodesData, setEpisodesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchEpisodesData();
+        setEpisodesData([...data].reverse()); // Reverse the order of episodesData
+      } catch (error) {
+        console.error('Error in fetchEpisodesData');
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Conditional rendering: Show loading or placeholder if episodesData is empty
+  if (episodesData.length === 0) {
+    return <p>Loading...</p>; 
+  }
+
+  if (requestedSlugs.length === 0) {
+    return <div>You gotta pick some playas</div>;
+  }
+
   if (players.length === 1) {
     return 'Choose 2 or more players to compare.';
   }
@@ -81,26 +100,6 @@ export default function Page({ params }) {
       ))}
     </tr>
   );  
-
-  const [episodesData, setEpisodesData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchEpisodesData();
-        setEpisodesData([...data].reverse()); // Reverse the order of episodesData
-      } catch (error) {
-        console.error('Error in fetchEpisodesData');
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  // Conditional rendering: Show loading or placeholder if episodesData is empty
-  if (episodesData.length === 0) {
-    return <p>Loading...</p>; 
-  }
 
   return (
     <>
