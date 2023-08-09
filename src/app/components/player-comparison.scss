@@ -58,3 +58,40 @@
     padding: 6px;
   }
 }
+
+
+/*--------------------------------------------------------*/
+/* Media Queries
+/*--------------------------------------------------------*/
+
+@media (max-width: 420px) {
+  .profile__section--epis,
+  .award__p {
+    font-size: 12px;
+  }
+
+  .player-table {
+    font-size: 12px;
+  
+    // Remove first column on mobile
+    tr td:first-child {
+      display: none;
+    }
+
+    td {
+      width: 50% !important;
+      overflow: hidden;
+      padding: 4px;
+    }
+
+    .epi-stats {
+      display: block;
+      min-width: auto;
+    }
+
+    .epi-stats__metric {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
