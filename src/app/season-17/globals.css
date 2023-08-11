@@ -701,10 +701,8 @@ h3 {
 /*--------------------------------------------------------*/
 
 .social-icon__text {
-  /* line-height: .8em; */
   display: inline-block;
   margin-left: 5px;
-  /* line-height: 17px; */
   vertical-align: middle;
   margin-top: -4px;
   letter-spacing: .5px;
@@ -715,11 +713,9 @@ h3 {
   color: #fff;
   fill: #fff;
   height: 30px;
-  /* margin-right: 10px; */
   display: flex;
   display: inline-block;
   vertical-align: middle;
-  /* margin-top: 6px; */
 }
 
 .social-icon {
@@ -742,12 +738,8 @@ h3 {
   width: 80px;
   height: 80px;
   text-align: center;
-  /* padding: 10px 14px; */
   border-radius: 100%;
   cursor: pointer;
-  /* font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; */
-  /* font-size: 30px; */
-  /* text-decoration: none; */
   background-color: #949494;
   color: #fff;
 }
