@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import playerData from "public/data/data-golden-1-players.json";
+import playerData from "./data/data-golden-1-players.json";
 import { GoldenPlayerTile } from "./components/GoldenPlayerTile";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
@@ -14,7 +14,6 @@ const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 interface Player {
   player_status: string;
   slug: string;
-  gorder: number;
 }
 
 export default function Players() {
