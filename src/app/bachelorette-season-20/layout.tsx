@@ -1,4 +1,5 @@
-import './global.scss'
+import './main-for-season-20.scss'
+import './patterns.scss'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 

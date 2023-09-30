@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import playerData from "public/data/data-golden-1-players.json";
 import { PlayerTile } from "./components/PlayerTile";
-import { PlayerLine } from "./components/PlayerLine";
 import { PlayerDetailed } from "./components/PlayerDetailed";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
@@ -52,10 +51,10 @@ export default function Players() {
       <div className="container">
         <div className="players__header">
           <h1 className={sgfont.className}>Golden Bachelor Season 1 Players</h1>
-          <p className="players__header__message">Click headshots to see players profiles.</p>
-          <p className="players__header__update-notice">Last updated: 6/25 10:00PM ET 2023</p>
+          {/* <p className="players__header__message">Click headshots to see players profiles.</p> */}
+          <p className="players__header__update-notice">Last updated: 9/29 10:00PM ET 2023</p>
 
-          <div className="controls">
+          {/* <div className="controls">
             <div className="toggle">
               <button
                 className={`button button--toggle ${selectedOption === "tile" ? 'toggle__option--active' : ''}`}
@@ -70,7 +69,7 @@ export default function Players() {
                 <FullscreenIcon />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <ul className="players">
@@ -80,11 +79,11 @@ export default function Players() {
             ))
           )}
 
-          {selectedOption === "detailed" && (
+          {/* {selectedOption === "detailed" && (
             orderedPlayers.map((player, index) => (
               <PlayerDetailed key={index} player={player} index={index} />
             ))
-          )}
+          )} */}
         </ul>
 
         <Link href="/bachelorette-season-20" className="previous-season">
