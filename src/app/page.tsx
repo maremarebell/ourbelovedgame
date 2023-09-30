@@ -33,7 +33,6 @@ export default function Players() {
   // Define the order of groups
   const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
 
-  const [isGorder, setGorder] = useState(false); // State to track the order
   const [selectedOption, setSelectedOption] = useState("tile");
 
   const handleToggle = (option: React.SetStateAction<string>) => {
@@ -65,12 +64,6 @@ export default function Players() {
                 <GalleryIcon />
               </button>
               <button
-                className={`button button--toggle ${selectedOption === "line" ? 'toggle__option--active' : ''}`}
-                onClick={() => handleToggle("line")}
-              >
-                <ListIcon />
-              </button>
-              <button
                 className={`button button--toggle ${selectedOption === "detailed" ? 'toggle__option--active' : ''}`}
                 onClick={() => handleToggle("detailed")}
               >
@@ -81,15 +74,9 @@ export default function Players() {
         </div>
 
         <ul className="players">
-          {/* {selectedOption === "tile" && (
+          {selectedOption === "tile" && (
             orderedPlayers.map((player, index) => (
               <PlayerTile key={index} data={player} index={index} />
-            ))
-          )}
-
-          {selectedOption === "line" && (
-            orderedPlayers.map((player, index) => (
-              <PlayerLine key={index} data={player} index={index} />
             ))
           )}
 
@@ -97,12 +84,13 @@ export default function Players() {
             orderedPlayers.map((player, index) => (
               <PlayerDetailed key={index} player={player} index={index} />
             ))
-          )} */}
+          )}
         </ul>
 
         <Link href="/bachelorette-season-20" className="previous-season">
           Check out previous players of Bachelorette Season 20
         </Link>
+        
         <Link href="/season-17" className="previous-season">
           Check out previous players of Bachelorette Season 17
         </Link>
