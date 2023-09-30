@@ -2,13 +2,12 @@
 
 import React, { useState } from 'react';
 import playerData from "public/data/data-golden-1-players.json";
-import { PlayerTile } from "./components/PlayerTile";
-import { PlayerDetailed } from "./components/PlayerDetailed";
+import { GoldenPlayerTile } from "./components/GoldenPlayerTile";
 import Link from 'next/link';
 import { Schibsted_Grotesk } from 'next/font/google'
-import { ListIcon } from './utils/logos.js';
-import { GalleryIcon } from './utils/logos.js';
-import { FullscreenIcon } from './utils/logos.js';
+// import { ListIcon } from './utils/logos.js';
+// import { GalleryIcon } from './utils/logos.js';
+// import { FullscreenIcon } from './utils/logos.js';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -75,7 +74,7 @@ export default function Players() {
         <ul className="players">
           {selectedOption === "tile" && (
             orderedPlayers.map((player, index) => (
-              <PlayerTile key={index} data={player} index={index} />
+              <GoldenPlayerTile key={index} data={player} index={index} />
             ))
           )}
 
