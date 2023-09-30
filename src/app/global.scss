@@ -59,12 +59,9 @@ html {
 /* General styles
 /*--------------------------------------------------------*/
 
-$red-bright: #F22E3E;
-
-body {
-  background-color: #D1B464;
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+body{
+  background-color: #BE9759;
+  background-image: linear-gradient(180deg, #E1CA8E 0%, #BE9659 52%, #a9773c 90%);
 }
 
 h1 {
@@ -85,6 +82,45 @@ p {
   padding: 16px;
 }
 
+
+//--------------------------------------------------------
+// Player
+//--------------------------------------------------------
+
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.player__link {
+  text-decoration: none;
+}
+
+.player__headshot--container {
+  width: 100%;
+}
+
+.player__headshot {
+  width: 100%;
+}
+
+.player__name {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #fff;
+  font-size: 20px;
+}
+
+.player__details {
+  color: #fff;
+}
+
+.previous-season {
+  color: #fff;
+  margin: 20px 0;
+  display: block;
+}
 
 //--------------------------------------------------------
 // Media queries 
