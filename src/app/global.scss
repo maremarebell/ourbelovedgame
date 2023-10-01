@@ -93,6 +93,15 @@ p {
   grid-gap: 16px;
 }
 
+.player {
+  border: 2px solid #BE9759;
+
+  &:hover {
+    border: 2px solid #fff;
+    cursor: pointer;
+  }
+}
+
 .player--eliminated {
   opacity: .3;
 }
