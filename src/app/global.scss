@@ -93,6 +93,10 @@ p {
   grid-gap: 16px;
 }
 
+.player--eliminated {
+  opacity: .3;
+}
+
 .player__link {
   text-decoration: none;
 }
@@ -121,6 +125,7 @@ p {
   margin: 20px 0;
   display: block;
 }
+
 
 //--------------------------------------------------------
 // Media queries 
