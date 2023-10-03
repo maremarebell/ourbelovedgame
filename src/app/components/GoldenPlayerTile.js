@@ -7,6 +7,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Schibsted_Grotesk } from 'next/font/google'
+import {generateTags} from '../utils/textUtils';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -51,6 +52,20 @@ export const GoldenPlayerTile = (props) => {
       </AccordionSummary>
       <AccordionDetails>
         <p>More details to come.</p>
+        {props.data.location}
+        <ul>
+          <li>
+            <a href={`${props.data.abc_profile}`} target="_blank" rel="noreferrer">
+              {props.data.abc_profile}
+            </a>
+          </li>
+          <li>
+            <a href={`${props.data.instagram_url}`} target="_blank" rel="noreferrer">
+              {props.data.instagram_url}
+            </a>
+          </li>
+        </ul>
+        {generateTags(props.data?.tags)}
       </AccordionDetails>
     </Accordion>
   );
