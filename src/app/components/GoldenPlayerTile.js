@@ -31,7 +31,7 @@ const AccordionSummary = styled((props) => (
 
 export const GoldenPlayerTile = (props) => {
 
-  const imagePath = `/assets/players/1-golden-bachelor/originals/${props.data.name}.jpg`;
+  const imagePath = `/assets/players/1-golden-bachelor/cropped/${props.data.name}.jpg`;
 
   return (
     <Accordion className="player-accordion">
