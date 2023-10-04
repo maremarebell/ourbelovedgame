@@ -47,19 +47,22 @@ export const GoldenPlayerTile = (props) => {
             alt={`headshot of ${props.data.name}`}
             className="player__headshot"
           />
-          <span className={`player__name ${sgfont.className}`}>{props.data.name}</span>
-          <p>{props.data.age}, {props.data.job}</p>
+          <span className={`player__name ${sgfont.className}`}>
+            {props.data.name}
+          </span>
+          <p>
+            {props.data.age}, {props.data.job} <br/>
+            {props.data.location}
+          </p>
         </div>
       </AccordionSummary>
       <AccordionDetails
         className="player-accordion__details"
       >
-        <p>More details to come.</p>
-        {props.data.location}
+        
         <ul>
-          <li>
+          <li class="player-accordion__list-item">
             <Image
-              className="profile__td__logo"
               src="/assets/logo-abc-white.svg"
               alt="ABC logo" 
               height={20} width={20} 
@@ -68,15 +71,14 @@ export const GoldenPlayerTile = (props) => {
               {props.data.name}'s ABC profile
             </a>
           </li>
-          <li>
+          <li class="player-accordion__list-item">
             <Image
-              className="profile__td__logo"
               src="/assets/logo-instagram-white.svg"
               alt="ABC logo" 
               height={20} width={20} 
             />
             <a href={`${props.data.instagram_url}`} target="_blank" rel="noreferrer" className="player-accordion__link">
-              {props.data.instagram_url}
+              {props.data.name}'s Instagram
             </a>
           </li>
         </ul>

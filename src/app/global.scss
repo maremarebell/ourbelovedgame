@@ -157,12 +157,20 @@ h1 {
 }
 
 .player-accordion__details {
+  padding: 0;
   color: #fff;
 }
 
 .player-accordion__link {
   color: #759eff;
+  margin-left: 4px;
+  cursor: pointer;
 }
+
+.player-accordion__list-item {
+  display: flex;
+}
+
 
 //--------------------------------------------------------
 // Media queries 
