@@ -9,6 +9,8 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Schibsted_Grotesk } from 'next/font/google'
 import {generateTags} from '../utils/textUtils';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
 
@@ -83,7 +85,14 @@ export const GoldenPlayerTile = (props) => {
           </li>
         </ul>
         <div className="player-accordion__tags">
-          <span className="player-accordion__tags__blurb">Tags from GoR:</span>
+          <span className="player-accordion__tags__blurb">
+            Tags from GoR:
+            {/* <Tooltip title="Delete">
+              <IconButton>
+                ?
+              </IconButton>
+            </Tooltip> */}
+          </span>
           {generateTags(props.data?.tags)}
         </div>
       </AccordionDetails>
