@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 // import Accordion from '@mui/material/Accordion';
 // import AccordionSummary from '@mui/material/AccordionSummary';
 import { styled } from '@mui/material/styles';
@@ -50,17 +51,31 @@ export const GoldenPlayerTile = (props) => {
           <p>{props.data.age}, {props.data.job}</p>
         </div>
       </AccordionSummary>
-      <AccordionDetails>
+      <AccordionDetails
+        className="player-accordion__details"
+      >
         <p>More details to come.</p>
         {props.data.location}
         <ul>
           <li>
-            <a href={`${props.data.abc_profile}`} target="_blank" rel="noreferrer">
-              {props.data.abc_profile}
+            <Image
+              className="profile__td__logo"
+              src="/assets/logo-abc-white.svg"
+              alt="ABC logo" 
+              height={20} width={20} 
+            />
+            <a href={`${props.data.abc_profile}`} target="_blank" rel="noreferrer" className="player-accordion__link">
+              {props.data.name}'s ABC profile
             </a>
           </li>
           <li>
-            <a href={`${props.data.instagram_url}`} target="_blank" rel="noreferrer">
+            <Image
+              className="profile__td__logo"
+              src="/assets/logo-instagram-white.svg"
+              alt="ABC logo" 
+              height={20} width={20} 
+            />
+            <a href={`${props.data.instagram_url}`} target="_blank" rel="noreferrer" className="player-accordion__link">
               {props.data.instagram_url}
             </a>
           </li>

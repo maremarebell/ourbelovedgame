@@ -44,9 +44,9 @@ export default function Players() {
   return (
     <>
       <div className="container">
-        <div className="players__header">
-          <h1 className={sgfont.className}>Golden Bachelor Season 1 Players</h1>
-          <p className="players__header__update-notice">Last updated: 9/29 10:00PM ET 2023</p>
+        <div className="header">
+          <h1 className={sgfont.className + " header__headline"}>Golden Bachelor Season 1 Players</h1>
+          <p className="header__notice">Last updated: 9/29 10:00PM ET 2023</p>
         </div>
 
         <ul className="players">
