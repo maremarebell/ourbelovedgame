@@ -52,7 +52,7 @@ export const GoldenPlayerTile = (props) => {
           <span className={`player__name ${sgfont.className}`}>
             {props.data.name}
           </span>
-          <p>
+          <p className="player__basics">
             {props.data.age}, {props.data.job} <br/>
             {props.data.location}
           </p>
