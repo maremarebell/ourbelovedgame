@@ -70,7 +70,7 @@ export const GoldenPlayerTile = (props) => {
               height={20} width={20} 
             />
             <a href={`${props.data.abc_profile}`} target="_blank" rel="noreferrer" className="player-accordion__link">
-              {props.data.name}'s ABC profile
+              {props.data.name}&apos;s ABC profile
             </a>
           </li>
           <li class="player-accordion__list-item">
@@ -80,7 +80,7 @@ export const GoldenPlayerTile = (props) => {
               height={20} width={20} 
             />
             <a href={`${props.data.instagram_url}`} target="_blank" rel="noreferrer" className="player-accordion__link">
-              {props.data.name}'s Instagram
+              {props.data.name}&apos;s Instagram
             </a>
           </li>
         </ul>
