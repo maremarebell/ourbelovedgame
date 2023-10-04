@@ -82,7 +82,10 @@ export const GoldenPlayerTile = (props) => {
             </a>
           </li>
         </ul>
-        {generateTags(props.data?.tags)}
+        <div className="player-accordion__tags">
+          <span className="player-accordion__tags__blurb">Tags from GoR:</span>
+          {generateTags(props.data?.tags)}
+        </div>
       </AccordionDetails>
     </Accordion>
   );

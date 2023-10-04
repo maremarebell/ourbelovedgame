@@ -169,6 +169,26 @@ h1 {
 
 .player-accordion__list-item {
   display: flex;
+  margin-bottom: 4px;
+}
+
+// Tags
+.player-accordion__tags {
+  margin-top: 10px;
+}
+
+// profile__tag is in util & this was easiest for styles
+// todo: fix one day?
+.player-tag.profile__tag {
+  background-color: #fff;
+  color: #000;
+  font-size: 11px;
+  padding: 2px 10px;
+}
+
+.player-accordion__tags__blurb {
+  font-size: 10px;
+  display: block;
 }
 
 

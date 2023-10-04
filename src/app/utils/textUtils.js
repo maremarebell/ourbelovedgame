@@ -28,14 +28,14 @@ export const generateTags = (tags) => {
   if (tags) {
     return (
       tags.split(";").map((tag, index) => (
-        <span key={index} className="profile__tag">
+        <span key={index} className="profile__tag player-tag">
           {tag}
         </span>
       ))
     );
   } else {
     return (
-      <span className="profile__tag">
+      <span className="profile__tag player-tag">
         No tags
       </span>
     );
