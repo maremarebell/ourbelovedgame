@@ -25,13 +25,19 @@ export function textWithLinks(text) {
 }
 
 export const generateTags = (tags) => {
-  if (tags) {
+  if (tags && tags.trim() !== "") {
     return (
-      tags.split(";").map((tag, index) => (
-        <span key={index} className="profile__tag player-tag">
-          {tag}
-        </span>
-      ))
+      tags.split(";").map((tag, index) => {
+        if (tag.trim() !== "") {
+          return (
+            <span key={index} className="profile__tag player-tag">
+              {tag}
+            </span>
+          );
+        } else {
+          return null;
+        }
+      })
     );
   } else {
     return (
