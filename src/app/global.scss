@@ -106,14 +106,6 @@ h1 {
   }
 }
 
-.player--eliminated {
-  opacity: .3;
-}
-
-.player__link {
-  text-decoration: none;
-}
-
 .player__headshot--container {
   width: 100%;
 }
@@ -143,6 +135,10 @@ h1 {
 //--------------------------------------------------------
 // Accordion
 //--------------------------------------------------------
+
+.player-accordion--eliminated {
+  opacity: .3;
+}
 
 .player-accordion__summary {
   color: #fff;

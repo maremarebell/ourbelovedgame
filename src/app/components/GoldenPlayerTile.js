@@ -35,7 +35,7 @@ export const GoldenPlayerTile = (props) => {
   const imagePath = `/assets/players/1-golden-bachelor/cropped/${props.data.name}.jpg`;
 
   return (
-    <Accordion className="player-accordion">
+    <Accordion className={`player-accordion player-accordion--${props.data.player_status}`}>
       <AccordionSummary
         aria-controls="panel1a-content"
         id={`panel1a-header${props.index}`}
