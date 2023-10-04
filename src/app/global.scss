@@ -75,13 +75,9 @@ h1 {
   color: #fff;
 }
 
-.header__headline {
-  
-}
+.header__headline {}
 
-.header__notice {
-
-}
+.header__notice {}
 
 .container {
   width: 100%;
@@ -148,10 +144,6 @@ h1 {
 // Accordion
 //--------------------------------------------------------
 
-.player-accordion {
-  // background-color: transparent;
-}
-
 .player-accordion__summary {
   color: #fff;
 }
@@ -200,9 +192,15 @@ h1 {
 }
 
 @media (max-width: 540px) {
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 
