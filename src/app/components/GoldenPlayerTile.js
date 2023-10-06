@@ -63,7 +63,7 @@ export const GoldenPlayerTile = (props) => {
       >
         
         <ul>
-          <li class="player-accordion__list-item">
+          <li className="player-accordion__list-item">
             <Image
               src="/assets/logo-abc-white.svg"
               alt="ABC logo" 
@@ -73,7 +73,7 @@ export const GoldenPlayerTile = (props) => {
               {props.data.name}&apos;s ABC profile
             </a>
           </li>
-          <li class="player-accordion__list-item">
+          <li className="player-accordion__list-item">
             <Image
               src="/assets/logo-instagram-white.svg"
               alt="ABC logo" 
@@ -87,11 +87,16 @@ export const GoldenPlayerTile = (props) => {
         <div className="player-accordion__tags">
           <span className="player-accordion__tags__blurb">
             Tags from GoR:
-            {/* <Tooltip title="Delete">
-              <IconButton>
-                ?
-              </IconButton>
-            </Tooltip> */}
+            <Tooltip title="GoR is short for Game of Roses, the podcast much of this info comes from.">
+              <span className="tooltip">
+                <Image
+                  src="/assets/icon-question.svg"
+                  alt="question mark"
+                  className="tooltip__icon"
+                  height={8} width={8} 
+                />
+              </span>
+            </Tooltip>
           </span>
           {generateTags(props.data?.tags)}
         </div>
