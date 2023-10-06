@@ -25,7 +25,7 @@ export default function Players() {
   }, {});
 
   // Define the order of groups
-  const groupOrder = ["active", "unannounced", "eliminated", "sidelined"];
+  const groupOrder = ["active", "unannounced", "eliminated", "self-eliminated", "sidelined"];
 
   const [selectedOption, setSelectedOption] = useState("tile");
 

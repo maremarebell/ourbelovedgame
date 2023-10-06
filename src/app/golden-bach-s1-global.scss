@@ -140,7 +140,13 @@ h1 {
 // Accordion
 //--------------------------------------------------------
 
-.player-accordion--eliminated {
+// .player-accordion--eliminated,
+// .player-accordion--self-eliminated {
+//   opacity: .3;
+// }
+
+.player-accordion__summary--eliminated,
+.player-accordion__summary--self-eliminated {
   opacity: .3;
 }
 
@@ -202,6 +208,29 @@ h1 {
   margin-top: 2px;
   margin-left: 2px;
   display: block;
+}
+
+// Status
+.player__status {
+  background-color: #fff;
+  position: absolute;
+  right: 4px;
+  top: 16px;
+  color: #000;
+  border-radius: 100px;
+  padding: 1px 8px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.player__status--active {
+  background-color: rgba(0, 255, 145, 0.643);
+}
+
+.player__status--eliminated,
+.player__status--self-eliminated {
+  background-color: rgba(255, 125, 125, 0.6);
 }
 
 

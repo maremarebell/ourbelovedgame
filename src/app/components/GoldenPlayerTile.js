@@ -41,9 +41,9 @@ export const GoldenPlayerTile = (props) => {
       <AccordionSummary
         aria-controls="panel1a-content"
         id={`panel1a-header${props.index}`}
-        className="player-accordion__summary"
+       
       >
-        <div>
+        <div className={`player-accordion__summary player-accordion__summary--${props.data.player_status}`}>
           <img
             src={imagePath}
             alt={`headshot of ${props.data.name}`}
@@ -57,11 +57,13 @@ export const GoldenPlayerTile = (props) => {
             {props.data.location}
           </p>
         </div>
+        <span className={`player__status player__status--${props.data.player_status}`}>
+          {props.data.player_status.replace(/-/g, ' ')}
+        </span>
       </AccordionSummary>
       <AccordionDetails
         className="player-accordion__details"
       >
-        
         <ul>
           <li className="player-accordion__list-item">
             <Image
