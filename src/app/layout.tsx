@@ -1,4 +1,4 @@
-import './global.scss'
+import './golden-bach-s1-global.scss'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
