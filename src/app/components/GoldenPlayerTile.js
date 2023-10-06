@@ -59,6 +59,11 @@ export const GoldenPlayerTile = (props) => {
         </div>
         <span className={`player__status player__status--${props.data.player_status}`}>
           {props.data.player_status.replace(/-/g, ' ')}
+          {(props.data.player_status === 'eliminated' || props.data.player_status === 'self-eliminated') && (
+            <>
+              &nbsp;Episode {props.data.player_status_last_update}
+            </>
+          )}
         </span>
       </AccordionSummary>
       <AccordionDetails
