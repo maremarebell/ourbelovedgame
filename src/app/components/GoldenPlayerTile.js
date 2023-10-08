@@ -1,15 +1,12 @@
 import React from "react";
 import Link from 'next/link';
 import Image from 'next/image';
-// import Accordion from '@mui/material/Accordion';
-// import AccordionSummary from '@mui/material/AccordionSummary';
 import { styled } from '@mui/material/styles';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Schibsted_Grotesk } from 'next/font/google'
 import {generateTags} from '../utils/textUtils';
-import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 
 const sgfont = Schibsted_Grotesk({ subsets: ['latin'] })
@@ -41,13 +38,14 @@ export const GoldenPlayerTile = (props) => {
       <AccordionSummary
         aria-controls="panel1a-content"
         id={`panel1a-header${props.index}`}
-       
       >
         <div className={`player-accordion__summary player-accordion__summary--${props.data.player_status}`}>
-          <img
+          <Image
             src={imagePath}
             alt={`headshot of ${props.data.name}`}
             className="player__headshot"
+            width="280"
+            height="179"
           />
           <span className={`player__name ${sgfont.className}`}>
             {props.data.name}
