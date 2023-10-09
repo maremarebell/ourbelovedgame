@@ -189,7 +189,7 @@ p {
   cursor: pointer;
 
   &:last-child {
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(33% - 20px);
     flex-grow: 0;
   }
 
